@@ -24,6 +24,8 @@
 ,Afghanistan,33.0,65.0,2020-03-16,21,Confirmed
 ,Afghanistan,33.0,65.0,2020-03-17,1,Recovered
 ,Afghanistan,33.0,65.0,2020-03-17,22,Confirmed
+,Afghanistan,33.0,65.0,2020-03-18,1,Recovered
+,Afghanistan,33.0,65.0,2020-03-18,22,Confirmed
 ,Albania,41.1533,20.1683,2020-03-09,2,Confirmed
 ,Albania,41.1533,20.1683,2020-03-10,10,Confirmed
 ,Albania,41.1533,20.1683,2020-03-11,1,Death
@@ -40,6 +42,8 @@
 ,Albania,41.1533,20.1683,2020-03-16,51,Confirmed
 ,Albania,41.1533,20.1683,2020-03-17,1,Death
 ,Albania,41.1533,20.1683,2020-03-17,55,Confirmed
+,Albania,41.1533,20.1683,2020-03-18,2,Death
+,Albania,41.1533,20.1683,2020-03-18,59,Confirmed
 ,Algeria,28.0339,1.6596,2020-02-25,1,Confirmed
 ,Algeria,28.0339,1.6596,2020-02-26,1,Confirmed
 ,Algeria,28.0339,1.6596,2020-02-27,1,Confirmed
@@ -74,6 +78,9 @@
 ,Algeria,28.0339,1.6596,2020-03-17,4,Death
 ,Algeria,28.0339,1.6596,2020-03-17,12,Recovered
 ,Algeria,28.0339,1.6596,2020-03-17,60,Confirmed
+,Algeria,28.0339,1.6596,2020-03-18,7,Death
+,Algeria,28.0339,1.6596,2020-03-18,12,Recovered
+,Algeria,28.0339,1.6596,2020-03-18,74,Confirmed
 ,Andorra,42.5063,1.5218,2020-03-02,1,Confirmed
 ,Andorra,42.5063,1.5218,2020-03-03,1,Confirmed
 ,Andorra,42.5063,1.5218,2020-03-04,1,Confirmed
@@ -95,11 +102,14 @@
 ,Andorra,42.5063,1.5218,2020-03-16,2,Confirmed
 ,Andorra,42.5063,1.5218,2020-03-17,1,Recovered
 ,Andorra,42.5063,1.5218,2020-03-17,39,Confirmed
+,Andorra,42.5063,1.5218,2020-03-18,1,Recovered
+,Andorra,42.5063,1.5218,2020-03-18,39,Confirmed
 ,Antigua and Barbuda,17.0608,-61.7964,2020-03-13,1,Confirmed
 ,Antigua and Barbuda,17.0608,-61.7964,2020-03-14,1,Confirmed
 ,Antigua and Barbuda,17.0608,-61.7964,2020-03-15,1,Confirmed
 ,Antigua and Barbuda,17.0608,-61.7964,2020-03-16,1,Confirmed
 ,Antigua and Barbuda,17.0608,-61.7964,2020-03-17,1,Confirmed
+,Antigua and Barbuda,17.0608,-61.7964,2020-03-18,1,Confirmed
 ,Argentina,-38.4161,-63.6167,2020-03-03,1,Confirmed
 ,Argentina,-38.4161,-63.6167,2020-03-04,1,Confirmed
 ,Argentina,-38.4161,-63.6167,2020-03-05,1,Confirmed
@@ -129,6 +139,9 @@
 ,Argentina,-38.4161,-63.6167,2020-03-17,2,Death
 ,Argentina,-38.4161,-63.6167,2020-03-17,3,Recovered
 ,Argentina,-38.4161,-63.6167,2020-03-17,68,Confirmed
+,Argentina,-38.4161,-63.6167,2020-03-18,2,Death
+,Argentina,-38.4161,-63.6167,2020-03-18,3,Recovered
+,Argentina,-38.4161,-63.6167,2020-03-18,79,Confirmed
 ,Armenia,40.0691,45.0382,2020-03-01,1,Confirmed
 ,Armenia,40.0691,45.0382,2020-03-02,1,Confirmed
 ,Armenia,40.0691,45.0382,2020-03-03,1,Confirmed
@@ -147,11 +160,8 @@
 ,Armenia,40.0691,45.0382,2020-03-16,52,Confirmed
 ,Armenia,40.0691,45.0382,2020-03-17,1,Recovered
 ,Armenia,40.0691,45.0382,2020-03-17,78,Confirmed
-,Aruba,12.5211,-69.9683,2020-03-13,2,Confirmed
-,Aruba,12.5211,-69.9683,2020-03-14,2,Confirmed
-,Aruba,12.5211,-69.9683,2020-03-15,2,Confirmed
-,Aruba,12.5211,-69.9683,2020-03-16,2,Confirmed
-,Aruba,12.5211,-69.9683,2020-03-17,3,Confirmed
+,Armenia,40.0691,45.0382,2020-03-18,1,Recovered
+,Armenia,40.0691,45.0382,2020-03-18,84,Confirmed
 New South Wales,Australia,-33.8688,151.2093,2020-01-26,3,Confirmed
 Victoria,Australia,-37.8136,144.9631,2020-01-26,1,Confirmed
 New South Wales,Australia,-33.8688,151.2093,2020-01-27,4,Confirmed
@@ -577,6 +587,20 @@ Western Australia,Australia,-31.9505,115.8605,2020-03-17,31,Confirmed
 Tasmania,Australia,-41.4545,145.9707,2020-03-17,7,Confirmed
 Northern Territory,Australia,-12.4634,130.8456,2020-03-17,1,Confirmed
 Australian Capital Territory,Australia,-35.4735,149.0124,2020-03-17,2,Confirmed
+New South Wales,Australia,-33.8688,151.2093,2020-03-18,5,Death
+Western Australia,Australia,-31.9505,115.8605,2020-03-18,1,Death
+New South Wales,Australia,-33.8688,151.2093,2020-03-18,4,Recovered
+Victoria,Australia,-37.8136,144.9631,2020-03-18,8,Recovered
+Queensland,Australia,-28.0167,153.4,2020-03-18,8,Recovered
+South Australia,Australia,-34.9285,138.6007,2020-03-18,3,Recovered
+New South Wales,Australia,-33.8688,151.2093,2020-03-18,267,Confirmed
+Victoria,Australia,-37.8136,144.9631,2020-03-18,121,Confirmed
+Queensland,Australia,-28.0167,153.4,2020-03-18,94,Confirmed
+South Australia,Australia,-34.9285,138.6007,2020-03-18,37,Confirmed
+Western Australia,Australia,-31.9505,115.8605,2020-03-18,35,Confirmed
+Tasmania,Australia,-41.4545,145.9707,2020-03-18,10,Confirmed
+Northern Territory,Australia,-12.4634,130.8456,2020-03-18,1,Confirmed
+Australian Capital Territory,Australia,-35.4735,149.0124,2020-03-18,3,Confirmed
 ,Austria,47.5162,14.5501,2020-02-25,2,Confirmed
 ,Austria,47.5162,14.5501,2020-02-26,2,Confirmed
 ,Austria,47.5162,14.5501,2020-02-27,3,Confirmed
@@ -614,6 +638,9 @@ Australian Capital Territory,Australia,-35.4735,149.0124,2020-03-17,2,Confirmed
 ,Austria,47.5162,14.5501,2020-03-17,3,Death
 ,Austria,47.5162,14.5501,2020-03-17,1,Recovered
 ,Austria,47.5162,14.5501,2020-03-17,1332,Confirmed
+,Austria,47.5162,14.5501,2020-03-18,4,Death
+,Austria,47.5162,14.5501,2020-03-18,9,Recovered
+,Austria,47.5162,14.5501,2020-03-18,1646,Confirmed
 ,Azerbaijan,40.1431,47.5769,2020-03-01,3,Confirmed
 ,Azerbaijan,40.1431,47.5769,2020-03-02,3,Confirmed
 ,Azerbaijan,40.1431,47.5769,2020-03-03,3,Confirmed
@@ -643,6 +670,9 @@ Australian Capital Territory,Australia,-35.4735,149.0124,2020-03-17,2,Confirmed
 ,Azerbaijan,40.1431,47.5769,2020-03-17,1,Death
 ,Azerbaijan,40.1431,47.5769,2020-03-17,6,Recovered
 ,Azerbaijan,40.1431,47.5769,2020-03-17,28,Confirmed
+,Azerbaijan,40.1431,47.5769,2020-03-18,1,Death
+,Azerbaijan,40.1431,47.5769,2020-03-18,6,Recovered
+,Azerbaijan,40.1431,47.5769,2020-03-18,28,Confirmed
 ,Bahrain,26.0275,50.55,2020-02-24,1,Confirmed
 ,Bahrain,26.0275,50.55,2020-02-25,23,Confirmed
 ,Bahrain,26.0275,50.55,2020-02-26,33,Confirmed
@@ -680,6 +710,9 @@ Australian Capital Territory,Australia,-35.4735,149.0124,2020-03-17,2,Confirmed
 ,Bahrain,26.0275,50.55,2020-03-17,1,Death
 ,Bahrain,26.0275,50.55,2020-03-17,81,Recovered
 ,Bahrain,26.0275,50.55,2020-03-17,228,Confirmed
+,Bahrain,26.0275,50.55,2020-03-18,1,Death
+,Bahrain,26.0275,50.55,2020-03-18,88,Recovered
+,Bahrain,26.0275,50.55,2020-03-18,256,Confirmed
 ,Bangladesh,23.685,90.3563,2020-03-08,3,Confirmed
 ,Bangladesh,23.685,90.3563,2020-03-09,3,Confirmed
 ,Bangladesh,23.685,90.3563,2020-03-10,3,Confirmed
@@ -692,7 +725,11 @@ Australian Capital Territory,Australia,-35.4735,149.0124,2020-03-17,2,Confirmed
 ,Bangladesh,23.685,90.3563,2020-03-16,8,Confirmed
 ,Bangladesh,23.685,90.3563,2020-03-17,3,Recovered
 ,Bangladesh,23.685,90.3563,2020-03-17,10,Confirmed
+,Bangladesh,23.685,90.3563,2020-03-18,1,Death
+,Bangladesh,23.685,90.3563,2020-03-18,3,Recovered
+,Bangladesh,23.685,90.3563,2020-03-18,14,Confirmed
 ,Barbados,13.1939,-59.5432,2020-03-17,2,Confirmed
+,Barbados,13.1939,-59.5432,2020-03-18,2,Confirmed
 ,Belarus,53.7098,27.9534,2020-02-28,1,Confirmed
 ,Belarus,53.7098,27.9534,2020-02-29,1,Confirmed
 ,Belarus,53.7098,27.9534,2020-03-01,1,Confirmed
@@ -721,6 +758,8 @@ Australian Capital Territory,Australia,-35.4735,149.0124,2020-03-17,2,Confirmed
 ,Belarus,53.7098,27.9534,2020-03-16,36,Confirmed
 ,Belarus,53.7098,27.9534,2020-03-17,3,Recovered
 ,Belarus,53.7098,27.9534,2020-03-17,36,Confirmed
+,Belarus,53.7098,27.9534,2020-03-18,5,Recovered
+,Belarus,53.7098,27.9534,2020-03-18,51,Confirmed
 ,Belgium,50.8333,4.0,2020-02-04,1,Confirmed
 ,Belgium,50.8333,4.0,2020-02-05,1,Confirmed
 ,Belgium,50.8333,4.0,2020-02-06,1,Confirmed
@@ -801,8 +840,12 @@ Australian Capital Territory,Australia,-35.4735,149.0124,2020-03-17,2,Confirmed
 ,Belgium,50.8333,4.0,2020-03-17,10,Death
 ,Belgium,50.8333,4.0,2020-03-17,1,Recovered
 ,Belgium,50.8333,4.0,2020-03-17,1243,Confirmed
+,Belgium,50.8333,4.0,2020-03-18,14,Death
+,Belgium,50.8333,4.0,2020-03-18,31,Recovered
+,Belgium,50.8333,4.0,2020-03-18,1486,Confirmed
 ,Benin,9.3077,2.3158,2020-03-16,1,Confirmed
 ,Benin,9.3077,2.3158,2020-03-17,1,Confirmed
+,Benin,9.3077,2.3158,2020-03-18,2,Confirmed
 ,Bhutan,27.5142,90.4336,2020-03-06,1,Confirmed
 ,Bhutan,27.5142,90.4336,2020-03-07,1,Confirmed
 ,Bhutan,27.5142,90.4336,2020-03-08,1,Confirmed
@@ -815,6 +858,7 @@ Australian Capital Territory,Australia,-35.4735,149.0124,2020-03-17,2,Confirmed
 ,Bhutan,27.5142,90.4336,2020-03-15,1,Confirmed
 ,Bhutan,27.5142,90.4336,2020-03-16,1,Confirmed
 ,Bhutan,27.5142,90.4336,2020-03-17,1,Confirmed
+,Bhutan,27.5142,90.4336,2020-03-18,1,Confirmed
 ,Bolivia,-16.2902,-63.5887,2020-03-11,2,Confirmed
 ,Bolivia,-16.2902,-63.5887,2020-03-12,2,Confirmed
 ,Bolivia,-16.2902,-63.5887,2020-03-13,3,Confirmed
@@ -822,6 +866,7 @@ Australian Capital Territory,Australia,-35.4735,149.0124,2020-03-17,2,Confirmed
 ,Bolivia,-16.2902,-63.5887,2020-03-15,10,Confirmed
 ,Bolivia,-16.2902,-63.5887,2020-03-16,11,Confirmed
 ,Bolivia,-16.2902,-63.5887,2020-03-17,11,Confirmed
+,Bolivia,-16.2902,-63.5887,2020-03-18,12,Confirmed
 ,Bosnia and Herzegovina,43.9159,17.6791,2020-03-05,2,Confirmed
 ,Bosnia and Herzegovina,43.9159,17.6791,2020-03-06,2,Confirmed
 ,Bosnia and Herzegovina,43.9159,17.6791,2020-03-07,3,Confirmed
@@ -836,6 +881,8 @@ Australian Capital Territory,Australia,-35.4735,149.0124,2020-03-17,2,Confirmed
 ,Bosnia and Herzegovina,43.9159,17.6791,2020-03-16,25,Confirmed
 ,Bosnia and Herzegovina,43.9159,17.6791,2020-03-17,2,Recovered
 ,Bosnia and Herzegovina,43.9159,17.6791,2020-03-17,26,Confirmed
+,Bosnia and Herzegovina,43.9159,17.6791,2020-03-18,2,Recovered
+,Bosnia and Herzegovina,43.9159,17.6791,2020-03-18,38,Confirmed
 ,Brazil,-14.235,-51.9253,2020-02-26,1,Confirmed
 ,Brazil,-14.235,-51.9253,2020-02-27,1,Confirmed
 ,Brazil,-14.235,-51.9253,2020-02-28,1,Confirmed
@@ -860,6 +907,9 @@ Australian Capital Territory,Australia,-35.4735,149.0124,2020-03-17,2,Confirmed
 ,Brazil,-14.235,-51.9253,2020-03-17,1,Death
 ,Brazil,-14.235,-51.9253,2020-03-17,2,Recovered
 ,Brazil,-14.235,-51.9253,2020-03-17,321,Confirmed
+,Brazil,-14.235,-51.9253,2020-03-18,3,Death
+,Brazil,-14.235,-51.9253,2020-03-18,2,Recovered
+,Brazil,-14.235,-51.9253,2020-03-18,372,Confirmed
 ,Brunei,4.5353,114.7277,2020-03-09,1,Confirmed
 ,Brunei,4.5353,114.7277,2020-03-10,1,Confirmed
 ,Brunei,4.5353,114.7277,2020-03-11,11,Confirmed
@@ -869,6 +919,7 @@ Australian Capital Territory,Australia,-35.4735,149.0124,2020-03-17,2,Confirmed
 ,Brunei,4.5353,114.7277,2020-03-15,50,Confirmed
 ,Brunei,4.5353,114.7277,2020-03-16,54,Confirmed
 ,Brunei,4.5353,114.7277,2020-03-17,56,Confirmed
+,Brunei,4.5353,114.7277,2020-03-18,68,Confirmed
 ,Bulgaria,42.7339,25.4858,2020-03-08,4,Confirmed
 ,Bulgaria,42.7339,25.4858,2020-03-09,4,Confirmed
 ,Bulgaria,42.7339,25.4858,2020-03-10,4,Confirmed
@@ -886,6 +937,8 @@ Australian Capital Territory,Australia,-35.4735,149.0124,2020-03-17,2,Confirmed
 ,Bulgaria,42.7339,25.4858,2020-03-16,52,Confirmed
 ,Bulgaria,42.7339,25.4858,2020-03-17,2,Death
 ,Bulgaria,42.7339,25.4858,2020-03-17,67,Confirmed
+,Bulgaria,42.7339,25.4858,2020-03-18,2,Death
+,Bulgaria,42.7339,25.4858,2020-03-18,92,Confirmed
 ,Burkina Faso,12.2383,-1.5616,2020-03-10,1,Confirmed
 ,Burkina Faso,12.2383,-1.5616,2020-03-11,2,Confirmed
 ,Burkina Faso,12.2383,-1.5616,2020-03-12,2,Confirmed
@@ -894,6 +947,8 @@ Australian Capital Territory,Australia,-35.4735,149.0124,2020-03-17,2,Confirmed
 ,Burkina Faso,12.2383,-1.5616,2020-03-15,3,Confirmed
 ,Burkina Faso,12.2383,-1.5616,2020-03-16,15,Confirmed
 ,Burkina Faso,12.2383,-1.5616,2020-03-17,15,Confirmed
+,Burkina Faso,12.2383,-1.5616,2020-03-18,1,Death
+,Burkina Faso,12.2383,-1.5616,2020-03-18,20,Confirmed
 ,Cambodia,11.55,104.9167,2020-01-27,1,Confirmed
 ,Cambodia,11.55,104.9167,2020-01-28,1,Confirmed
 ,Cambodia,11.55,104.9167,2020-01-29,1,Confirmed
@@ -980,6 +1035,8 @@ Australian Capital Territory,Australia,-35.4735,149.0124,2020-03-17,2,Confirmed
 ,Cambodia,11.55,104.9167,2020-03-16,7,Confirmed
 ,Cambodia,11.55,104.9167,2020-03-17,1,Recovered
 ,Cambodia,11.55,104.9167,2020-03-17,33,Confirmed
+,Cambodia,11.55,104.9167,2020-03-18,1,Recovered
+,Cambodia,11.55,104.9167,2020-03-18,35,Confirmed
 ,Cameroon,3.8480000000000003,11.5021,2020-03-06,1,Confirmed
 ,Cameroon,3.8480000000000003,11.5021,2020-03-07,1,Confirmed
 ,Cameroon,3.8480000000000003,11.5021,2020-03-08,2,Confirmed
@@ -992,6 +1049,7 @@ Australian Capital Territory,Australia,-35.4735,149.0124,2020-03-17,2,Confirmed
 ,Cameroon,3.8480000000000003,11.5021,2020-03-15,2,Confirmed
 ,Cameroon,3.8480000000000003,11.5021,2020-03-16,4,Confirmed
 ,Cameroon,3.8480000000000003,11.5021,2020-03-17,10,Confirmed
+,Cameroon,3.8480000000000003,11.5021,2020-03-18,10,Confirmed
 Ontario,Canada,51.2538,-85.3232,2020-01-26,1,Confirmed
 Ontario,Canada,51.2538,-85.3232,2020-01-27,1,Confirmed
 British Columbia,Canada,49.2827,-123.1207,2020-01-28,1,Confirmed
@@ -1220,9 +1278,25 @@ Grand Princess,Canada,37.6489,-122.6655,2020-03-17,8,Confirmed
 Newfoundland and Labrador,Canada,53.1355,-57.6604,2020-03-17,3,Confirmed
 Prince Edward Island,Canada,46.5107,-63.4168,2020-03-17,1,Confirmed
 Nova Scotia,Canada,44.681999999999995,-63.7443,2020-03-17,7,Confirmed
+British Columbia,Canada,49.2827,-123.1207,2020-03-18,7,Death
+Ontario,Canada,51.2538,-85.3232,2020-03-18,1,Death
+British Columbia,Canada,49.2827,-123.1207,2020-03-18,4,Recovered
+Ontario,Canada,51.2538,-85.3232,2020-03-18,5,Recovered
+British Columbia,Canada,49.2827,-123.1207,2020-03-18,186,Confirmed
+Ontario,Canada,51.2538,-85.3232,2020-03-18,221,Confirmed
+Alberta,Canada,53.9333,-116.5765,2020-03-18,97,Confirmed
+Quebec,Canada,52.9399,-73.5491,2020-03-18,94,Confirmed
+New Brunswick,Canada,46.5653,-66.4619,2020-03-18,11,Confirmed
+Manitoba,Canada,53.7609,-98.8139,2020-03-18,15,Confirmed
+Saskatchewan,Canada,52.9399,-106.4509,2020-03-18,8,Confirmed
+Grand Princess,Canada,37.6489,-122.6655,2020-03-18,9,Confirmed
+Newfoundland and Labrador,Canada,53.1355,-57.6604,2020-03-18,3,Confirmed
+Prince Edward Island,Canada,46.5107,-63.4168,2020-03-18,1,Confirmed
+Nova Scotia,Canada,44.681999999999995,-63.7443,2020-03-18,12,Confirmed
 ,Central African Republic,6.6111,20.9394,2020-03-15,1,Confirmed
 ,Central African Republic,6.6111,20.9394,2020-03-16,1,Confirmed
 ,Central African Republic,6.6111,20.9394,2020-03-17,1,Confirmed
+,Central African Republic,6.6111,20.9394,2020-03-18,1,Confirmed
 ,Chile,-35.6751,-71.543,2020-03-03,1,Confirmed
 ,Chile,-35.6751,-71.543,2020-03-04,1,Confirmed
 ,Chile,-35.6751,-71.543,2020-03-05,4,Confirmed
@@ -1238,6 +1312,7 @@ Nova Scotia,Canada,44.681999999999995,-63.7443,2020-03-17,7,Confirmed
 ,Chile,-35.6751,-71.543,2020-03-15,74,Confirmed
 ,Chile,-35.6751,-71.543,2020-03-16,155,Confirmed
 ,Chile,-35.6751,-71.543,2020-03-17,201,Confirmed
+,Chile,-35.6751,-71.543,2020-03-18,238,Confirmed
 Hubei,China,30.9756,112.2707,2020-01-22,17,Death
 Hubei,China,30.9756,112.2707,2020-01-22,28,Recovered
 Hubei,China,30.9756,112.2707,2020-01-22,444,Confirmed
@@ -5720,6 +5795,99 @@ Ningxia,China,37.2692,106.1655,2020-03-17,75,Confirmed
 Qinghai,China,35.7452,95.9956,2020-03-17,18,Confirmed
 Macau,China,22.1667,113.55,2020-03-17,12,Confirmed
 Tibet,China,31.6927,88.0924,2020-03-17,1,Confirmed
+Hubei,China,30.9756,112.2707,2020-03-18,3122,Death
+Guangdong,China,23.3417,113.4244,2020-03-18,8,Death
+Henan,China,33.882,113.61399999999999,2020-03-18,22,Death
+Zhejiang,China,29.1832,120.0934,2020-03-18,1,Death
+Hunan,China,27.6104,111.7088,2020-03-18,4,Death
+Anhui,China,31.8257,117.2264,2020-03-18,6,Death
+Jiangxi,China,27.614,115.7221,2020-03-18,1,Death
+Shandong,China,36.3427,118.1498,2020-03-18,7,Death
+Chongqing,China,30.0572,107.874,2020-03-18,6,Death
+Sichuan,China,30.6171,102.7103,2020-03-18,3,Death
+Heilongjiang,China,47.861999999999995,127.7615,2020-03-18,13,Death
+Beijing,China,40.1824,116.4142,2020-03-18,8,Death
+Shanghai,China,31.201999999999998,121.4491,2020-03-18,3,Death
+Hebei,China,39.549,116.1306,2020-03-18,6,Death
+Fujian,China,26.0789,117.9874,2020-03-18,1,Death
+Guangxi,China,23.8298,108.7881,2020-03-18,2,Death
+Shaanxi,China,35.1917,108.8701,2020-03-18,3,Death
+Yunnan,China,24.974,101.48700000000001,2020-03-18,2,Death
+Hainan,China,19.1959,109.7453,2020-03-18,6,Death
+Guizhou,China,26.8154,106.8748,2020-03-18,2,Death
+Tianjin,China,39.3054,117.323,2020-03-18,3,Death
+Gansu,China,37.8099,101.0583,2020-03-18,2,Death
+Hong Kong,China,22.3,114.2,2020-03-18,4,Death
+Liaoning,China,41.2956,122.6085,2020-03-18,1,Death
+Jilin,China,43.6661,126.1923,2020-03-18,1,Death
+Xinjiang,China,41.1129,85.2401,2020-03-18,3,Death
+Inner Mongolia,China,44.0935,113.9448,2020-03-18,1,Death
+Hubei,China,30.9756,112.2707,2020-03-18,56927,Recovered
+Guangdong,China,23.3417,113.4244,2020-03-18,1313,Recovered
+Henan,China,33.882,113.61399999999999,2020-03-18,1250,Recovered
+Zhejiang,China,29.1832,120.0934,2020-03-18,1216,Recovered
+Hunan,China,27.6104,111.7088,2020-03-18,1014,Recovered
+Anhui,China,31.8257,117.2264,2020-03-18,984,Recovered
+Jiangxi,China,27.614,115.7221,2020-03-18,934,Recovered
+Shandong,China,36.3427,118.1498,2020-03-18,746,Recovered
+Jiangsu,China,32.9711,119.455,2020-03-18,631,Recovered
+Chongqing,China,30.0572,107.874,2020-03-18,570,Recovered
+Sichuan,China,30.6171,102.7103,2020-03-18,525,Recovered
+Heilongjiang,China,47.861999999999995,127.7615,2020-03-18,459,Recovered
+Beijing,China,40.1824,116.4142,2020-03-18,378,Recovered
+Shanghai,China,31.201999999999998,121.4491,2020-03-18,326,Recovered
+Hebei,China,39.549,116.1306,2020-03-18,310,Recovered
+Fujian,China,26.0789,117.9874,2020-03-18,295,Recovered
+Guangxi,China,23.8298,108.7881,2020-03-18,250,Recovered
+Shaanxi,China,35.1917,108.8701,2020-03-18,237,Recovered
+Yunnan,China,24.974,101.48700000000001,2020-03-18,172,Recovered
+Hainan,China,19.1959,109.7453,2020-03-18,161,Recovered
+Guizhou,China,26.8154,106.8748,2020-03-18,144,Recovered
+Tianjin,China,39.3054,117.323,2020-03-18,133,Recovered
+Shanxi,China,37.5777,112.2922,2020-03-18,133,Recovered
+Gansu,China,37.8099,101.0583,2020-03-18,91,Recovered
+Hong Kong,China,22.3,114.2,2020-03-18,92,Recovered
+Liaoning,China,41.2956,122.6085,2020-03-18,122,Recovered
+Jilin,China,43.6661,126.1923,2020-03-18,92,Recovered
+Xinjiang,China,41.1129,85.2401,2020-03-18,73,Recovered
+Inner Mongolia,China,44.0935,113.9448,2020-03-18,73,Recovered
+Ningxia,China,37.2692,106.1655,2020-03-18,75,Recovered
+Qinghai,China,35.7452,95.9956,2020-03-18,18,Recovered
+Macau,China,22.1667,113.55,2020-03-18,10,Recovered
+Tibet,China,31.6927,88.0924,2020-03-18,1,Recovered
+Hubei,China,30.9756,112.2707,2020-03-18,67800,Confirmed
+Guangdong,China,23.3417,113.4244,2020-03-18,1370,Confirmed
+Henan,China,33.882,113.61399999999999,2020-03-18,1273,Confirmed
+Zhejiang,China,29.1832,120.0934,2020-03-18,1232,Confirmed
+Hunan,China,27.6104,111.7088,2020-03-18,1018,Confirmed
+Anhui,China,31.8257,117.2264,2020-03-18,990,Confirmed
+Jiangxi,China,27.614,115.7221,2020-03-18,935,Confirmed
+Shandong,China,36.3427,118.1498,2020-03-18,761,Confirmed
+Jiangsu,China,32.9711,119.455,2020-03-18,631,Confirmed
+Chongqing,China,30.0572,107.874,2020-03-18,576,Confirmed
+Sichuan,China,30.6171,102.7103,2020-03-18,540,Confirmed
+Heilongjiang,China,47.861999999999995,127.7615,2020-03-18,482,Confirmed
+Beijing,China,40.1824,116.4142,2020-03-18,469,Confirmed
+Shanghai,China,31.201999999999998,121.4491,2020-03-18,361,Confirmed
+Hebei,China,39.549,116.1306,2020-03-18,318,Confirmed
+Fujian,China,26.0789,117.9874,2020-03-18,296,Confirmed
+Guangxi,China,23.8298,108.7881,2020-03-18,253,Confirmed
+Shaanxi,China,35.1917,108.8701,2020-03-18,246,Confirmed
+Yunnan,China,24.974,101.48700000000001,2020-03-18,176,Confirmed
+Hainan,China,19.1959,109.7453,2020-03-18,168,Confirmed
+Guizhou,China,26.8154,106.8748,2020-03-18,146,Confirmed
+Tianjin,China,39.3054,117.323,2020-03-18,136,Confirmed
+Shanxi,China,37.5777,112.2922,2020-03-18,133,Confirmed
+Gansu,China,37.8099,101.0583,2020-03-18,133,Confirmed
+Hong Kong,China,22.3,114.2,2020-03-18,181,Confirmed
+Liaoning,China,41.2956,122.6085,2020-03-18,125,Confirmed
+Jilin,China,43.6661,126.1923,2020-03-18,93,Confirmed
+Xinjiang,China,41.1129,85.2401,2020-03-18,76,Confirmed
+Inner Mongolia,China,44.0935,113.9448,2020-03-18,75,Confirmed
+Ningxia,China,37.2692,106.1655,2020-03-18,75,Confirmed
+Qinghai,China,35.7452,95.9956,2020-03-18,18,Confirmed
+Macau,China,22.1667,113.55,2020-03-18,15,Confirmed
+Tibet,China,31.6927,88.0924,2020-03-18,1,Confirmed
 ,Colombia,4.5709,-74.2973,2020-03-06,1,Confirmed
 ,Colombia,4.5709,-74.2973,2020-03-07,1,Confirmed
 ,Colombia,4.5709,-74.2973,2020-03-08,1,Confirmed
@@ -5733,9 +5901,12 @@ Tibet,China,31.6927,88.0924,2020-03-17,1,Confirmed
 ,Colombia,4.5709,-74.2973,2020-03-16,54,Confirmed
 ,Colombia,4.5709,-74.2973,2020-03-17,1,Recovered
 ,Colombia,4.5709,-74.2973,2020-03-17,65,Confirmed
+,Colombia,4.5709,-74.2973,2020-03-18,1,Recovered
+,Colombia,4.5709,-74.2973,2020-03-18,93,Confirmed
 ,Congo (Brazzaville),-4.0383,21.7587,2020-03-15,1,Confirmed
 ,Congo (Brazzaville),-4.0383,21.7587,2020-03-16,1,Confirmed
 ,Congo (Brazzaville),-4.0383,21.7587,2020-03-17,1,Confirmed
+,Congo (Brazzaville),-4.0383,21.7587,2020-03-18,1,Confirmed
 ,Congo (Kinshasa),-4.0383,21.7587,2020-03-11,1,Confirmed
 ,Congo (Kinshasa),-4.0383,21.7587,2020-03-12,1,Confirmed
 ,Congo (Kinshasa),-4.0383,21.7587,2020-03-13,2,Confirmed
@@ -5743,6 +5914,7 @@ Tibet,China,31.6927,88.0924,2020-03-17,1,Confirmed
 ,Congo (Kinshasa),-4.0383,21.7587,2020-03-15,2,Confirmed
 ,Congo (Kinshasa),-4.0383,21.7587,2020-03-16,2,Confirmed
 ,Congo (Kinshasa),-4.0383,21.7587,2020-03-17,3,Confirmed
+,Congo (Kinshasa),-4.0383,21.7587,2020-03-18,4,Confirmed
 ,Costa Rica,9.7489,-83.7534,2020-03-06,1,Confirmed
 ,Costa Rica,9.7489,-83.7534,2020-03-07,1,Confirmed
 ,Costa Rica,9.7489,-83.7534,2020-03-08,5,Confirmed
@@ -5755,6 +5927,7 @@ Tibet,China,31.6927,88.0924,2020-03-17,1,Confirmed
 ,Costa Rica,9.7489,-83.7534,2020-03-15,27,Confirmed
 ,Costa Rica,9.7489,-83.7534,2020-03-16,35,Confirmed
 ,Costa Rica,9.7489,-83.7534,2020-03-17,41,Confirmed
+,Costa Rica,9.7489,-83.7534,2020-03-18,50,Confirmed
 ,Cote d'Ivoire,7.54,-5.5471,2020-03-11,1,Confirmed
 ,Cote d'Ivoire,7.54,-5.5471,2020-03-12,1,Confirmed
 ,Cote d'Ivoire,7.54,-5.5471,2020-03-13,1,Confirmed
@@ -5763,6 +5936,8 @@ Tibet,China,31.6927,88.0924,2020-03-17,1,Confirmed
 ,Cote d'Ivoire,7.54,-5.5471,2020-03-16,1,Confirmed
 ,Cote d'Ivoire,7.54,-5.5471,2020-03-17,1,Recovered
 ,Cote d'Ivoire,7.54,-5.5471,2020-03-17,5,Confirmed
+,Cote d'Ivoire,7.54,-5.5471,2020-03-18,1,Recovered
+,Cote d'Ivoire,7.54,-5.5471,2020-03-18,6,Confirmed
 ,Croatia,45.1,15.2,2020-02-25,1,Confirmed
 ,Croatia,45.1,15.2,2020-02-26,3,Confirmed
 ,Croatia,45.1,15.2,2020-02-27,3,Confirmed
@@ -5790,6 +5965,8 @@ Tibet,China,31.6927,88.0924,2020-03-17,1,Confirmed
 ,Croatia,45.1,15.2,2020-03-16,57,Confirmed
 ,Croatia,45.1,15.2,2020-03-17,4,Recovered
 ,Croatia,45.1,15.2,2020-03-17,65,Confirmed
+,Croatia,45.1,15.2,2020-03-18,4,Recovered
+,Croatia,45.1,15.2,2020-03-18,81,Confirmed
 Diamond Princess,Cruise Ship,35.4437,139.638,2020-02-07,61,Confirmed
 Diamond Princess,Cruise Ship,35.4437,139.638,2020-02-08,61,Confirmed
 Diamond Princess,Cruise Ship,35.4437,139.638,2020-02-09,64,Confirmed
@@ -5882,12 +6059,17 @@ Diamond Princess,Cruise Ship,35.4437,139.638,2020-03-16,696,Confirmed
 Diamond Princess,Cruise Ship,35.4437,139.638,2020-03-17,7,Death
 Diamond Princess,Cruise Ship,35.4437,139.638,2020-03-17,325,Recovered
 Diamond Princess,Cruise Ship,35.4437,139.638,2020-03-17,696,Confirmed
+Diamond Princess,Cruise Ship,35.4437,139.638,2020-03-18,7,Death
+Diamond Princess,Cruise Ship,35.4437,139.638,2020-03-18,325,Recovered
+Diamond Princess,Cruise Ship,35.4437,139.638,2020-03-18,712,Confirmed
 ,Cuba,22.0,-80.0,2020-03-12,3,Confirmed
 ,Cuba,22.0,-80.0,2020-03-13,4,Confirmed
 ,Cuba,22.0,-80.0,2020-03-14,4,Confirmed
 ,Cuba,22.0,-80.0,2020-03-15,4,Confirmed
 ,Cuba,22.0,-80.0,2020-03-16,4,Confirmed
 ,Cuba,22.0,-80.0,2020-03-17,5,Confirmed
+,Cuba,22.0,-80.0,2020-03-18,1,Death
+,Cuba,22.0,-80.0,2020-03-18,7,Confirmed
 ,Cyprus,35.1264,33.4299,2020-03-09,2,Confirmed
 ,Cyprus,35.1264,33.4299,2020-03-10,3,Confirmed
 ,Cyprus,35.1264,33.4299,2020-03-11,6,Confirmed
@@ -5897,6 +6079,7 @@ Diamond Princess,Cruise Ship,35.4437,139.638,2020-03-17,696,Confirmed
 ,Cyprus,35.1264,33.4299,2020-03-15,26,Confirmed
 ,Cyprus,35.1264,33.4299,2020-03-16,33,Confirmed
 ,Cyprus,35.1264,33.4299,2020-03-17,46,Confirmed
+,Cyprus,35.1264,33.4299,2020-03-18,49,Confirmed
 ,Czechia,49.8175,15.472999999999999,2020-03-01,3,Confirmed
 ,Czechia,49.8175,15.472999999999999,2020-03-02,3,Confirmed
 ,Czechia,49.8175,15.472999999999999,2020-03-03,5,Confirmed
@@ -5916,6 +6099,8 @@ Diamond Princess,Cruise Ship,35.4437,139.638,2020-03-17,696,Confirmed
 ,Czechia,49.8175,15.472999999999999,2020-03-16,298,Confirmed
 ,Czechia,49.8175,15.472999999999999,2020-03-17,3,Recovered
 ,Czechia,49.8175,15.472999999999999,2020-03-17,396,Confirmed
+,Czechia,49.8175,15.472999999999999,2020-03-18,3,Recovered
+,Czechia,49.8175,15.472999999999999,2020-03-18,464,Confirmed
 Denmark,Denmark,56.2639,9.5018,2020-02-27,1,Confirmed
 Denmark,Denmark,56.2639,9.5018,2020-02-28,1,Confirmed
 Denmark,Denmark,56.2639,9.5018,2020-02-29,3,Confirmed
@@ -5966,6 +6151,11 @@ Denmark,Denmark,56.2639,9.5018,2020-03-17,4,Death
 Denmark,Denmark,56.2639,9.5018,2020-03-17,1,Recovered
 Denmark,Denmark,56.2639,9.5018,2020-03-17,977,Confirmed
 Faroe Islands,Denmark,61.8926,-6.9118,2020-03-17,47,Confirmed
+Denmark,Denmark,56.2639,9.5018,2020-03-18,4,Death
+Denmark,Denmark,56.2639,9.5018,2020-03-18,1,Recovered
+Denmark,Denmark,56.2639,9.5018,2020-03-18,1057,Confirmed
+Faroe Islands,Denmark,61.8926,-6.9118,2020-03-18,58,Confirmed
+,Djibouti,11.8251,42.5903,2020-03-18,1,Confirmed
 ,Dominican Republic,18.7357,-70.1627,2020-03-01,1,Confirmed
 ,Dominican Republic,18.7357,-70.1627,2020-03-02,1,Confirmed
 ,Dominican Republic,18.7357,-70.1627,2020-03-03,1,Confirmed
@@ -5984,6 +6174,8 @@ Faroe Islands,Denmark,61.8926,-6.9118,2020-03-17,47,Confirmed
 ,Dominican Republic,18.7357,-70.1627,2020-03-16,11,Confirmed
 ,Dominican Republic,18.7357,-70.1627,2020-03-17,1,Death
 ,Dominican Republic,18.7357,-70.1627,2020-03-17,21,Confirmed
+,Dominican Republic,18.7357,-70.1627,2020-03-18,1,Death
+,Dominican Republic,18.7357,-70.1627,2020-03-18,21,Confirmed
 ,Ecuador,-1.8312,-78.1834,2020-03-01,6,Confirmed
 ,Ecuador,-1.8312,-78.1834,2020-03-02,6,Confirmed
 ,Ecuador,-1.8312,-78.1834,2020-03-03,7,Confirmed
@@ -6005,6 +6197,8 @@ Faroe Islands,Denmark,61.8926,-6.9118,2020-03-17,47,Confirmed
 ,Ecuador,-1.8312,-78.1834,2020-03-16,37,Confirmed
 ,Ecuador,-1.8312,-78.1834,2020-03-17,2,Death
 ,Ecuador,-1.8312,-78.1834,2020-03-17,58,Confirmed
+,Ecuador,-1.8312,-78.1834,2020-03-18,2,Death
+,Ecuador,-1.8312,-78.1834,2020-03-18,111,Confirmed
 ,Egypt,26.0,30.0,2020-02-14,1,Confirmed
 ,Egypt,26.0,30.0,2020-02-15,1,Confirmed
 ,Egypt,26.0,30.0,2020-02-16,1,Confirmed
@@ -6067,9 +6261,13 @@ Faroe Islands,Denmark,61.8926,-6.9118,2020-03-17,47,Confirmed
 ,Egypt,26.0,30.0,2020-03-17,4,Death
 ,Egypt,26.0,30.0,2020-03-17,32,Recovered
 ,Egypt,26.0,30.0,2020-03-17,196,Confirmed
+,Egypt,26.0,30.0,2020-03-18,6,Death
+,Egypt,26.0,30.0,2020-03-18,32,Recovered
+,Egypt,26.0,30.0,2020-03-18,196,Confirmed
 ,Equatorial Guinea,1.5,10.0,2020-03-15,1,Confirmed
 ,Equatorial Guinea,1.5,10.0,2020-03-16,1,Confirmed
 ,Equatorial Guinea,1.5,10.0,2020-03-17,1,Confirmed
+,Equatorial Guinea,1.5,10.0,2020-03-18,4,Confirmed
 ,Estonia,58.5953,25.0136,2020-02-27,1,Confirmed
 ,Estonia,58.5953,25.0136,2020-02-28,1,Confirmed
 ,Estonia,58.5953,25.0136,2020-02-29,1,Confirmed
@@ -6093,15 +6291,19 @@ Faroe Islands,Denmark,61.8926,-6.9118,2020-03-17,47,Confirmed
 ,Estonia,58.5953,25.0136,2020-03-16,205,Confirmed
 ,Estonia,58.5953,25.0136,2020-03-17,1,Recovered
 ,Estonia,58.5953,25.0136,2020-03-17,225,Confirmed
+,Estonia,58.5953,25.0136,2020-03-18,1,Recovered
+,Estonia,58.5953,25.0136,2020-03-18,258,Confirmed
 ,Eswatini,-26.5225,31.4659,2020-03-14,1,Confirmed
 ,Eswatini,-26.5225,31.4659,2020-03-15,1,Confirmed
 ,Eswatini,-26.5225,31.4659,2020-03-16,1,Confirmed
 ,Eswatini,-26.5225,31.4659,2020-03-17,1,Confirmed
+,Eswatini,-26.5225,31.4659,2020-03-18,1,Confirmed
 ,Ethiopia,9.145,40.4897,2020-03-13,1,Confirmed
 ,Ethiopia,9.145,40.4897,2020-03-14,1,Confirmed
 ,Ethiopia,9.145,40.4897,2020-03-15,1,Confirmed
 ,Ethiopia,9.145,40.4897,2020-03-16,5,Confirmed
 ,Ethiopia,9.145,40.4897,2020-03-17,5,Confirmed
+,Ethiopia,9.145,40.4897,2020-03-18,6,Confirmed
 ,Finland,64.0,26.0,2020-01-29,1,Confirmed
 ,Finland,64.0,26.0,2020-01-30,1,Confirmed
 ,Finland,64.0,26.0,2020-01-31,1,Confirmed
@@ -6186,6 +6388,8 @@ Faroe Islands,Denmark,61.8926,-6.9118,2020-03-17,47,Confirmed
 ,Finland,64.0,26.0,2020-03-16,277,Confirmed
 ,Finland,64.0,26.0,2020-03-17,10,Recovered
 ,Finland,64.0,26.0,2020-03-17,321,Confirmed
+,Finland,64.0,26.0,2020-03-18,10,Recovered
+,Finland,64.0,26.0,2020-03-18,336,Confirmed
 France,France,46.2276,2.2137,2020-01-24,2,Confirmed
 France,France,46.2276,2.2137,2020-01-25,3,Confirmed
 France,France,46.2276,2.2137,2020-01-26,3,Confirmed
@@ -6361,10 +6565,23 @@ French Guiana,France,3.9339,-53.1258,2020-03-17,11,Confirmed
 Mayotte,France,-12.8275,45.1662,2020-03-17,1,Confirmed
 Guadeloupe,France,16.25,-61.5833,2020-03-17,18,Confirmed
 Reunion,France,-21.1351,55.2471,2020-03-17,9,Confirmed
+France,France,46.2276,2.2137,2020-03-18,148,Death
+France,France,46.2276,2.2137,2020-03-18,12,Recovered
+France,France,46.2276,2.2137,2020-03-18,9043,Confirmed
+St Martin,France,18.0708,-63.0501,2020-03-18,3,Confirmed
+Saint Barthelemy,France,17.9,-62.8333,2020-03-18,3,Confirmed
+French Polynesia,France,-17.6797,149.4068,2020-03-18,3,Confirmed
+French Guiana,France,3.9339,-53.1258,2020-03-18,11,Confirmed
+Mayotte,France,-12.8275,45.1662,2020-03-18,3,Confirmed
+Guadeloupe,France,16.25,-61.5833,2020-03-18,27,Confirmed
+Reunion,France,-21.1351,55.2471,2020-03-18,12,Confirmed
 ,Gabon,-0.8037,11.6094,2020-03-14,1,Confirmed
 ,Gabon,-0.8037,11.6094,2020-03-15,1,Confirmed
 ,Gabon,-0.8037,11.6094,2020-03-16,1,Confirmed
 ,Gabon,-0.8037,11.6094,2020-03-17,1,Confirmed
+,Gabon,-0.8037,11.6094,2020-03-18,1,Confirmed
+,"Gambia, The",13.4432,-15.3101,2020-03-17,1,Confirmed
+,"Gambia, The",13.4432,-15.3101,2020-03-18,1,Confirmed
 ,Georgia,42.3154,43.3569,2020-02-26,1,Confirmed
 ,Georgia,42.3154,43.3569,2020-02-27,1,Confirmed
 ,Georgia,42.3154,43.3569,2020-02-28,1,Confirmed
@@ -6388,6 +6605,8 @@ Reunion,France,-21.1351,55.2471,2020-03-17,9,Confirmed
 ,Georgia,42.3154,43.3569,2020-03-16,33,Confirmed
 ,Georgia,42.3154,43.3569,2020-03-17,1,Recovered
 ,Georgia,42.3154,43.3569,2020-03-17,34,Confirmed
+,Georgia,42.3154,43.3569,2020-03-18,1,Recovered
+,Georgia,42.3154,43.3569,2020-03-18,38,Confirmed
 ,Germany,51.0,9.0,2020-01-27,1,Confirmed
 ,Germany,51.0,9.0,2020-01-28,4,Confirmed
 ,Germany,51.0,9.0,2020-01-29,4,Confirmed
@@ -6482,10 +6701,14 @@ Reunion,France,-21.1351,55.2471,2020-03-17,9,Confirmed
 ,Germany,51.0,9.0,2020-03-17,24,Death
 ,Germany,51.0,9.0,2020-03-17,67,Recovered
 ,Germany,51.0,9.0,2020-03-17,9257,Confirmed
+,Germany,51.0,9.0,2020-03-18,28,Death
+,Germany,51.0,9.0,2020-03-18,105,Recovered
+,Germany,51.0,9.0,2020-03-18,12327,Confirmed
 ,Ghana,7.9465,-1.0232,2020-03-14,3,Confirmed
 ,Ghana,7.9465,-1.0232,2020-03-15,6,Confirmed
 ,Ghana,7.9465,-1.0232,2020-03-16,6,Confirmed
 ,Ghana,7.9465,-1.0232,2020-03-17,7,Confirmed
+,Ghana,7.9465,-1.0232,2020-03-18,7,Confirmed
 ,Greece,39.0742,21.8243,2020-02-26,1,Confirmed
 ,Greece,39.0742,21.8243,2020-02-27,3,Confirmed
 ,Greece,39.0742,21.8243,2020-02-28,4,Confirmed
@@ -6518,23 +6741,26 @@ Reunion,France,-21.1351,55.2471,2020-03-17,9,Confirmed
 ,Greece,39.0742,21.8243,2020-03-17,5,Death
 ,Greece,39.0742,21.8243,2020-03-17,8,Recovered
 ,Greece,39.0742,21.8243,2020-03-17,387,Confirmed
+,Greece,39.0742,21.8243,2020-03-18,5,Death
+,Greece,39.0742,21.8243,2020-03-18,8,Recovered
+,Greece,39.0742,21.8243,2020-03-18,418,Confirmed
 ,Greenland,71.7069,-42.6043,2020-03-16,1,Confirmed
 ,Greenland,71.7069,-42.6043,2020-03-17,1,Confirmed
+,Greenland,71.7069,-42.6043,2020-03-18,1,Confirmed
 ,Guatemala,15.7835,-90.2308,2020-03-14,1,Confirmed
 ,Guatemala,15.7835,-90.2308,2020-03-15,1,Confirmed
 ,Guatemala,15.7835,-90.2308,2020-03-16,1,Death
 ,Guatemala,15.7835,-90.2308,2020-03-16,2,Confirmed
 ,Guatemala,15.7835,-90.2308,2020-03-17,1,Death
 ,Guatemala,15.7835,-90.2308,2020-03-17,6,Confirmed
-,Guernsey,49.45,-2.58,2020-03-14,1,Confirmed
-,Guernsey,49.45,-2.58,2020-03-15,1,Confirmed
-,Guernsey,49.45,-2.58,2020-03-16,1,Confirmed
-,Guernsey,49.45,-2.58,2020-03-17,1,Confirmed
+,Guatemala,15.7835,-90.2308,2020-03-18,1,Death
+,Guatemala,15.7835,-90.2308,2020-03-18,6,Confirmed
 ,Guinea,9.9456,-9.6966,2020-03-13,1,Confirmed
 ,Guinea,9.9456,-9.6966,2020-03-14,1,Confirmed
 ,Guinea,9.9456,-9.6966,2020-03-15,1,Confirmed
 ,Guinea,9.9456,-9.6966,2020-03-16,1,Confirmed
 ,Guinea,9.9456,-9.6966,2020-03-17,1,Confirmed
+,Guinea,9.9456,-9.6966,2020-03-18,1,Confirmed
 ,Guyana,5.0,-58.75,2020-03-12,1,Death
 ,Guyana,5.0,-58.75,2020-03-12,1,Confirmed
 ,Guyana,5.0,-58.75,2020-03-13,1,Death
@@ -6547,6 +6773,8 @@ Reunion,France,-21.1351,55.2471,2020-03-17,9,Confirmed
 ,Guyana,5.0,-58.75,2020-03-16,4,Confirmed
 ,Guyana,5.0,-58.75,2020-03-17,1,Death
 ,Guyana,5.0,-58.75,2020-03-17,7,Confirmed
+,Guyana,5.0,-58.75,2020-03-18,1,Death
+,Guyana,5.0,-58.75,2020-03-18,7,Confirmed
 ,Holy See,41.9029,12.4534,2020-03-06,1,Confirmed
 ,Holy See,41.9029,12.4534,2020-03-07,1,Confirmed
 ,Holy See,41.9029,12.4534,2020-03-08,1,Confirmed
@@ -6559,6 +6787,7 @@ Reunion,France,-21.1351,55.2471,2020-03-17,9,Confirmed
 ,Holy See,41.9029,12.4534,2020-03-15,1,Confirmed
 ,Holy See,41.9029,12.4534,2020-03-16,1,Confirmed
 ,Holy See,41.9029,12.4534,2020-03-17,1,Confirmed
+,Holy See,41.9029,12.4534,2020-03-18,1,Confirmed
 ,Honduras,15.2,-86.2419,2020-03-11,2,Confirmed
 ,Honduras,15.2,-86.2419,2020-03-12,2,Confirmed
 ,Honduras,15.2,-86.2419,2020-03-13,2,Confirmed
@@ -6566,6 +6795,7 @@ Reunion,France,-21.1351,55.2471,2020-03-17,9,Confirmed
 ,Honduras,15.2,-86.2419,2020-03-15,3,Confirmed
 ,Honduras,15.2,-86.2419,2020-03-16,6,Confirmed
 ,Honduras,15.2,-86.2419,2020-03-17,8,Confirmed
+,Honduras,15.2,-86.2419,2020-03-18,9,Confirmed
 ,Hungary,47.1625,19.5033,2020-03-04,2,Confirmed
 ,Hungary,47.1625,19.5033,2020-03-05,2,Confirmed
 ,Hungary,47.1625,19.5033,2020-03-06,2,Confirmed
@@ -6587,6 +6817,9 @@ Reunion,France,-21.1351,55.2471,2020-03-17,9,Confirmed
 ,Hungary,47.1625,19.5033,2020-03-17,1,Death
 ,Hungary,47.1625,19.5033,2020-03-17,2,Recovered
 ,Hungary,47.1625,19.5033,2020-03-17,50,Confirmed
+,Hungary,47.1625,19.5033,2020-03-18,1,Death
+,Hungary,47.1625,19.5033,2020-03-18,2,Recovered
+,Hungary,47.1625,19.5033,2020-03-18,58,Confirmed
 ,Iceland,64.9631,-19.0208,2020-02-28,1,Confirmed
 ,Iceland,64.9631,-19.0208,2020-02-29,1,Confirmed
 ,Iceland,64.9631,-19.0208,2020-03-01,3,Confirmed
@@ -6614,6 +6847,9 @@ Reunion,France,-21.1351,55.2471,2020-03-17,9,Confirmed
 ,Iceland,64.9631,-19.0208,2020-03-16,180,Confirmed
 ,Iceland,64.9631,-19.0208,2020-03-17,1,Death
 ,Iceland,64.9631,-19.0208,2020-03-17,220,Confirmed
+,Iceland,64.9631,-19.0208,2020-03-18,1,Death
+,Iceland,64.9631,-19.0208,2020-03-18,5,Recovered
+,Iceland,64.9631,-19.0208,2020-03-18,250,Confirmed
 ,India,21.0,78.0,2020-01-30,1,Confirmed
 ,India,21.0,78.0,2020-01-31,1,Confirmed
 ,India,21.0,78.0,2020-02-01,1,Confirmed
@@ -6700,6 +6936,9 @@ Reunion,France,-21.1351,55.2471,2020-03-17,9,Confirmed
 ,India,21.0,78.0,2020-03-17,3,Death
 ,India,21.0,78.0,2020-03-17,14,Recovered
 ,India,21.0,78.0,2020-03-17,142,Confirmed
+,India,21.0,78.0,2020-03-18,3,Death
+,India,21.0,78.0,2020-03-18,14,Recovered
+,India,21.0,78.0,2020-03-18,156,Confirmed
 ,Indonesia,-0.7893,113.9213,2020-03-02,2,Confirmed
 ,Indonesia,-0.7893,113.9213,2020-03-03,2,Confirmed
 ,Indonesia,-0.7893,113.9213,2020-03-04,2,Confirmed
@@ -6731,6 +6970,9 @@ Reunion,France,-21.1351,55.2471,2020-03-17,9,Confirmed
 ,Indonesia,-0.7893,113.9213,2020-03-17,5,Death
 ,Indonesia,-0.7893,113.9213,2020-03-17,8,Recovered
 ,Indonesia,-0.7893,113.9213,2020-03-17,172,Confirmed
+,Indonesia,-0.7893,113.9213,2020-03-18,19,Death
+,Indonesia,-0.7893,113.9213,2020-03-18,11,Recovered
+,Indonesia,-0.7893,113.9213,2020-03-18,227,Confirmed
 ,Iran,32.0,53.0,2020-02-19,2,Death
 ,Iran,32.0,53.0,2020-02-19,2,Confirmed
 ,Iran,32.0,53.0,2020-02-20,2,Death
@@ -6808,6 +7050,9 @@ Reunion,France,-21.1351,55.2471,2020-03-17,9,Confirmed
 ,Iran,32.0,53.0,2020-03-17,988,Death
 ,Iran,32.0,53.0,2020-03-17,5389,Recovered
 ,Iran,32.0,53.0,2020-03-17,16169,Confirmed
+,Iran,32.0,53.0,2020-03-18,1135,Death
+,Iran,32.0,53.0,2020-03-18,5389,Recovered
+,Iran,32.0,53.0,2020-03-18,17361,Confirmed
 ,Iraq,33.0,44.0,2020-02-24,1,Confirmed
 ,Iraq,33.0,44.0,2020-02-25,1,Confirmed
 ,Iraq,33.0,44.0,2020-02-26,5,Confirmed
@@ -6854,6 +7099,9 @@ Reunion,France,-21.1351,55.2471,2020-03-17,9,Confirmed
 ,Iraq,33.0,44.0,2020-03-17,11,Death
 ,Iraq,33.0,44.0,2020-03-17,32,Recovered
 ,Iraq,33.0,44.0,2020-03-17,154,Confirmed
+,Iraq,33.0,44.0,2020-03-18,12,Death
+,Iraq,33.0,44.0,2020-03-18,43,Recovered
+,Iraq,33.0,44.0,2020-03-18,164,Confirmed
 ,Ireland,53.1424,-7.6921,2020-02-29,1,Confirmed
 ,Ireland,53.1424,-7.6921,2020-03-01,1,Confirmed
 ,Ireland,53.1424,-7.6921,2020-03-02,1,Confirmed
@@ -6880,6 +7128,9 @@ Reunion,France,-21.1351,55.2471,2020-03-17,9,Confirmed
 ,Ireland,53.1424,-7.6921,2020-03-17,2,Death
 ,Ireland,53.1424,-7.6921,2020-03-17,5,Recovered
 ,Ireland,53.1424,-7.6921,2020-03-17,223,Confirmed
+,Ireland,53.1424,-7.6921,2020-03-18,2,Death
+,Ireland,53.1424,-7.6921,2020-03-18,5,Recovered
+,Ireland,53.1424,-7.6921,2020-03-18,292,Confirmed
 ,Israel,31.0,35.0,2020-02-21,1,Confirmed
 ,Israel,31.0,35.0,2020-02-22,1,Confirmed
 ,Israel,31.0,35.0,2020-02-23,1,Confirmed
@@ -6926,6 +7177,8 @@ Reunion,France,-21.1351,55.2471,2020-03-17,9,Confirmed
 ,Israel,31.0,35.0,2020-03-16,255,Confirmed
 ,Israel,31.0,35.0,2020-03-17,11,Recovered
 ,Israel,31.0,35.0,2020-03-17,337,Confirmed
+,Israel,31.0,35.0,2020-03-18,11,Recovered
+,Israel,31.0,35.0,2020-03-18,433,Confirmed
 ,Italy,43.0,12.0,2020-01-31,2,Confirmed
 ,Italy,43.0,12.0,2020-02-01,2,Confirmed
 ,Italy,43.0,12.0,2020-02-02,2,Confirmed
@@ -7024,6 +7277,9 @@ Reunion,France,-21.1351,55.2471,2020-03-17,9,Confirmed
 ,Italy,43.0,12.0,2020-03-17,2503,Death
 ,Italy,43.0,12.0,2020-03-17,2941,Recovered
 ,Italy,43.0,12.0,2020-03-17,31506,Confirmed
+,Italy,43.0,12.0,2020-03-18,2978,Death
+,Italy,43.0,12.0,2020-03-18,4025,Recovered
+,Italy,43.0,12.0,2020-03-18,35713,Confirmed
 ,Jamaica,18.1096,-77.2975,2020-03-11,1,Confirmed
 ,Jamaica,18.1096,-77.2975,2020-03-12,2,Confirmed
 ,Jamaica,18.1096,-77.2975,2020-03-13,8,Confirmed
@@ -7033,6 +7289,8 @@ Reunion,France,-21.1351,55.2471,2020-03-17,9,Confirmed
 ,Jamaica,18.1096,-77.2975,2020-03-16,10,Confirmed
 ,Jamaica,18.1096,-77.2975,2020-03-17,2,Recovered
 ,Jamaica,18.1096,-77.2975,2020-03-17,12,Confirmed
+,Jamaica,18.1096,-77.2975,2020-03-18,2,Recovered
+,Jamaica,18.1096,-77.2975,2020-03-18,13,Confirmed
 ,Japan,36.0,138.0,2020-01-22,2,Confirmed
 ,Japan,36.0,138.0,2020-01-23,1,Confirmed
 ,Japan,36.0,138.0,2020-01-24,2,Confirmed
@@ -7175,10 +7433,9 @@ Reunion,France,-21.1351,55.2471,2020-03-17,9,Confirmed
 ,Japan,36.0,138.0,2020-03-17,29,Death
 ,Japan,36.0,138.0,2020-03-17,144,Recovered
 ,Japan,36.0,138.0,2020-03-17,878,Confirmed
-,Jersey,49.19,-2.11,2020-03-14,2,Confirmed
-,Jersey,49.19,-2.11,2020-03-15,2,Confirmed
-,Jersey,49.19,-2.11,2020-03-16,2,Confirmed
-,Jersey,49.19,-2.11,2020-03-17,2,Confirmed
+,Japan,36.0,138.0,2020-03-18,29,Death
+,Japan,36.0,138.0,2020-03-18,144,Recovered
+,Japan,36.0,138.0,2020-03-18,889,Confirmed
 ,Jordan,31.24,36.51,2020-03-03,1,Confirmed
 ,Jordan,31.24,36.51,2020-03-04,1,Confirmed
 ,Jordan,31.24,36.51,2020-03-05,1,Confirmed
@@ -7199,16 +7456,20 @@ Reunion,France,-21.1351,55.2471,2020-03-17,9,Confirmed
 ,Jordan,31.24,36.51,2020-03-16,17,Confirmed
 ,Jordan,31.24,36.51,2020-03-17,1,Recovered
 ,Jordan,31.24,36.51,2020-03-17,34,Confirmed
+,Jordan,31.24,36.51,2020-03-18,1,Recovered
+,Jordan,31.24,36.51,2020-03-18,52,Confirmed
 ,Kazakhstan,48.0196,66.9237,2020-03-13,4,Confirmed
 ,Kazakhstan,48.0196,66.9237,2020-03-14,6,Confirmed
 ,Kazakhstan,48.0196,66.9237,2020-03-15,9,Confirmed
 ,Kazakhstan,48.0196,66.9237,2020-03-16,10,Confirmed
 ,Kazakhstan,48.0196,66.9237,2020-03-17,33,Confirmed
+,Kazakhstan,48.0196,66.9237,2020-03-18,35,Confirmed
 ,Kenya,-0.0236,37.9062,2020-03-13,1,Confirmed
 ,Kenya,-0.0236,37.9062,2020-03-14,1,Confirmed
 ,Kenya,-0.0236,37.9062,2020-03-15,3,Confirmed
 ,Kenya,-0.0236,37.9062,2020-03-16,3,Confirmed
 ,Kenya,-0.0236,37.9062,2020-03-17,3,Confirmed
+,Kenya,-0.0236,37.9062,2020-03-18,3,Confirmed
 ,"Korea, South",36.0,128.0,2020-01-22,1,Confirmed
 ,"Korea, South",36.0,128.0,2020-01-23,1,Confirmed
 ,"Korea, South",36.0,128.0,2020-01-24,2,Confirmed
@@ -7332,9 +7593,13 @@ Reunion,France,-21.1351,55.2471,2020-03-17,9,Confirmed
 ,"Korea, South",36.0,128.0,2020-03-17,81,Death
 ,"Korea, South",36.0,128.0,2020-03-17,1407,Recovered
 ,"Korea, South",36.0,128.0,2020-03-17,8320,Confirmed
+,"Korea, South",36.0,128.0,2020-03-18,84,Death
+,"Korea, South",36.0,128.0,2020-03-18,1540,Recovered
+,"Korea, South",36.0,128.0,2020-03-18,8413,Confirmed
 ,Kosovo,42.6026,20.903000000000002,2020-03-15,2,Confirmed
 ,Kosovo,42.6026,20.903000000000002,2020-03-16,2,Confirmed
 ,Kosovo,42.6026,20.903000000000002,2020-03-17,2,Confirmed
+,Kosovo,42.6026,20.903000000000002,2020-03-18,2,Confirmed
 ,Kuwait,29.5,47.75,2020-02-24,1,Confirmed
 ,Kuwait,29.5,47.75,2020-02-25,11,Confirmed
 ,Kuwait,29.5,47.75,2020-02-26,26,Confirmed
@@ -7368,6 +7633,9 @@ Reunion,France,-21.1351,55.2471,2020-03-17,9,Confirmed
 ,Kuwait,29.5,47.75,2020-03-16,123,Confirmed
 ,Kuwait,29.5,47.75,2020-03-17,9,Recovered
 ,Kuwait,29.5,47.75,2020-03-17,130,Confirmed
+,Kuwait,29.5,47.75,2020-03-18,15,Recovered
+,Kuwait,29.5,47.75,2020-03-18,142,Confirmed
+,Kyrgyzstan,41.2044,74.7661,2020-03-18,3,Confirmed
 ,Latvia,56.8796,24.6032,2020-03-02,1,Confirmed
 ,Latvia,56.8796,24.6032,2020-03-03,1,Confirmed
 ,Latvia,56.8796,24.6032,2020-03-04,1,Confirmed
@@ -7392,6 +7660,8 @@ Reunion,France,-21.1351,55.2471,2020-03-17,9,Confirmed
 ,Latvia,56.8796,24.6032,2020-03-16,34,Confirmed
 ,Latvia,56.8796,24.6032,2020-03-17,1,Recovered
 ,Latvia,56.8796,24.6032,2020-03-17,49,Confirmed
+,Latvia,56.8796,24.6032,2020-03-18,1,Recovered
+,Latvia,56.8796,24.6032,2020-03-18,71,Confirmed
 ,Lebanon,33.8547,35.8623,2020-02-21,1,Confirmed
 ,Lebanon,33.8547,35.8623,2020-02-22,1,Confirmed
 ,Lebanon,33.8547,35.8623,2020-02-23,1,Confirmed
@@ -7440,8 +7710,12 @@ Reunion,France,-21.1351,55.2471,2020-03-17,9,Confirmed
 ,Lebanon,33.8547,35.8623,2020-03-17,3,Death
 ,Lebanon,33.8547,35.8623,2020-03-17,3,Recovered
 ,Lebanon,33.8547,35.8623,2020-03-17,120,Confirmed
+,Lebanon,33.8547,35.8623,2020-03-18,3,Death
+,Lebanon,33.8547,35.8623,2020-03-18,3,Recovered
+,Lebanon,33.8547,35.8623,2020-03-18,133,Confirmed
 ,Liberia,6.4281,-9.4295,2020-03-16,1,Confirmed
 ,Liberia,6.4281,-9.4295,2020-03-17,1,Confirmed
+,Liberia,6.4281,-9.4295,2020-03-18,2,Confirmed
 ,Liechtenstein,47.14,9.55,2020-03-04,1,Confirmed
 ,Liechtenstein,47.14,9.55,2020-03-05,1,Confirmed
 ,Liechtenstein,47.14,9.55,2020-03-06,1,Confirmed
@@ -7456,6 +7730,7 @@ Reunion,France,-21.1351,55.2471,2020-03-17,9,Confirmed
 ,Liechtenstein,47.14,9.55,2020-03-15,4,Confirmed
 ,Liechtenstein,47.14,9.55,2020-03-16,4,Confirmed
 ,Liechtenstein,47.14,9.55,2020-03-17,7,Confirmed
+,Liechtenstein,47.14,9.55,2020-03-18,28,Confirmed
 ,Lithuania,55.1694,23.8813,2020-02-28,1,Confirmed
 ,Lithuania,55.1694,23.8813,2020-02-29,1,Confirmed
 ,Lithuania,55.1694,23.8813,2020-03-01,1,Confirmed
@@ -7478,6 +7753,8 @@ Reunion,France,-21.1351,55.2471,2020-03-17,9,Confirmed
 ,Lithuania,55.1694,23.8813,2020-03-16,17,Confirmed
 ,Lithuania,55.1694,23.8813,2020-03-17,1,Recovered
 ,Lithuania,55.1694,23.8813,2020-03-17,25,Confirmed
+,Lithuania,55.1694,23.8813,2020-03-18,1,Recovered
+,Lithuania,55.1694,23.8813,2020-03-18,27,Confirmed
 ,Luxembourg,49.8153,6.1296,2020-02-29,1,Confirmed
 ,Luxembourg,49.8153,6.1296,2020-03-01,1,Confirmed
 ,Luxembourg,49.8153,6.1296,2020-03-02,1,Confirmed
@@ -7500,6 +7777,8 @@ Reunion,France,-21.1351,55.2471,2020-03-17,9,Confirmed
 ,Luxembourg,49.8153,6.1296,2020-03-16,77,Confirmed
 ,Luxembourg,49.8153,6.1296,2020-03-17,1,Death
 ,Luxembourg,49.8153,6.1296,2020-03-17,140,Confirmed
+,Luxembourg,49.8153,6.1296,2020-03-18,2,Death
+,Luxembourg,49.8153,6.1296,2020-03-18,203,Confirmed
 ,Malaysia,2.5,112.5,2020-01-25,3,Confirmed
 ,Malaysia,2.5,112.5,2020-01-26,4,Confirmed
 ,Malaysia,2.5,112.5,2020-01-27,4,Confirmed
@@ -7594,6 +7873,9 @@ Reunion,France,-21.1351,55.2471,2020-03-17,9,Confirmed
 ,Malaysia,2.5,112.5,2020-03-17,2,Death
 ,Malaysia,2.5,112.5,2020-03-17,49,Recovered
 ,Malaysia,2.5,112.5,2020-03-17,673,Confirmed
+,Malaysia,2.5,112.5,2020-03-18,2,Death
+,Malaysia,2.5,112.5,2020-03-18,60,Recovered
+,Malaysia,2.5,112.5,2020-03-18,790,Confirmed
 ,Maldives,3.2028,73.2207,2020-03-08,4,Confirmed
 ,Maldives,3.2028,73.2207,2020-03-09,4,Confirmed
 ,Maldives,3.2028,73.2207,2020-03-10,6,Confirmed
@@ -7604,6 +7886,7 @@ Reunion,France,-21.1351,55.2471,2020-03-17,9,Confirmed
 ,Maldives,3.2028,73.2207,2020-03-15,13,Confirmed
 ,Maldives,3.2028,73.2207,2020-03-16,13,Confirmed
 ,Maldives,3.2028,73.2207,2020-03-17,13,Confirmed
+,Maldives,3.2028,73.2207,2020-03-18,13,Confirmed
 ,Malta,35.9375,14.3754,2020-03-07,3,Confirmed
 ,Malta,35.9375,14.3754,2020-03-08,3,Confirmed
 ,Malta,35.9375,14.3754,2020-03-09,3,Confirmed
@@ -7620,6 +7903,8 @@ Reunion,France,-21.1351,55.2471,2020-03-17,9,Confirmed
 ,Malta,35.9375,14.3754,2020-03-16,30,Confirmed
 ,Malta,35.9375,14.3754,2020-03-17,2,Recovered
 ,Malta,35.9375,14.3754,2020-03-17,38,Confirmed
+,Malta,35.9375,14.3754,2020-03-18,2,Recovered
+,Malta,35.9375,14.3754,2020-03-18,38,Confirmed
 ,Martinique,14.6415,-61.0242,2020-03-07,2,Confirmed
 ,Martinique,14.6415,-61.0242,2020-03-08,2,Confirmed
 ,Martinique,14.6415,-61.0242,2020-03-09,2,Confirmed
@@ -7633,10 +7918,14 @@ Reunion,France,-21.1351,55.2471,2020-03-17,9,Confirmed
 ,Martinique,14.6415,-61.0242,2020-03-16,15,Confirmed
 ,Martinique,14.6415,-61.0242,2020-03-17,1,Death
 ,Martinique,14.6415,-61.0242,2020-03-17,16,Confirmed
+,Martinique,14.6415,-61.0242,2020-03-18,1,Death
+,Martinique,14.6415,-61.0242,2020-03-18,19,Confirmed
 ,Mauritania,21.0079,10.9408,2020-03-14,1,Confirmed
 ,Mauritania,21.0079,10.9408,2020-03-15,1,Confirmed
 ,Mauritania,21.0079,10.9408,2020-03-16,1,Confirmed
 ,Mauritania,21.0079,10.9408,2020-03-17,1,Confirmed
+,Mauritania,21.0079,10.9408,2020-03-18,1,Confirmed
+,Mauritius,-20.2,57.5,2020-03-18,3,Confirmed
 ,Mexico,23.6345,-102.5528,2020-02-28,1,Confirmed
 ,Mexico,23.6345,-102.5528,2020-02-29,4,Confirmed
 ,Mexico,23.6345,-102.5528,2020-03-01,5,Confirmed
@@ -7671,6 +7960,8 @@ Reunion,France,-21.1351,55.2471,2020-03-17,9,Confirmed
 ,Mexico,23.6345,-102.5528,2020-03-16,53,Confirmed
 ,Mexico,23.6345,-102.5528,2020-03-17,4,Recovered
 ,Mexico,23.6345,-102.5528,2020-03-17,82,Confirmed
+,Mexico,23.6345,-102.5528,2020-03-18,4,Recovered
+,Mexico,23.6345,-102.5528,2020-03-18,93,Confirmed
 ,Moldova,47.4116,28.3699,2020-03-08,1,Confirmed
 ,Moldova,47.4116,28.3699,2020-03-09,1,Confirmed
 ,Moldova,47.4116,28.3699,2020-03-10,3,Confirmed
@@ -7682,6 +7973,9 @@ Reunion,France,-21.1351,55.2471,2020-03-17,9,Confirmed
 ,Moldova,47.4116,28.3699,2020-03-16,23,Confirmed
 ,Moldova,47.4116,28.3699,2020-03-17,1,Recovered
 ,Moldova,47.4116,28.3699,2020-03-17,30,Confirmed
+,Moldova,47.4116,28.3699,2020-03-18,1,Death
+,Moldova,47.4116,28.3699,2020-03-18,1,Recovered
+,Moldova,47.4116,28.3699,2020-03-18,30,Confirmed
 ,Monaco,43.7333,7.4167,2020-02-29,1,Confirmed
 ,Monaco,43.7333,7.4167,2020-03-01,1,Confirmed
 ,Monaco,43.7333,7.4167,2020-03-02,1,Confirmed
@@ -7700,6 +7994,7 @@ Reunion,France,-21.1351,55.2471,2020-03-17,9,Confirmed
 ,Monaco,43.7333,7.4167,2020-03-15,2,Confirmed
 ,Monaco,43.7333,7.4167,2020-03-16,7,Confirmed
 ,Monaco,43.7333,7.4167,2020-03-17,7,Confirmed
+,Monaco,43.7333,7.4167,2020-03-18,7,Confirmed
 ,Mongolia,46.8625,103.8467,2020-03-10,1,Confirmed
 ,Mongolia,46.8625,103.8467,2020-03-11,1,Confirmed
 ,Mongolia,46.8625,103.8467,2020-03-12,1,Confirmed
@@ -7708,7 +8003,9 @@ Reunion,France,-21.1351,55.2471,2020-03-17,9,Confirmed
 ,Mongolia,46.8625,103.8467,2020-03-15,1,Confirmed
 ,Mongolia,46.8625,103.8467,2020-03-16,1,Confirmed
 ,Mongolia,46.8625,103.8467,2020-03-17,5,Confirmed
+,Mongolia,46.8625,103.8467,2020-03-18,6,Confirmed
 ,Montenegro,42.5,19.3,2020-03-17,2,Confirmed
+,Montenegro,42.5,19.3,2020-03-18,1,Confirmed
 ,Morocco,31.7917,-7.0926,2020-03-02,1,Confirmed
 ,Morocco,31.7917,-7.0926,2020-03-03,1,Confirmed
 ,Morocco,31.7917,-7.0926,2020-03-04,1,Confirmed
@@ -7738,10 +8035,14 @@ Reunion,France,-21.1351,55.2471,2020-03-17,9,Confirmed
 ,Morocco,31.7917,-7.0926,2020-03-17,2,Death
 ,Morocco,31.7917,-7.0926,2020-03-17,1,Recovered
 ,Morocco,31.7917,-7.0926,2020-03-17,38,Confirmed
+,Morocco,31.7917,-7.0926,2020-03-18,2,Death
+,Morocco,31.7917,-7.0926,2020-03-18,1,Recovered
+,Morocco,31.7917,-7.0926,2020-03-18,49,Confirmed
 ,Namibia,-22.9576,18.4904,2020-03-14,2,Confirmed
 ,Namibia,-22.9576,18.4904,2020-03-15,2,Confirmed
 ,Namibia,-22.9576,18.4904,2020-03-16,2,Confirmed
 ,Namibia,-22.9576,18.4904,2020-03-17,2,Confirmed
+,Namibia,-22.9576,18.4904,2020-03-18,2,Confirmed
 ,Nepal,28.1667,84.25,2020-01-25,1,Confirmed
 ,Nepal,28.1667,84.25,2020-01-26,1,Confirmed
 ,Nepal,28.1667,84.25,2020-01-27,1,Confirmed
@@ -7830,6 +8131,8 @@ Reunion,France,-21.1351,55.2471,2020-03-17,9,Confirmed
 ,Nepal,28.1667,84.25,2020-03-16,1,Confirmed
 ,Nepal,28.1667,84.25,2020-03-17,1,Recovered
 ,Nepal,28.1667,84.25,2020-03-17,1,Confirmed
+,Nepal,28.1667,84.25,2020-03-18,1,Recovered
+,Nepal,28.1667,84.25,2020-03-18,1,Confirmed
 Netherlands,Netherlands,52.1326,5.2913,2020-02-27,1,Confirmed
 Netherlands,Netherlands,52.1326,5.2913,2020-02-28,1,Confirmed
 Netherlands,Netherlands,52.1326,5.2913,2020-02-29,6,Confirmed
@@ -7854,22 +8157,32 @@ Netherlands,Netherlands,52.1326,5.2913,2020-03-12,5,Death
 Netherlands,Netherlands,52.1326,5.2913,2020-03-12,503,Confirmed
 Netherlands,Netherlands,52.1326,5.2913,2020-03-13,10,Death
 Netherlands,Netherlands,52.1326,5.2913,2020-03-13,804,Confirmed
+Aruba,Netherlands,12.5186,-70.0358,2020-03-13,2,Confirmed
 Netherlands,Netherlands,52.1326,5.2913,2020-03-14,12,Death
 Netherlands,Netherlands,52.1326,5.2913,2020-03-14,2,Recovered
 Netherlands,Netherlands,52.1326,5.2913,2020-03-14,959,Confirmed
 Curacao,Netherlands,12.1696,-68.99,2020-03-14,1,Confirmed
+Aruba,Netherlands,12.5186,-70.0358,2020-03-14,2,Confirmed
 Netherlands,Netherlands,52.1326,5.2913,2020-03-15,20,Death
 Netherlands,Netherlands,52.1326,5.2913,2020-03-15,2,Recovered
 Netherlands,Netherlands,52.1326,5.2913,2020-03-15,1135,Confirmed
 Curacao,Netherlands,12.1696,-68.99,2020-03-15,1,Confirmed
+Aruba,Netherlands,12.5186,-70.0358,2020-03-15,2,Confirmed
 Netherlands,Netherlands,52.1326,5.2913,2020-03-16,24,Death
 Netherlands,Netherlands,52.1326,5.2913,2020-03-16,2,Recovered
 Netherlands,Netherlands,52.1326,5.2913,2020-03-16,1413,Confirmed
 Curacao,Netherlands,12.1696,-68.99,2020-03-16,1,Confirmed
+Aruba,Netherlands,12.5186,-70.0358,2020-03-16,2,Confirmed
 Netherlands,Netherlands,52.1326,5.2913,2020-03-17,43,Death
 Netherlands,Netherlands,52.1326,5.2913,2020-03-17,2,Recovered
 Netherlands,Netherlands,52.1326,5.2913,2020-03-17,1705,Confirmed
 Curacao,Netherlands,12.1696,-68.99,2020-03-17,3,Confirmed
+Aruba,Netherlands,12.5186,-70.0358,2020-03-17,3,Confirmed
+Netherlands,Netherlands,52.1326,5.2913,2020-03-18,58,Death
+Netherlands,Netherlands,52.1326,5.2913,2020-03-18,2,Recovered
+Netherlands,Netherlands,52.1326,5.2913,2020-03-18,2051,Confirmed
+Curacao,Netherlands,12.1696,-68.99,2020-03-18,3,Confirmed
+Aruba,Netherlands,12.5186,-70.0358,2020-03-18,4,Confirmed
 ,New Zealand,-40.9006,174.886,2020-02-28,1,Confirmed
 ,New Zealand,-40.9006,174.886,2020-02-29,1,Confirmed
 ,New Zealand,-40.9006,174.886,2020-03-01,1,Confirmed
@@ -7889,6 +8202,7 @@ Curacao,Netherlands,12.1696,-68.99,2020-03-17,3,Confirmed
 ,New Zealand,-40.9006,174.886,2020-03-15,8,Confirmed
 ,New Zealand,-40.9006,174.886,2020-03-16,8,Confirmed
 ,New Zealand,-40.9006,174.886,2020-03-17,12,Confirmed
+,New Zealand,-40.9006,174.886,2020-03-18,20,Confirmed
 ,Nigeria,9.082,8.6753,2020-02-28,1,Confirmed
 ,Nigeria,9.082,8.6753,2020-02-29,1,Confirmed
 ,Nigeria,9.082,8.6753,2020-03-01,1,Confirmed
@@ -7908,6 +8222,8 @@ Curacao,Netherlands,12.1696,-68.99,2020-03-17,3,Confirmed
 ,Nigeria,9.082,8.6753,2020-03-15,2,Confirmed
 ,Nigeria,9.082,8.6753,2020-03-16,2,Confirmed
 ,Nigeria,9.082,8.6753,2020-03-17,3,Confirmed
+,Nigeria,9.082,8.6753,2020-03-18,1,Recovered
+,Nigeria,9.082,8.6753,2020-03-18,8,Confirmed
 ,North Macedonia,41.6086,21.7453,2020-02-26,1,Confirmed
 ,North Macedonia,41.6086,21.7453,2020-02-27,1,Confirmed
 ,North Macedonia,41.6086,21.7453,2020-02-28,1,Confirmed
@@ -7934,6 +8250,8 @@ Curacao,Netherlands,12.1696,-68.99,2020-03-17,3,Confirmed
 ,North Macedonia,41.6086,21.7453,2020-03-16,18,Confirmed
 ,North Macedonia,41.6086,21.7453,2020-03-17,1,Recovered
 ,North Macedonia,41.6086,21.7453,2020-03-17,26,Confirmed
+,North Macedonia,41.6086,21.7453,2020-03-18,1,Recovered
+,North Macedonia,41.6086,21.7453,2020-03-18,35,Confirmed
 ,Norway,60.472,8.4689,2020-02-26,1,Confirmed
 ,Norway,60.472,8.4689,2020-02-27,1,Confirmed
 ,Norway,60.472,8.4689,2020-02-28,6,Confirmed
@@ -7968,6 +8286,9 @@ Curacao,Netherlands,12.1696,-68.99,2020-03-17,3,Confirmed
 ,Norway,60.472,8.4689,2020-03-17,3,Death
 ,Norway,60.472,8.4689,2020-03-17,1,Recovered
 ,Norway,60.472,8.4689,2020-03-17,1463,Confirmed
+,Norway,60.472,8.4689,2020-03-18,6,Death
+,Norway,60.472,8.4689,2020-03-18,1,Recovered
+,Norway,60.472,8.4689,2020-03-18,1550,Confirmed
 ,Oman,21.0,57.0,2020-02-24,2,Confirmed
 ,Oman,21.0,57.0,2020-02-25,2,Confirmed
 ,Oman,21.0,57.0,2020-02-26,4,Confirmed
@@ -8009,6 +8330,8 @@ Curacao,Netherlands,12.1696,-68.99,2020-03-17,3,Confirmed
 ,Oman,21.0,57.0,2020-03-16,22,Confirmed
 ,Oman,21.0,57.0,2020-03-17,9,Recovered
 ,Oman,21.0,57.0,2020-03-17,24,Confirmed
+,Oman,21.0,57.0,2020-03-18,12,Recovered
+,Oman,21.0,57.0,2020-03-18,39,Confirmed
 ,Pakistan,30.3753,69.3451,2020-02-26,2,Confirmed
 ,Pakistan,30.3753,69.3451,2020-02-27,2,Confirmed
 ,Pakistan,30.3753,69.3451,2020-02-28,2,Confirmed
@@ -8040,6 +8363,8 @@ Curacao,Netherlands,12.1696,-68.99,2020-03-17,3,Confirmed
 ,Pakistan,30.3753,69.3451,2020-03-16,136,Confirmed
 ,Pakistan,30.3753,69.3451,2020-03-17,2,Recovered
 ,Pakistan,30.3753,69.3451,2020-03-17,236,Confirmed
+,Pakistan,30.3753,69.3451,2020-03-18,2,Recovered
+,Pakistan,30.3753,69.3451,2020-03-18,299,Confirmed
 ,Panama,8.538,-80.7821,2020-03-10,1,Confirmed
 ,Panama,8.538,-80.7821,2020-03-11,1,Death
 ,Panama,8.538,-80.7821,2020-03-11,8,Confirmed
@@ -8055,6 +8380,8 @@ Curacao,Netherlands,12.1696,-68.99,2020-03-17,3,Confirmed
 ,Panama,8.538,-80.7821,2020-03-16,55,Confirmed
 ,Panama,8.538,-80.7821,2020-03-17,1,Death
 ,Panama,8.538,-80.7821,2020-03-17,69,Confirmed
+,Panama,8.538,-80.7821,2020-03-18,1,Death
+,Panama,8.538,-80.7821,2020-03-18,86,Confirmed
 ,Paraguay,-23.4425,-58.4438,2020-03-08,1,Confirmed
 ,Paraguay,-23.4425,-58.4438,2020-03-09,1,Confirmed
 ,Paraguay,-23.4425,-58.4438,2020-03-10,1,Confirmed
@@ -8065,6 +8392,7 @@ Curacao,Netherlands,12.1696,-68.99,2020-03-17,3,Confirmed
 ,Paraguay,-23.4425,-58.4438,2020-03-15,6,Confirmed
 ,Paraguay,-23.4425,-58.4438,2020-03-16,8,Confirmed
 ,Paraguay,-23.4425,-58.4438,2020-03-17,9,Confirmed
+,Paraguay,-23.4425,-58.4438,2020-03-18,11,Confirmed
 ,Peru,-9.19,-75.0152,2020-03-06,1,Confirmed
 ,Peru,-9.19,-75.0152,2020-03-07,1,Confirmed
 ,Peru,-9.19,-75.0152,2020-03-08,6,Confirmed
@@ -8078,6 +8406,8 @@ Curacao,Netherlands,12.1696,-68.99,2020-03-17,3,Confirmed
 ,Peru,-9.19,-75.0152,2020-03-16,86,Confirmed
 ,Peru,-9.19,-75.0152,2020-03-17,1,Recovered
 ,Peru,-9.19,-75.0152,2020-03-17,117,Confirmed
+,Peru,-9.19,-75.0152,2020-03-18,1,Recovered
+,Peru,-9.19,-75.0152,2020-03-18,145,Confirmed
 ,Philippines,13.0,122.0,2020-01-30,1,Confirmed
 ,Philippines,13.0,122.0,2020-01-31,1,Confirmed
 ,Philippines,13.0,122.0,2020-02-01,1,Confirmed
@@ -8206,6 +8536,9 @@ Curacao,Netherlands,12.1696,-68.99,2020-03-17,3,Confirmed
 ,Philippines,13.0,122.0,2020-03-17,12,Death
 ,Philippines,13.0,122.0,2020-03-17,5,Recovered
 ,Philippines,13.0,122.0,2020-03-17,187,Confirmed
+,Philippines,13.0,122.0,2020-03-18,19,Death
+,Philippines,13.0,122.0,2020-03-18,5,Recovered
+,Philippines,13.0,122.0,2020-03-18,202,Confirmed
 ,Poland,51.9194,19.1451,2020-03-04,1,Confirmed
 ,Poland,51.9194,19.1451,2020-03-05,1,Confirmed
 ,Poland,51.9194,19.1451,2020-03-06,5,Confirmed
@@ -8228,6 +8561,9 @@ Curacao,Netherlands,12.1696,-68.99,2020-03-17,3,Confirmed
 ,Poland,51.9194,19.1451,2020-03-17,5,Death
 ,Poland,51.9194,19.1451,2020-03-17,13,Recovered
 ,Poland,51.9194,19.1451,2020-03-17,238,Confirmed
+,Poland,51.9194,19.1451,2020-03-18,5,Death
+,Poland,51.9194,19.1451,2020-03-18,13,Recovered
+,Poland,51.9194,19.1451,2020-03-18,251,Confirmed
 ,Portugal,39.3999,-8.2245,2020-03-02,2,Confirmed
 ,Portugal,39.3999,-8.2245,2020-03-03,2,Confirmed
 ,Portugal,39.3999,-8.2245,2020-03-04,5,Confirmed
@@ -8250,6 +8586,9 @@ Curacao,Netherlands,12.1696,-68.99,2020-03-17,3,Confirmed
 ,Portugal,39.3999,-8.2245,2020-03-17,1,Death
 ,Portugal,39.3999,-8.2245,2020-03-17,3,Recovered
 ,Portugal,39.3999,-8.2245,2020-03-17,448,Confirmed
+,Portugal,39.3999,-8.2245,2020-03-18,2,Death
+,Portugal,39.3999,-8.2245,2020-03-18,3,Recovered
+,Portugal,39.3999,-8.2245,2020-03-18,448,Confirmed
 ,Qatar,25.3548,51.1839,2020-02-29,1,Confirmed
 ,Qatar,25.3548,51.1839,2020-03-01,3,Confirmed
 ,Qatar,25.3548,51.1839,2020-03-02,3,Confirmed
@@ -8272,8 +8611,8 @@ Curacao,Netherlands,12.1696,-68.99,2020-03-17,3,Confirmed
 ,Qatar,25.3548,51.1839,2020-03-16,439,Confirmed
 ,Qatar,25.3548,51.1839,2020-03-17,4,Recovered
 ,Qatar,25.3548,51.1839,2020-03-17,439,Confirmed
-,Republic of the Congo,-1.44,15.556,2020-03-16,1,Confirmed
-,Republic of the Congo,-1.44,15.556,2020-03-17,1,Confirmed
+,Qatar,25.3548,51.1839,2020-03-18,4,Recovered
+,Qatar,25.3548,51.1839,2020-03-18,452,Confirmed
 ,Romania,45.9432,24.9668,2020-02-26,1,Confirmed
 ,Romania,45.9432,24.9668,2020-02-27,1,Confirmed
 ,Romania,45.9432,24.9668,2020-02-28,3,Confirmed
@@ -8309,6 +8648,8 @@ Curacao,Netherlands,12.1696,-68.99,2020-03-17,3,Confirmed
 ,Romania,45.9432,24.9668,2020-03-16,158,Confirmed
 ,Romania,45.9432,24.9668,2020-03-17,16,Recovered
 ,Romania,45.9432,24.9668,2020-03-17,184,Confirmed
+,Romania,45.9432,24.9668,2020-03-18,19,Recovered
+,Romania,45.9432,24.9668,2020-03-18,260,Confirmed
 ,Russia,60.0,90.0,2020-01-31,2,Confirmed
 ,Russia,60.0,90.0,2020-02-01,2,Confirmed
 ,Russia,60.0,90.0,2020-02-02,2,Confirmed
@@ -8391,18 +8732,23 @@ Curacao,Netherlands,12.1696,-68.99,2020-03-17,3,Confirmed
 ,Russia,60.0,90.0,2020-03-16,90,Confirmed
 ,Russia,60.0,90.0,2020-03-17,8,Recovered
 ,Russia,60.0,90.0,2020-03-17,114,Confirmed
+,Russia,60.0,90.0,2020-03-18,8,Recovered
+,Russia,60.0,90.0,2020-03-18,147,Confirmed
 ,Rwanda,-1.9403,29.8739,2020-03-14,1,Confirmed
 ,Rwanda,-1.9403,29.8739,2020-03-15,1,Confirmed
 ,Rwanda,-1.9403,29.8739,2020-03-16,5,Confirmed
 ,Rwanda,-1.9403,29.8739,2020-03-17,7,Confirmed
+,Rwanda,-1.9403,29.8739,2020-03-18,8,Confirmed
 ,Saint Lucia,13.9094,-60.9789,2020-03-14,1,Confirmed
 ,Saint Lucia,13.9094,-60.9789,2020-03-15,2,Confirmed
 ,Saint Lucia,13.9094,-60.9789,2020-03-16,2,Confirmed
 ,Saint Lucia,13.9094,-60.9789,2020-03-17,2,Confirmed
+,Saint Lucia,13.9094,-60.9789,2020-03-18,2,Confirmed
 ,Saint Vincent and the Grenadines,12.9843,-61.2872,2020-03-14,1,Confirmed
 ,Saint Vincent and the Grenadines,12.9843,-61.2872,2020-03-15,1,Confirmed
 ,Saint Vincent and the Grenadines,12.9843,-61.2872,2020-03-16,1,Confirmed
 ,Saint Vincent and the Grenadines,12.9843,-61.2872,2020-03-17,1,Confirmed
+,Saint Vincent and the Grenadines,12.9843,-61.2872,2020-03-18,1,Confirmed
 ,San Marino,43.9424,12.4578,2020-02-27,1,Confirmed
 ,San Marino,43.9424,12.4578,2020-02-28,1,Confirmed
 ,San Marino,43.9424,12.4578,2020-02-29,1,Confirmed
@@ -8442,6 +8788,9 @@ Curacao,Netherlands,12.1696,-68.99,2020-03-17,3,Confirmed
 ,San Marino,43.9424,12.4578,2020-03-17,7,Death
 ,San Marino,43.9424,12.4578,2020-03-17,4,Recovered
 ,San Marino,43.9424,12.4578,2020-03-17,109,Confirmed
+,San Marino,43.9424,12.4578,2020-03-18,11,Death
+,San Marino,43.9424,12.4578,2020-03-18,4,Recovered
+,San Marino,43.9424,12.4578,2020-03-18,119,Confirmed
 ,Saudi Arabia,24.0,45.0,2020-03-02,1,Confirmed
 ,Saudi Arabia,24.0,45.0,2020-03-03,1,Confirmed
 ,Saudi Arabia,24.0,45.0,2020-03-04,1,Confirmed
@@ -8466,6 +8815,8 @@ Curacao,Netherlands,12.1696,-68.99,2020-03-17,3,Confirmed
 ,Saudi Arabia,24.0,45.0,2020-03-16,118,Confirmed
 ,Saudi Arabia,24.0,45.0,2020-03-17,6,Recovered
 ,Saudi Arabia,24.0,45.0,2020-03-17,171,Confirmed
+,Saudi Arabia,24.0,45.0,2020-03-18,6,Recovered
+,Saudi Arabia,24.0,45.0,2020-03-18,171,Confirmed
 ,Senegal,14.4974,-14.4524,2020-03-02,1,Confirmed
 ,Senegal,14.4974,-14.4524,2020-03-03,2,Confirmed
 ,Senegal,14.4974,-14.4524,2020-03-04,4,Confirmed
@@ -8492,6 +8843,8 @@ Curacao,Netherlands,12.1696,-68.99,2020-03-17,3,Confirmed
 ,Senegal,14.4974,-14.4524,2020-03-16,24,Confirmed
 ,Senegal,14.4974,-14.4524,2020-03-17,2,Recovered
 ,Senegal,14.4974,-14.4524,2020-03-17,26,Confirmed
+,Senegal,14.4974,-14.4524,2020-03-18,2,Recovered
+,Senegal,14.4974,-14.4524,2020-03-18,31,Confirmed
 ,Serbia,44.0165,21.0059,2020-03-06,1,Confirmed
 ,Serbia,44.0165,21.0059,2020-03-07,1,Confirmed
 ,Serbia,44.0165,21.0059,2020-03-08,1,Confirmed
@@ -8506,10 +8859,13 @@ Curacao,Netherlands,12.1696,-68.99,2020-03-17,3,Confirmed
 ,Serbia,44.0165,21.0059,2020-03-16,55,Confirmed
 ,Serbia,44.0165,21.0059,2020-03-17,1,Recovered
 ,Serbia,44.0165,21.0059,2020-03-17,65,Confirmed
+,Serbia,44.0165,21.0059,2020-03-18,1,Recovered
+,Serbia,44.0165,21.0059,2020-03-18,83,Confirmed
 ,Seychelles,-4.6796,55.492,2020-03-14,2,Confirmed
 ,Seychelles,-4.6796,55.492,2020-03-15,2,Confirmed
 ,Seychelles,-4.6796,55.492,2020-03-16,3,Confirmed
 ,Seychelles,-4.6796,55.492,2020-03-17,4,Confirmed
+,Seychelles,-4.6796,55.492,2020-03-18,4,Confirmed
 ,Singapore,1.2833,103.8333,2020-01-23,1,Confirmed
 ,Singapore,1.2833,103.8333,2020-01-24,3,Confirmed
 ,Singapore,1.2833,103.8333,2020-01-25,3,Confirmed
@@ -8604,6 +8960,8 @@ Curacao,Netherlands,12.1696,-68.99,2020-03-17,3,Confirmed
 ,Singapore,1.2833,103.8333,2020-03-16,243,Confirmed
 ,Singapore,1.2833,103.8333,2020-03-17,114,Recovered
 ,Singapore,1.2833,103.8333,2020-03-17,266,Confirmed
+,Singapore,1.2833,103.8333,2020-03-18,114,Recovered
+,Singapore,1.2833,103.8333,2020-03-18,313,Confirmed
 ,Slovakia,48.669,19.699,2020-03-06,1,Confirmed
 ,Slovakia,48.669,19.699,2020-03-07,1,Confirmed
 ,Slovakia,48.669,19.699,2020-03-08,3,Confirmed
@@ -8616,6 +8974,8 @@ Curacao,Netherlands,12.1696,-68.99,2020-03-17,3,Confirmed
 ,Slovakia,48.669,19.699,2020-03-15,54,Confirmed
 ,Slovakia,48.669,19.699,2020-03-16,63,Confirmed
 ,Slovakia,48.669,19.699,2020-03-17,72,Confirmed
+,Slovakia,48.669,19.699,2020-03-18,1,Death
+,Slovakia,48.669,19.699,2020-03-18,105,Confirmed
 ,Slovenia,46.1512,14.9955,2020-03-05,2,Confirmed
 ,Slovenia,46.1512,14.9955,2020-03-06,7,Confirmed
 ,Slovenia,46.1512,14.9955,2020-03-07,7,Confirmed
@@ -8633,8 +8993,11 @@ Curacao,Netherlands,12.1696,-68.99,2020-03-17,3,Confirmed
 ,Slovenia,46.1512,14.9955,2020-03-16,253,Confirmed
 ,Slovenia,46.1512,14.9955,2020-03-17,1,Death
 ,Slovenia,46.1512,14.9955,2020-03-17,275,Confirmed
+,Slovenia,46.1512,14.9955,2020-03-18,1,Death
+,Slovenia,46.1512,14.9955,2020-03-18,275,Confirmed
 ,Somalia,5.1521,46.1996,2020-03-16,1,Confirmed
 ,Somalia,5.1521,46.1996,2020-03-17,1,Confirmed
+,Somalia,5.1521,46.1996,2020-03-18,1,Confirmed
 ,South Africa,-30.5595,22.9375,2020-03-05,1,Confirmed
 ,South Africa,-30.5595,22.9375,2020-03-06,1,Confirmed
 ,South Africa,-30.5595,22.9375,2020-03-07,1,Confirmed
@@ -8648,6 +9011,7 @@ Curacao,Netherlands,12.1696,-68.99,2020-03-17,3,Confirmed
 ,South Africa,-30.5595,22.9375,2020-03-15,51,Confirmed
 ,South Africa,-30.5595,22.9375,2020-03-16,62,Confirmed
 ,South Africa,-30.5595,22.9375,2020-03-17,62,Confirmed
+,South Africa,-30.5595,22.9375,2020-03-18,116,Confirmed
 ,Spain,40.0,-4.0,2020-02-01,1,Confirmed
 ,Spain,40.0,-4.0,2020-02-02,1,Confirmed
 ,Spain,40.0,-4.0,2020-02-03,1,Confirmed
@@ -8741,6 +9105,9 @@ Curacao,Netherlands,12.1696,-68.99,2020-03-17,3,Confirmed
 ,Spain,40.0,-4.0,2020-03-17,533,Death
 ,Spain,40.0,-4.0,2020-03-17,1028,Recovered
 ,Spain,40.0,-4.0,2020-03-17,11748,Confirmed
+,Spain,40.0,-4.0,2020-03-18,623,Death
+,Spain,40.0,-4.0,2020-03-18,1081,Recovered
+,Spain,40.0,-4.0,2020-03-18,13910,Confirmed
 ,Sri Lanka,7.0,81.0,2020-01-27,1,Confirmed
 ,Sri Lanka,7.0,81.0,2020-01-28,1,Confirmed
 ,Sri Lanka,7.0,81.0,2020-01-29,1,Confirmed
@@ -8831,6 +9198,8 @@ Curacao,Netherlands,12.1696,-68.99,2020-03-17,3,Confirmed
 ,Sri Lanka,7.0,81.0,2020-03-16,28,Confirmed
 ,Sri Lanka,7.0,81.0,2020-03-17,1,Recovered
 ,Sri Lanka,7.0,81.0,2020-03-17,44,Confirmed
+,Sri Lanka,7.0,81.0,2020-03-18,1,Recovered
+,Sri Lanka,7.0,81.0,2020-03-18,51,Confirmed
 ,Sudan,12.8628,30.2176,2020-03-13,1,Death
 ,Sudan,12.8628,30.2176,2020-03-13,1,Confirmed
 ,Sudan,12.8628,30.2176,2020-03-14,1,Death
@@ -8841,10 +9210,13 @@ Curacao,Netherlands,12.1696,-68.99,2020-03-17,3,Confirmed
 ,Sudan,12.8628,30.2176,2020-03-16,1,Confirmed
 ,Sudan,12.8628,30.2176,2020-03-17,1,Death
 ,Sudan,12.8628,30.2176,2020-03-17,1,Confirmed
+,Sudan,12.8628,30.2176,2020-03-18,1,Death
+,Sudan,12.8628,30.2176,2020-03-18,2,Confirmed
 ,Suriname,3.9193,-56.0278,2020-03-14,1,Confirmed
 ,Suriname,3.9193,-56.0278,2020-03-15,1,Confirmed
 ,Suriname,3.9193,-56.0278,2020-03-16,1,Confirmed
 ,Suriname,3.9193,-56.0278,2020-03-17,1,Confirmed
+,Suriname,3.9193,-56.0278,2020-03-18,1,Confirmed
 ,Sweden,63.0,16.0,2020-01-31,1,Confirmed
 ,Sweden,63.0,16.0,2020-02-01,1,Confirmed
 ,Sweden,63.0,16.0,2020-02-02,1,Confirmed
@@ -8908,6 +9280,9 @@ Curacao,Netherlands,12.1696,-68.99,2020-03-17,3,Confirmed
 ,Sweden,63.0,16.0,2020-03-17,7,Death
 ,Sweden,63.0,16.0,2020-03-17,1,Recovered
 ,Sweden,63.0,16.0,2020-03-17,1190,Confirmed
+,Sweden,63.0,16.0,2020-03-18,10,Death
+,Sweden,63.0,16.0,2020-03-18,1,Recovered
+,Sweden,63.0,16.0,2020-03-18,1279,Confirmed
 ,Switzerland,46.8182,8.2275,2020-02-25,1,Confirmed
 ,Switzerland,46.8182,8.2275,2020-02-26,1,Confirmed
 ,Switzerland,46.8182,8.2275,2020-02-27,8,Confirmed
@@ -8958,6 +9333,9 @@ Curacao,Netherlands,12.1696,-68.99,2020-03-17,3,Confirmed
 ,Switzerland,46.8182,8.2275,2020-03-17,27,Death
 ,Switzerland,46.8182,8.2275,2020-03-17,4,Recovered
 ,Switzerland,46.8182,8.2275,2020-03-17,2700,Confirmed
+,Switzerland,46.8182,8.2275,2020-03-18,28,Death
+,Switzerland,46.8182,8.2275,2020-03-18,15,Recovered
+,Switzerland,46.8182,8.2275,2020-03-18,3028,Confirmed
 ,Taiwan*,23.7,121.0,2020-01-22,1,Confirmed
 ,Taiwan*,23.7,121.0,2020-01-23,1,Confirmed
 ,Taiwan*,23.7,121.0,2020-01-24,3,Confirmed
@@ -9086,8 +9464,12 @@ Curacao,Netherlands,12.1696,-68.99,2020-03-17,3,Confirmed
 ,Taiwan*,23.7,121.0,2020-03-17,1,Death
 ,Taiwan*,23.7,121.0,2020-03-17,22,Recovered
 ,Taiwan*,23.7,121.0,2020-03-17,77,Confirmed
+,Taiwan*,23.7,121.0,2020-03-18,1,Death
+,Taiwan*,23.7,121.0,2020-03-18,22,Recovered
+,Taiwan*,23.7,121.0,2020-03-18,100,Confirmed
 ,Tanzania,-6.369,34.8888,2020-03-16,1,Confirmed
 ,Tanzania,-6.369,34.8888,2020-03-17,1,Confirmed
+,Tanzania,-6.369,34.8888,2020-03-18,3,Confirmed
 ,Thailand,15.0,101.0,2020-01-22,2,Confirmed
 ,Thailand,15.0,101.0,2020-01-23,3,Confirmed
 ,Thailand,15.0,101.0,2020-01-24,5,Confirmed
@@ -9213,9 +9595,12 @@ Curacao,Netherlands,12.1696,-68.99,2020-03-17,3,Confirmed
 ,Thailand,15.0,101.0,2020-03-17,1,Death
 ,Thailand,15.0,101.0,2020-03-17,41,Recovered
 ,Thailand,15.0,101.0,2020-03-17,177,Confirmed
+,Thailand,15.0,101.0,2020-03-18,1,Death
+,Thailand,15.0,101.0,2020-03-18,42,Recovered
+,Thailand,15.0,101.0,2020-03-18,212,Confirmed
 ,The Bahamas,24.25,-76.0,2020-03-16,1,Confirmed
 ,The Bahamas,24.25,-76.0,2020-03-17,1,Confirmed
-,The Gambia,13.4667,-16.6,2020-03-17,1,Confirmed
+,The Bahamas,24.25,-76.0,2020-03-18,1,Confirmed
 ,Togo,8.6195,0.8248,2020-03-06,1,Confirmed
 ,Togo,8.6195,0.8248,2020-03-07,1,Confirmed
 ,Togo,8.6195,0.8248,2020-03-08,1,Confirmed
@@ -9228,10 +9613,12 @@ Curacao,Netherlands,12.1696,-68.99,2020-03-17,3,Confirmed
 ,Togo,8.6195,0.8248,2020-03-15,1,Confirmed
 ,Togo,8.6195,0.8248,2020-03-16,1,Confirmed
 ,Togo,8.6195,0.8248,2020-03-17,1,Confirmed
+,Togo,8.6195,0.8248,2020-03-18,1,Confirmed
 ,Trinidad and Tobago,10.6918,-61.2225,2020-03-14,2,Confirmed
 ,Trinidad and Tobago,10.6918,-61.2225,2020-03-15,2,Confirmed
 ,Trinidad and Tobago,10.6918,-61.2225,2020-03-16,4,Confirmed
 ,Trinidad and Tobago,10.6918,-61.2225,2020-03-17,5,Confirmed
+,Trinidad and Tobago,10.6918,-61.2225,2020-03-18,7,Confirmed
 ,Tunisia,34.0,9.0,2020-03-04,1,Confirmed
 ,Tunisia,34.0,9.0,2020-03-05,1,Confirmed
 ,Tunisia,34.0,9.0,2020-03-06,1,Confirmed
@@ -9246,6 +9633,7 @@ Curacao,Netherlands,12.1696,-68.99,2020-03-17,3,Confirmed
 ,Tunisia,34.0,9.0,2020-03-15,18,Confirmed
 ,Tunisia,34.0,9.0,2020-03-16,20,Confirmed
 ,Tunisia,34.0,9.0,2020-03-17,24,Confirmed
+,Tunisia,34.0,9.0,2020-03-18,29,Confirmed
 ,Turkey,38.9637,35.2433,2020-03-11,1,Confirmed
 ,Turkey,38.9637,35.2433,2020-03-12,1,Confirmed
 ,Turkey,38.9637,35.2433,2020-03-13,5,Confirmed
@@ -9254,6 +9642,8 @@ Curacao,Netherlands,12.1696,-68.99,2020-03-17,3,Confirmed
 ,Turkey,38.9637,35.2433,2020-03-16,18,Confirmed
 ,Turkey,38.9637,35.2433,2020-03-17,1,Death
 ,Turkey,38.9637,35.2433,2020-03-17,47,Confirmed
+,Turkey,38.9637,35.2433,2020-03-18,1,Death
+,Turkey,38.9637,35.2433,2020-03-18,98,Confirmed
 "King County, WA",US,47.6062,-122.3321,2020-01-22,1,Confirmed
 "King County, WA",US,47.6062,-122.3321,2020-01-23,1,Confirmed
 "King County, WA",US,47.6062,-122.3321,2020-01-24,1,Confirmed
@@ -10702,6 +11092,80 @@ Alabama,US,32.3182,-86.9023,2020-03-17,39,Confirmed
 Puerto Rico,US,18.2208,-66.5901,2020-03-17,5,Confirmed
 Guam,US,13.4443,144.7937,2020-03-17,3,Confirmed
 Virgin Islands,US,18.3358,-64.8963,2020-03-17,2,Confirmed
+Washington,US,47.4009,-121.4905,2020-03-18,55,Death
+New York,US,42.1657,-74.9481,2020-03-18,16,Death
+California,US,36.1162,-119.6816,2020-03-18,13,Death
+Georgia,US,33.0406,-83.6431,2020-03-18,3,Death
+Colorado,US,39.0598,-105.3111,2020-03-18,2,Death
+Florida,US,27.7663,-81.6868,2020-03-18,7,Death
+New Jersey,US,40.2989,-74.521,2020-03-18,3,Death
+Oregon,US,44.571999999999996,-122.0709,2020-03-18,2,Death
+Texas,US,31.0545,-97.5635,2020-03-18,3,Death
+Illinois,US,40.3495,-88.9861,2020-03-18,1,Death
+South Carolina,US,33.8569,-80.945,2020-03-18,1,Death
+Virginia,US,37.7693,-78.17,2020-03-18,2,Death
+Indiana,US,39.8494,-86.2583,2020-03-18,2,Death
+Kentucky,US,37.6681,-84.6701,2020-03-18,1,Death
+Nevada,US,38.3135,-117.0554,2020-03-18,1,Death
+Kansas,US,38.5266,-96.7265,2020-03-18,1,Death
+Louisiana,US,31.1695,-91.8678,2020-03-18,4,Death
+South Dakota,US,44.2998,-99.4388,2020-03-18,1,Death
+Washington,US,47.4009,-121.4905,2020-03-18,1014,Confirmed
+New York,US,42.1657,-74.9481,2020-03-18,2495,Confirmed
+California,US,36.1162,-119.6816,2020-03-18,751,Confirmed
+Massachusetts,US,42.2302,-71.5301,2020-03-18,218,Confirmed
+Diamond Princess,US,35.4437,139.638,2020-03-18,47,Confirmed
+Grand Princess,US,37.6489,-122.6655,2020-03-18,21,Confirmed
+Georgia,US,33.0406,-83.6431,2020-03-18,199,Confirmed
+Colorado,US,39.0598,-105.3111,2020-03-18,184,Confirmed
+Florida,US,27.7663,-81.6868,2020-03-18,314,Confirmed
+New Jersey,US,40.2989,-74.521,2020-03-18,267,Confirmed
+Oregon,US,44.571999999999996,-122.0709,2020-03-18,68,Confirmed
+Texas,US,31.0545,-97.5635,2020-03-18,173,Confirmed
+Illinois,US,40.3495,-88.9861,2020-03-18,162,Confirmed
+Pennsylvania,US,40.5908,-77.2098,2020-03-18,152,Confirmed
+Iowa,US,42.0115,-93.2105,2020-03-18,29,Confirmed
+Maryland,US,39.0639,-76.8021,2020-03-18,85,Confirmed
+North Carolina,US,35.6301,-79.8064,2020-03-18,70,Confirmed
+South Carolina,US,33.8569,-80.945,2020-03-18,47,Confirmed
+Tennessee,US,35.7478,-86.6923,2020-03-18,79,Confirmed
+Virginia,US,37.7693,-78.17,2020-03-18,77,Confirmed
+Arizona,US,33.7298,-111.4312,2020-03-18,27,Confirmed
+Indiana,US,39.8494,-86.2583,2020-03-18,39,Confirmed
+Kentucky,US,37.6681,-84.6701,2020-03-18,27,Confirmed
+District of Columbia,US,38.8974,-77.0268,2020-03-18,31,Confirmed
+Nevada,US,38.3135,-117.0554,2020-03-18,55,Confirmed
+New Hampshire,US,43.4525,-71.5639,2020-03-18,26,Confirmed
+Minnesota,US,45.6945,-93.9002,2020-03-18,77,Confirmed
+Nebraska,US,41.1254,-98.2681,2020-03-18,24,Confirmed
+Ohio,US,40.3888,-82.7649,2020-03-18,86,Confirmed
+Rhode Island,US,41.6809,-71.5118,2020-03-18,33,Confirmed
+Wisconsin,US,44.2685,-89.6165,2020-03-18,92,Confirmed
+Connecticut,US,41.5978,-72.7554,2020-03-18,68,Confirmed
+Hawaii,US,21.0943,-157.4983,2020-03-18,14,Confirmed
+Oklahoma,US,35.5653,-96.9289,2020-03-18,19,Confirmed
+Utah,US,40.15,-111.8624,2020-03-18,51,Confirmed
+Kansas,US,38.5266,-96.7265,2020-03-18,18,Confirmed
+Louisiana,US,31.1695,-91.8678,2020-03-18,257,Confirmed
+Missouri,US,38.4561,-92.2884,2020-03-18,18,Confirmed
+Vermont,US,44.0459,-72.7107,2020-03-18,18,Confirmed
+Alaska,US,61.3707,-152.4044,2020-03-18,6,Confirmed
+Arkansas,US,34.9697,-92.3731,2020-03-18,33,Confirmed
+Delaware,US,39.3185,-75.5071,2020-03-18,19,Confirmed
+Idaho,US,44.2405,-114.4788,2020-03-18,9,Confirmed
+Maine,US,44.6939,-69.3819,2020-03-18,42,Confirmed
+Michigan,US,43.3266,-84.5361,2020-03-18,83,Confirmed
+Mississippi,US,32.7416,-89.6787,2020-03-18,34,Confirmed
+Montana,US,46.9219,-110.4544,2020-03-18,11,Confirmed
+New Mexico,US,34.8405,-106.2485,2020-03-18,23,Confirmed
+North Dakota,US,47.5289,-99.78399999999999,2020-03-18,6,Confirmed
+South Dakota,US,44.2998,-99.4388,2020-03-18,11,Confirmed
+West Virginia,US,38.4912,-80.9545,2020-03-18,1,Confirmed
+Wyoming,US,42.756,-107.3025,2020-03-18,15,Confirmed
+Alabama,US,32.3182,-86.9023,2020-03-18,46,Confirmed
+Puerto Rico,US,18.2208,-66.5901,2020-03-18,5,Confirmed
+Guam,US,13.4443,144.7937,2020-03-18,5,Confirmed
+Virgin Islands,US,18.3358,-64.8963,2020-03-18,2,Confirmed
 ,Ukraine,48.3794,31.1656,2020-03-03,1,Confirmed
 ,Ukraine,48.3794,31.1656,2020-03-04,1,Confirmed
 ,Ukraine,48.3794,31.1656,2020-03-05,1,Confirmed
@@ -10722,6 +11186,8 @@ Virgin Islands,US,18.3358,-64.8963,2020-03-17,2,Confirmed
 ,Ukraine,48.3794,31.1656,2020-03-16,7,Confirmed
 ,Ukraine,48.3794,31.1656,2020-03-17,2,Death
 ,Ukraine,48.3794,31.1656,2020-03-17,14,Confirmed
+,Ukraine,48.3794,31.1656,2020-03-18,2,Death
+,Ukraine,48.3794,31.1656,2020-03-18,14,Confirmed
 ,United Arab Emirates,24.0,54.0,2020-01-29,4,Confirmed
 ,United Arab Emirates,24.0,54.0,2020-01-30,4,Confirmed
 ,United Arab Emirates,24.0,54.0,2020-01-31,4,Confirmed
@@ -10806,6 +11272,8 @@ Virgin Islands,US,18.3358,-64.8963,2020-03-17,2,Confirmed
 ,United Arab Emirates,24.0,54.0,2020-03-16,98,Confirmed
 ,United Arab Emirates,24.0,54.0,2020-03-17,23,Recovered
 ,United Arab Emirates,24.0,54.0,2020-03-17,98,Confirmed
+,United Arab Emirates,24.0,54.0,2020-03-18,26,Recovered
+,United Arab Emirates,24.0,54.0,2020-03-18,113,Confirmed
 United Kingdom,United Kingdom,55.3781,-3.4360000000000004,2020-01-31,2,Confirmed
 United Kingdom,United Kingdom,55.3781,-3.4360000000000004,2020-02-01,2,Confirmed
 United Kingdom,United Kingdom,55.3781,-3.4360000000000004,2020-02-02,2,Confirmed
@@ -10938,17 +11406,29 @@ Channel Islands,United Kingdom,49.3723,-2.3644,2020-03-17,6,Confirmed
 Gibraltar,United Kingdom,36.1408,-5.3536,2020-03-17,3,Confirmed
 United Kingdom,United Kingdom,55.3781,-3.4360000000000004,2020-03-17,1950,Confirmed
 Cayman Islands,United Kingdom,19.3133,-81.2546,2020-03-17,1,Confirmed
+United Kingdom,United Kingdom,55.3781,-3.4360000000000004,2020-03-18,71,Death
+Cayman Islands,United Kingdom,19.3133,-81.2546,2020-03-18,1,Death
+Gibraltar,United Kingdom,36.1408,-5.3536,2020-03-18,2,Recovered
+United Kingdom,United Kingdom,55.3781,-3.4360000000000004,2020-03-18,65,Recovered
+Channel Islands,United Kingdom,49.3723,-2.3644,2020-03-18,6,Confirmed
+Gibraltar,United Kingdom,36.1408,-5.3536,2020-03-18,8,Confirmed
+United Kingdom,United Kingdom,55.3781,-3.4360000000000004,2020-03-18,2626,Confirmed
+Cayman Islands,United Kingdom,19.3133,-81.2546,2020-03-18,1,Confirmed
+Montserrat,United Kingdom,16.7425,-62.1874,2020-03-18,1,Confirmed
 ,Uruguay,-32.5228,-55.7658,2020-03-14,4,Confirmed
 ,Uruguay,-32.5228,-55.7658,2020-03-15,4,Confirmed
 ,Uruguay,-32.5228,-55.7658,2020-03-16,8,Confirmed
 ,Uruguay,-32.5228,-55.7658,2020-03-17,29,Confirmed
+,Uruguay,-32.5228,-55.7658,2020-03-18,50,Confirmed
 ,Uzbekistan,41.3775,64.5853,2020-03-15,1,Confirmed
 ,Uzbekistan,41.3775,64.5853,2020-03-16,6,Confirmed
 ,Uzbekistan,41.3775,64.5853,2020-03-17,10,Confirmed
+,Uzbekistan,41.3775,64.5853,2020-03-18,15,Confirmed
 ,Venezuela,6.4238,-66.5897,2020-03-14,2,Confirmed
 ,Venezuela,6.4238,-66.5897,2020-03-15,10,Confirmed
 ,Venezuela,6.4238,-66.5897,2020-03-16,17,Confirmed
 ,Venezuela,6.4238,-66.5897,2020-03-17,33,Confirmed
+,Venezuela,6.4238,-66.5897,2020-03-18,36,Confirmed
 ,Vietnam,16.0,108.0,2020-01-23,2,Confirmed
 ,Vietnam,16.0,108.0,2020-01-24,2,Confirmed
 ,Vietnam,16.0,108.0,2020-01-25,2,Confirmed
@@ -11050,3 +11530,6 @@ Cayman Islands,United Kingdom,19.3133,-81.2546,2020-03-17,1,Confirmed
 ,Vietnam,16.0,108.0,2020-03-16,61,Confirmed
 ,Vietnam,16.0,108.0,2020-03-17,16,Recovered
 ,Vietnam,16.0,108.0,2020-03-17,66,Confirmed
+,Vietnam,16.0,108.0,2020-03-18,16,Recovered
+,Vietnam,16.0,108.0,2020-03-18,75,Confirmed
+,Zambia,-15.4167,28.2833,2020-03-18,2,Confirmed
