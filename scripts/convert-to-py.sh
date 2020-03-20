@@ -1,0 +1,1 @@
+jupyter nbconvert --to python covid_19_data.ipynb --output ./scripts/covid_19_data.py
