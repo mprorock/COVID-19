@@ -1,0 +1,11 @@
+name: Tests
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Run
+    steps:
+      - uses: actions/checkout@v2
+      - run: python ./scripts/covid_19_data.py
