@@ -16,7 +16,7 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Install Deps
         run: |
-          pip install jupyterlab pandas scipy scikit-learn plotly seaborn numpy matplotlib ipywidgets fbprophet
+          conda install -c conda-forge scikit-learn plotly seaborn pandas numpy matplotlib ipywidgets fbprophet
       - name: Get Latest Data
         run: python ./scripts/covid_19_data.py
 
