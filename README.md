@@ -7,7 +7,7 @@
 
 git clone git@github.com:mprorock/COVID-19.git
 cd COVID-19
-conda install -c jupyterlab conda-forge scikit-learn plotly seaborn pandas numpy matplotlib ipywidgets fbprophet
+conda install -c conda-forge scikit-learn plotly seaborn pandas numpy matplotlib ipywidgets fbprophet
 
 jupyterlab .
 ```
