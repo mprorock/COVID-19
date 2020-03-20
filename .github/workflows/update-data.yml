@@ -22,9 +22,9 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-      - name: Get Latest Data
-        shell: bash -l {0}
-        run: ./update.sh
+      # - name: Get Latest Data
+      #   shell: bash -l {0}
+      #   run: ./update.sh
       - name: Get Latest Data
         shell: bash -l {0}
         run: python ./scripts/covid_19_data.py
