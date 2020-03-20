@@ -19,9 +19,9 @@ jobs:
         run: |
           conda install -c conda-forge scikit-learn plotly seaborn pandas numpy matplotlib ipywidgets fbprophet
       - name: Setup Git
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
       - name: Get Latest Data
         shell: bash -l {0}
         run: ./update.sh
