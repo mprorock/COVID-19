@@ -1,3 +1,26 @@
+
+## Getting Started
+
+- [install conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html)
+
+```
+
+git clone git@github.com:mprorock/COVID-19.git
+cd COVID-19
+conda install -c jupyterlab conda-forge scikit-learn plotly seaborn pandas numpy matplotlib ipywidgets fbprophet
+
+jupyterlab .
+```
+
+Go to:
+
+http://localhost:8889/lab
+
+Run all Cells of "covid_19_data.ipynb".
+
+And other notebooks.
+
+
 # 2019 Novel Coronavirus COVID-19 (2019-nCoV) Data Repository by Johns Hopkins CSSE
 
 
