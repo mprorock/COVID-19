@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.8]
+        python-version: [3.7]
     steps:
       - uses: actions/checkout@v2
       - uses: goanpeca/setup-miniconda@v1
@@ -18,9 +18,6 @@ jobs:
         shell: bash -l {0}
         run: |
           conda install -c conda-forge scikit-learn plotly seaborn pandas numpy matplotlib ipywidgets fbprophet
-      - name: Install Deps2
-        run: |
-          pip install pandas
       - name: Get Latest Data
         shell: bash -l {0}
         run: python ./scripts/covid_19_data.py
