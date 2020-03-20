@@ -1,7 +1,7 @@
 
 ## Getting Started
 
-- [install conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html)
+- [install conda for Python 3](https://conda.io/projects/conda/en/latest/user-guide/install/index.html)
 
 ```
 
@@ -9,7 +9,7 @@ git clone git@github.com:mprorock/COVID-19.git
 cd COVID-19
 conda install -c conda-forge scikit-learn plotly seaborn pandas numpy matplotlib ipywidgets fbprophet
 
-jupyterlab .
+jupyter lab .
 ```
 
 Go to:
