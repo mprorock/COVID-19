@@ -1,5 +1,6 @@
 ﻿Date,Confirmed,Province/State,Death,Recovered,Total Confirmed,Total Deaths,Total Recovered,Active Cases,Death Rate,Death Change Rate,Recovery Change Rate,Confirmed Change Rate,Likely Cases 1pct,Likely Cases 1.8pct,Likely Cases 3.5pct,Likely Cases C86
-2020-03-15,1,Equatorial Guinea,0,0,1.0,0.0,0.0,1.0,0.0,,,,0,0,0,1.0
-2020-03-16,1,Equatorial Guinea,0,0,1.0,0.0,0.0,1.0,0.0,,,0.0,0,0,0,1.0
-2020-03-17,1,Equatorial Guinea,0,0,1.0,0.0,0.0,1.0,0.0,,,0.0,0,0,0,1.0
-2020-03-18,4,Equatorial Guinea,0,0,4.0,0.0,0.0,4.0,0.0,,,3.0,0,0,0,5.0
+2020-03-15,1.0,Equatorial Guinea,0,0,1.0,0.0,0.0,1.0,0.0,,,,0,0,0,1.0
+2020-03-16,1.0,Equatorial Guinea,0,0,1.0,0.0,0.0,1.0,0.0,,,0.0,0,0,0,1.0
+2020-03-17,1.0,Equatorial Guinea,0,0,1.0,0.0,0.0,1.0,0.0,,,0.0,0,0,0,1.0
+2020-03-18,4.0,Equatorial Guinea,0,0,4.0,0.0,0.0,4.0,0.0,,,3.0,0,0,0,5.0
+2020-03-19,6.0,Equatorial Guinea,0,0,6.0,0.0,0.0,6.0,0.0,,,0.5,0,0,0,7.0
