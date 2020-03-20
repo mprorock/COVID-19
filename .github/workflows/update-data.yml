@@ -14,8 +14,10 @@ jobs:
       uses: actions/setup-python@v1
       with:
         python-version: ${{ matrix.python-version }}
+    - uses: goanpeca/setup-miniconda@v1
+        with:
+          auto-update-conda: true
+          python-version: ${{ matrix.python-version }}
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
-        pip install conda
         conda install -c jupyterlab conda-forge scikit-learn plotly seaborn pandas numpy matplotlib ipywidgets fbprophet
