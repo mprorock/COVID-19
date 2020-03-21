@@ -1,8 +1,9 @@
-﻿Date,Confirmed,Province/State,Death,Recovered,Total Confirmed,Total Deaths,Total Recovered,Active Cases,Death Rate,Death Change Rate,Recovery Change Rate,Confirmed Change Rate,Likely Cases 1pct,Likely Cases 1.8pct,Likely Cases 3.5pct,Likely Cases C86
-2020-03-13,4,Kazakhstan,0,0,4.0,0.0,0.0,4.0,0.0,,,,0,0,0,5.0
-2020-03-14,6,Kazakhstan,0,0,6.0,0.0,0.0,6.0,0.0,,,0.5,0,0,0,7.0
-2020-03-15,9,Kazakhstan,0,0,9.0,0.0,0.0,9.0,0.0,,,0.5,0,0,0,10.0
-2020-03-16,10,Kazakhstan,0,0,10.0,0.0,0.0,10.0,0.0,,,0.111,0,0,0,11.0
-2020-03-17,33,Kazakhstan,0,0,33.0,0.0,0.0,33.0,0.0,,,2.3,0,0,0,38.0
-2020-03-18,35,Kazakhstan,0,0,35.0,0.0,0.0,35.0,0.0,,,0.061,0,0,0,40.0
-2020-03-19,44,Kazakhstan,0,0,44.0,0.0,0.0,44.0,0.0,,,0.257,0,0,0,50.0
+﻿Date,Confirmed,Death,Province/State,Recovered,Total Confirmed,Total Deaths,Total Recovered,Active Cases,Death Rate,Death Change Rate,Recovery Change Rate,Confirmed Change Rate,Likely Cases 1pct,Likely Cases 1.8pct,Likely Cases 3.5pct,Likely Cases C86
+2020-03-13,4.0,,Kazakhstan,0,4.0,,0.0,4.0,0.0,,,,,,,5.0
+2020-03-14,6.0,,Kazakhstan,0,6.0,,0.0,6.0,0.0,,,0.5,,,,7.0
+2020-03-15,9.0,,Kazakhstan,0,9.0,,0.0,9.0,0.0,,,0.5,,,,10.0
+2020-03-16,10.0,,Kazakhstan,0,10.0,,0.0,10.0,0.0,,,0.111,,,,11.0
+2020-03-17,33.0,,Kazakhstan,0,33.0,,0.0,33.0,0.0,,,2.3,,,,38.0
+2020-03-18,35.0,,Kazakhstan,0,35.0,,0.0,35.0,0.0,,,0.061,,,,40.0
+2020-03-19,44.0,,Kazakhstan,0,44.0,,0.0,44.0,0.0,,,0.257,,,,50.0
+2020-03-20,49.0,3.0,Kazakhstan,0,49.0,3.0,0.0,46.0,0.061,inf,,0.114,300.0,540.0,1050.0,56.0
