@@ -34,8 +34,72 @@ combined_csv['Country/Region'] = combined_csv['Country/Region'].replace('Republi
 combined_csv['Country/Region'] = combined_csv['Country/Region'].replace('Iran (Islamic Republic of)', 'Iran')
 combined_csv['Country/Region'] = combined_csv['Country/Region'].replace('Mainland China', 'China')
 
+combined_csv.to_csv(output_dir + "combined.csv", index=False, encoding='utf-8-sig')
+
 
 # In[3]:
+
+
+us_state_abbrev = {
+        'Alabama': 'AL',
+        'Alaska': 'AK',
+        'Arizona': 'AZ',
+        'Arkansas': 'AR',
+        'California': 'CA',
+        'Colorado': 'CO',
+        'Connecticut': 'CT',
+        'Delaware': 'DE',
+        'District of Columbia': 'D.C.',
+        'Florida': 'FL',
+        'Georgia': 'GA',
+        'Hawaii': 'HI',
+        'Idaho': 'ID',
+        'Illinois': 'IL',
+        'Indiana': 'IN',
+        'Iowa': 'IA',
+        'Kansas': 'KS',
+        'Kentucky': 'KY',
+        'Louisiana': 'LA',
+        'Maine': 'ME',
+        'Maryland': 'MD',
+        'Massachusetts': 'MA',
+        'Michigan': 'MI',
+        'Minnesota': 'MN',
+        'Mississippi': 'MS',
+        'Missouri': 'MO',
+        'Montana': 'MT',
+        'Nebraska': 'NE',
+        'Nevada': 'NV',
+        'New Hampshire': 'NH',
+        'New Jersey': 'NJ',
+        'New Mexico': 'NM',
+        'New York': 'NY',
+        'North Carolina': 'NC',
+        'North Dakota': 'ND',
+        'Northern Mariana Islands':'MP',
+        'Ohio': 'OH',
+        'Oklahoma': 'OK',
+        'Oregon': 'OR',
+        'Palau': 'PW',
+        'Pennsylvania': 'PA',
+        'Puerto Rico': 'PR',
+        'Rhode Island': 'RI',
+        'South Carolina': 'SC',
+        'South Dakota': 'SD',
+        'Tennessee': 'TN',
+        'Texas': 'TX',
+        'Utah': 'UT',
+        'Vermont': 'VT',
+        'Virgin Islands': 'VI',
+        'Virginia': 'VA',
+        'Washington': 'WA',
+        'West Virginia': 'WV',
+        'Wisconsin': 'WI',
+        'Wyoming': 'WY',
+    }
+
+
+# In[4]:
 
 
 df = combined_csv.copy()
@@ -65,7 +129,7 @@ df = df.dropna().reset_index()
 df.to_csv(output_dir + "covid_19_by_date_and_country.csv", index=False, encoding='utf-8-sig')
 
 
-# In[4]:
+# In[5]:
 
 
 overallDf = df.copy().groupby('Last Update').agg({
@@ -89,7 +153,7 @@ overallDf = overallDf.dropna().reset_index()
 overallDf.to_csv(output_dir + "covid_19_by_date.csv", index=False, encoding='utf-8-sig')
 
 
-# In[5]:
+# In[6]:
 
 
 overallDf = df.copy().groupby('Day').agg({
@@ -112,7 +176,7 @@ overallDf = overallDf.dropna().reset_index()
 overallDf.to_csv(output_dir + "covid_19_by_day.csv", index=False, encoding='utf-8-sig')
 
 
-# In[6]:
+# In[7]:
 
 
 overallDf = df.copy().groupby(by=['Country/Region','Day']).agg({
@@ -133,7 +197,7 @@ overallDf['New Death Rate'] = overallDf['New Deaths'].pct_change()
 overallDf = overallDf.dropna().reset_index()
 
 
-# In[7]:
+# In[8]:
 
 
 #john's hopkins raw files
@@ -157,32 +221,33 @@ ts_confirmed['Date'] = pd.to_datetime(ts_confirmed['Date'])
 covid_19_ts = ts_deaths.copy()
 covid_19_ts = covid_19_ts.append(ts_recovered)
 covid_19_ts = covid_19_ts.append(ts_confirmed)
-covid_19_ts = covid_19_ts.sort_values(['Country/Region', 'Date']).reset_index(drop=True)
+covid_19_ts = covid_19_ts.sort_values(['Country/Region', 'Province/State', 'Date']).reset_index(drop=True)
+
 #now drop 0 values
 covid_19_ts = covid_19_ts[covid_19_ts['Observation'] != 0]
 
 
-# In[8]:
+# In[9]:
 
 
 overallDf.to_csv(output_dir + "covid_19_by_date_and_country.csv", index=False, encoding='utf-8-sig')
 covid_19_ts.to_csv(output_dir + "covid_19_ts.csv", index=False, encoding='utf-8-sig')
 
 
-# In[9]:
+# In[10]:
 
 
 #display for debug
-# display(covid_19_ts)
+#display(covid_19_ts)
 
 
-# In[10]:
+# In[11]:
 
 
 # now run any JH combinations
 
 
-# In[11]:
+# In[12]:
 
 
 covid_19_by_country_and_day_of_outbreak = pd.read_csv(output_dir + 'covid_19_by_date_and_country.csv')
@@ -192,13 +257,13 @@ covid_19_overall = pd.read_csv(output_dir + 'covid_19.csv')
 covid_19_ts = pd.read_csv(output_dir + 'covid_19_ts.csv')
 
 
-# In[12]:
+# In[13]:
 
 
 covid_19_ts['Date'] = pd.to_datetime(covid_19_ts['Date'])
 
 
-# In[13]:
+# In[14]:
 
 
 ts_df = covid_19_ts.copy()
@@ -243,28 +308,33 @@ covid_19_infected_observations['Death Change Rate'] = covid_19_infected_observat
 covid_19_infected_observations['Recovery Change Rate'] = covid_19_infected_observations.groupby('Country/Region')['Recovered'].pct_change()
 covid_19_infected_observations['Confirmed Change Rate'] = covid_19_infected_observations.groupby('Country/Region')['Confirmed'].pct_change()
 
+covid_19_infected_observations['Case Bins'] = pd.qcut(covid_19_infected_observations['Active Cases'], 10)
+maxes = covid_19_infected_observations.groupby('Country/Region')['Day'].max().reset_index()
+maxes.columns = ['Country/Region', 'Max Day']
+covid_19_infected_observations = pd.merge(left=covid_19_infected_observations, right=maxes, left_on='Country/Region', right_on='Country/Region', how='left')
 
-# In[14]:
+
+# In[15]:
 
 
 covid_19_national_observations.to_csv(output_dir + "global/covid_19_national_observations.csv", index=False, encoding="utf-8-sig")
 covid_19_infected_observations.to_csv(output_dir + "global/covid_19_infected_observations.csv", index=False, encoding="utf-8-sig")
 
 
-# In[15]:
-
-
-covid_19_national_observations[covid_19_national_observations['Country/Region']=='Brazil']
-
-
 # In[16]:
+
+
+#covid_19_national_observations[covid_19_national_observations['Country/Region']=='Brazil']
+
+
+# In[17]:
 
 
 world_totals = covid_19_national_observations.groupby(['Date']).sum().reset_index().copy()
 world_totals = world_totals.sort_values('Date')
-world_totals['Total Confirmed'] = world_totals['Confirmed'].rolling(1).sum()
-world_totals['Total Deaths'] = world_totals['Death'].rolling(1).sum()
-world_totals['Total Recovered'] = world_totals['Recovered'].rolling(1).sum()
+world_totals['Total Confirmed'] = world_totals['Confirmed'].rolling(1).sum().fillna(0)
+world_totals['Total Deaths'] = world_totals['Death'].rolling(1).sum().fillna(0)
+world_totals['Total Recovered'] = world_totals['Recovered'].rolling(1).sum().fillna(0)
 world_totals['Active Cases'] = world_totals['Total Confirmed'] - world_totals['Total Deaths'] - world_totals['Total Recovered']
 world_totals['Death Rate'] = np.round(world_totals['Total Deaths'] / world_totals['Total Confirmed'],3)
 world_totals['Death Change Rate'] = world_totals['Total Deaths'].pct_change()
@@ -279,23 +349,34 @@ world_totals['Likely Cases 3.5pct'] = world_totals['Total Deaths'] * 350
 world_totals.to_csv(output_dir + "global/covid_19_world_totals.csv", index=False, encoding='utf-8-sig')
 
 
-# In[17]:
+# In[18]:
 
 
 #country specific stuff below here
 
 
-# In[18]:
+# In[21]:
 
+
+def cleanStr(s):
+    c = s.lower().replace(' ', '_')
+    c = c.replace('*', '').replace('(', '_').replace(')', '_').replace(',', '_')
+    c = c.strip()
+    return c
 
 def partitionByCountry(country):  
     print('Processing data files for', country)
-    c = country.lower().replace(' ', '_')
-    c = c.replace('*', '').replace('(', '_').replace(')', '_')
+    c = cleanStr(country)
     os.makedirs(output_dir + 'countries/'+c, exist_ok=True)
 
     df = covid_19_ts[covid_19_ts['Country/Region'] == country].copy()
+    df['Province/State'] = df['Province/State'].str.rsplit(',').str[-1].str.strip() 
+    df['Province/State'] = df['Province/State'].replace(us_state_abbrev)
+
     df = df.sort_values(['Province/State', 'Date'])
+    
+    if c == 'us':
+        print(df['Province/State'].unique())
 
     cases = pd.DataFrame()
     if df['Province/State'].count() == 0:
@@ -318,26 +399,26 @@ def partitionByCountry(country):
     totals = cases.groupby(['Date']).sum().reset_index().copy()
     totals = totals.sort_values('Date')    
     
-    totals['Total Confirmed'] = totals['Confirmed'].rolling(1).sum()
-    totals['Total Deaths'] = totals['Death'].rolling(1).sum()
-    totals['Total Recovered'] = totals['Recovered'].rolling(1).sum()
+    totals['Total Confirmed'] = totals['Confirmed'].rolling(1).sum().fillna(0)
+    totals['Total Deaths'] = totals['Death'].rolling(1).sum().fillna(0)
+    totals['Total Recovered'] = totals['Recovered'].rolling(1).sum().fillna(0)
     totals['Active Cases'] = totals['Total Confirmed'] - totals['Total Deaths'] - totals['Total Recovered']
-    totals['Death Rate'] = np.round(totals['Total Deaths'] / totals['Total Confirmed'], 3)
-    totals['Death Change Rate'] = np.round(totals['Total Deaths'].pct_change(), 3)
-    totals['Recovery Change Rate'] = np.round(totals['Total Recovered'].pct_change(), 3)
-    totals['Confirmed Change Rate'] = np.round(totals['Total Confirmed'].pct_change(), 3)
+    totals['Death Rate'] = np.round(totals['Total Deaths'] / totals['Total Confirmed'], 3).fillna(0)
+    totals['Death Change Rate'] = np.round(totals['Total Deaths'].pct_change(), 3).fillna(0)
+    totals['Recovery Change Rate'] = np.round(totals['Total Recovered'].pct_change(), 3).fillna(0)
+    totals['Confirmed Change Rate'] = np.round(totals['Total Confirmed'].pct_change(), 3).fillna(0)
     
     totals['New Active Cases'] = totals['Active Cases'] - totals['Active Cases'].shift()
-    totals['New Active Cases PCT Change'] = totals['New Active Cases'].pct_change()
+    totals['New Active Cases PCT Change'] = totals['New Active Cases'].pct_change().fillna(0)
 
     totals['New Cases'] = totals['Confirmed'] - totals['Confirmed'].shift()
-    totals['New Case PCT Change'] = totals['New Cases'].pct_change()
+    totals['New Case PCT Change'] = totals['New Cases'].pct_change().fillna(0)
 
     totals['New Deaths'] = totals['Death'] - totals['Death'].shift()
-    totals['New Death PCT Change'] = totals['New Deaths'].pct_change()
+    totals['New Death PCT Change'] = totals['New Deaths'].pct_change().fillna(0)
     
     totals['New Recovered'] = totals['Recovered'] - totals['Recovered'].shift()
-    totals['New Recovered PCT Change'] = totals['New Recovered'].pct_change()
+    totals['New Recovered PCT Change'] = totals['New Recovered'].pct_change().fillna(0)
     
     totals['Likely Cases C86'] = totals['Active Cases'] * 1.14
     totals['Likely Cases 1pct'] = totals['Total Deaths'] * 100
@@ -364,26 +445,16 @@ def partitionByCountry(country):
     cases['Likely Cases 3.5pct'] = np.round(cases['Death'] * 350)
     cases['Likely Cases C86'] = np.round(cases['Confirmed'] * 1.14)
 
-    
-    if c == 'us':
-        states_abbrv=pd.read_csv('./reference/US-state-abbrv.csv')
-        states=pd.DataFrame()
-        states['Province/State'] = cases['Province/State'].drop_duplicates().str.rsplit(',').str[-1].str.strip()
-        states_abbrv['Abbreviation'] = states_abbrv['Abbreviation'].str.strip()
-        states_abbrv['State'] = states_abbrv['State'].str.strip()
-        states = pd.merge(left=states, right=states_abbrv, left_on='Province/State', right_on='Abbreviation', how='left')
-        states['State'] = states['State'].fillna(states['Province/State'])
         
-        states.to_csv(output_dir + "countries/us/state_list.csv", index=False)
-    
     cases.to_csv(output_dir + 'countries/'+c+'/covid_19_'+c+'_cases.csv', index=False, encoding='utf-8-sig')
     totals.to_csv(output_dir + 'countries/'+c+'/covid_19_'+c+'_totals.csv', index=False, encoding='utf-8-sig')
 
 
-# In[19]:
+# In[22]:
 
 
 countries = covid_19_national_observations['Country/Region'].unique()
+countries.sort()
 for cnt in countries:
     partitionByCountry(cnt)
 

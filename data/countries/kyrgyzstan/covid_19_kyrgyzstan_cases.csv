@@ -1,0 +1,6 @@
+﻿Date,Confirmed,Province/State,Death,Recovered,Total Confirmed,Total Deaths,Total Recovered,Active Cases,Death Rate,Death Change Rate,Recovery Change Rate,Confirmed Change Rate,Likely Cases 1pct,Likely Cases 1.8pct,Likely Cases 3.5pct,Likely Cases C86
+2020-03-18,3,Kyrgyzstan,0,0,3.0,0.0,0.0,3.0,0.0,,,,0,0,0,3.0
+2020-03-19,3,Kyrgyzstan,0,0,3.0,0.0,0.0,3.0,0.0,,,0.0,0,0,0,3.0
+2020-03-20,6,Kyrgyzstan,0,0,6.0,0.0,0.0,6.0,0.0,,,1.0,0,0,0,7.0
+2020-03-21,14,Kyrgyzstan,0,0,14.0,0.0,0.0,14.0,0.0,,,1.333,0,0,0,16.0
+2020-03-22,14,Kyrgyzstan,0,0,14.0,0.0,0.0,14.0,0.0,,,0.0,0,0,0,16.0

@@ -1,0 +1,11 @@
+﻿Date,Confirmed,Recovered,Province/State,Death,Total Confirmed,Total Deaths,Total Recovered,Active Cases,Death Rate,Death Change Rate,Recovery Change Rate,Confirmed Change Rate,Likely Cases 1pct,Likely Cases 1.8pct,Likely Cases 3.5pct,Likely Cases C86
+2020-03-13,1.0,,Ethiopia,0,1.0,0.0,,1.0,0.0,,,,0,0,0,1.0
+2020-03-14,1.0,,Ethiopia,0,1.0,0.0,,1.0,0.0,,,0.0,0,0,0,1.0
+2020-03-15,1.0,,Ethiopia,0,1.0,0.0,,1.0,0.0,,,0.0,0,0,0,1.0
+2020-03-16,5.0,,Ethiopia,0,5.0,0.0,,5.0,0.0,,,4.0,0,0,0,6.0
+2020-03-17,5.0,,Ethiopia,0,5.0,0.0,,5.0,0.0,,,0.0,0,0,0,6.0
+2020-03-18,6.0,,Ethiopia,0,6.0,0.0,,6.0,0.0,,,0.2,0,0,0,7.0
+2020-03-19,6.0,,Ethiopia,0,6.0,0.0,,6.0,0.0,,,0.0,0,0,0,7.0
+2020-03-20,9.0,,Ethiopia,0,9.0,0.0,,9.0,0.0,,,0.5,0,0,0,10.0
+2020-03-21,9.0,,Ethiopia,0,9.0,0.0,,9.0,0.0,,,0.0,0,0,0,10.0
+2020-03-22,11.0,4.0,Ethiopia,0,11.0,0.0,4.0,7.0,0.0,,inf,0.222,0,0,0,13.0
