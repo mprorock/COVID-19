@@ -161,9 +161,11 @@ def pred_province(country, province, t=90, infectivity_factor=180, gMethod='line
 def generate_forecasts():
     for country in countries:
         print("Generating forecasts for: " + country)
+        cases, totals = getDf(country)
+        if totals.shape[0] < 3:
+            continue
         with suppress_stdout_stderr():
             pred_country(country, 3, infectivity_factor=180, gMethod='linear', disp=False)
-        cases, totals = getDf(country)
         sts = cases['Province/State'].unique()
         sts.sort()
         if len(sts) > 1:
