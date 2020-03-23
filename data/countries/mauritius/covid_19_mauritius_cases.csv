@@ -1,0 +1,6 @@
+﻿Date,Confirmed,Death,Province/State,Recovered,Total Confirmed,Total Deaths,Total Recovered,Active Cases,Death Rate,Death Change Rate,Recovery Change Rate,Confirmed Change Rate,Likely Cases 1pct,Likely Cases 1.8pct,Likely Cases 3.5pct,Likely Cases C86
+2020-03-18,3.0,,Mauritius,0,3.0,,0.0,3.0,0.0,,,,,,,3.0
+2020-03-19,3.0,,Mauritius,0,3.0,,0.0,3.0,0.0,,,0.0,,,,3.0
+2020-03-20,12.0,,Mauritius,0,12.0,,0.0,12.0,0.0,,,3.0,,,,14.0
+2020-03-21,14.0,1.0,Mauritius,0,14.0,1.0,0.0,13.0,0.071,inf,,0.167,100.0,180.0,350.0,16.0
+2020-03-22,18.0,1.0,Mauritius,0,18.0,1.0,0.0,17.0,0.056,0.0,,0.286,100.0,180.0,350.0,21.0
