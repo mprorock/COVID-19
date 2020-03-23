@@ -1,0 +1,10 @@
+﻿Date,Confirmed,Recovered,Province/State,Death,Total Confirmed,Total Deaths,Total Recovered,Active Cases,Death Rate,Death Change Rate,Recovery Change Rate,Confirmed Change Rate,Likely Cases 1pct,Likely Cases 1.8pct,Likely Cases 3.5pct,Likely Cases C86
+2020-03-14,2.0,,Trinidad and Tobago,0,2.0,0.0,,2.0,0.0,,,,0,0,0,2.0
+2020-03-15,2.0,,Trinidad and Tobago,0,2.0,0.0,,2.0,0.0,,,0.0,0,0,0,2.0
+2020-03-16,4.0,,Trinidad and Tobago,0,4.0,0.0,,4.0,0.0,,,1.0,0,0,0,5.0
+2020-03-17,5.0,,Trinidad and Tobago,0,5.0,0.0,,5.0,0.0,,,0.25,0,0,0,6.0
+2020-03-18,7.0,,Trinidad and Tobago,0,7.0,0.0,,7.0,0.0,,,0.4,0,0,0,8.0
+2020-03-19,9.0,,Trinidad and Tobago,0,9.0,0.0,,9.0,0.0,,,0.286,0,0,0,10.0
+2020-03-20,9.0,,Trinidad and Tobago,0,9.0,0.0,,9.0,0.0,,,0.0,0,0,0,10.0
+2020-03-21,49.0,1.0,Trinidad and Tobago,0,49.0,0.0,1.0,48.0,0.0,,inf,4.444,0,0,0,56.0
+2020-03-22,50.0,1.0,Trinidad and Tobago,0,50.0,0.0,1.0,49.0,0.0,,0.0,0.02,0,0,0,57.0
