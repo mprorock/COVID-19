@@ -132,11 +132,6 @@ def pred_province(country, province, t=90, infectivity_factor=180, gMethod='line
     #print('Total records so far: ', totals.shape[0])
     # now let's run the forecast with fbprophet
     fb_df = cases[['Date', 'Confirmed']].copy()
-    fb_df = fb_df.dropna()
-    if cases['Confirmed'].sum() < 5:
-        return False
-    if cases.shape[0] < 3:
-        return False
     fb_df = fb_df.sort_values('Date').reset_index(drop=True)
     fb_df.columns = ['ds','y']
     #fb_df['cap'] = totals['Death'] * infectivity_factor
@@ -180,3 +175,42 @@ def generate_forecasts():
                     pred_province(country, st, 3, infectivity_factor=180, gMethod='linear', disp=False)
 
 generate_forecasts()
+
+covid_19_ts = pd.read_csv(input_dir + 'covid_19_ts.csv')
+covid_19_national_observations = pd.read_csv(input_dir + 'global/covid_19_national_observations.csv')
+covid_19_infected_observations = pd.read_csv(input_dir + 'global/covid_19_infected_observations.csv')
+covid_19_world_totals = pd.read_csv(input_dir + 'global/covid_19_world_totals.csv')
+
+#correct date parsing on some of the JH data
+covid_19_ts['Date'] = pd.to_datetime(covid_19_ts['Date'])
+covid_19_national_observations['Date'] = pd.to_datetime(covid_19_national_observations['Date'])
+covid_19_infected_observations['Date'] = pd.to_datetime(covid_19_infected_observations['Date'])
+covid_19_world_totals['Date'] = pd.to_datetime(covid_19_world_totals['Date'])
+
+world_chart = px.bar(covid_19_infected_observations, 
+    x="Day", y="Active Cases", color="Country/Region", title="Global Active Cases by Day of Outbreak (Confirmed - Recovered - Deaths)")
+world_chart.write_html('./www//global_by_day.html')
+
+covid_19_world_totals_state = covid_19_world_totals[['Date', 'Active Cases', 'Recovered', 'Death']].melt(id_vars=['Date'], 
+            value_vars=['Active Cases', 'Death', 'Recovered'], value_name="Population", var_name='Status')
+world_chart = px.bar(covid_19_world_totals_state, 
+    x="Date", y="Population", color="Status", title="Global Active, Recovered and Deaths by Date")
+world_chart.write_image('./www/global.png')
+
+fb_df = covid_19_world_totals[['Date', 'Active Cases']].copy()
+fb_df = fb_df.sort_values('Date').reset_index(drop=True)
+fb_df.columns = ['ds','y']
+#print(fb_df)
+
+m = Prophet(yearly_seasonality=True, weekly_seasonality=False, daily_seasonality=False, growth='linear', n_changepoints=3)
+m.fit(fb_df)
+
+future = m.make_future_dataframe(periods=3)
+
+forecast = m.predict(future)
+
+py.init_notebook_mode()
+
+fig = plot_plotly(m, forecast, xlabel='Date', ylabel='Active Cases', uncertainty=True, figsize=(1200,600))  # This returns a plotly Figure
+fig.update_layout(title='Active Global COVID-19 Cases and Forecast')
+fig.write_html('./www/global_forecast.html')
