@@ -355,7 +355,7 @@ world_totals.to_csv(output_dir + "global/covid_19_world_totals.csv", index=False
 #country specific stuff below here
 
 
-# In[19]:
+# In[22]:
 
 
 def cleanStr(s):
@@ -407,6 +407,7 @@ def partitionByCountry(country):
     totals['Death Change Rate'] = np.round(totals['Total Deaths'].pct_change(), 3).fillna(0)
     totals['Recovery Change Rate'] = np.round(totals['Total Recovered'].pct_change(), 3).fillna(0)
     totals['Confirmed Change Rate'] = np.round(totals['Total Confirmed'].pct_change(), 3).fillna(0)
+    totals['Confirmed Rolling 3 Change Rate'] = totals['Confirmed Change Rate'].rolling(3).mean().fillna(0)
     
     totals['New Active Cases'] = totals['Active Cases'] - totals['Active Cases'].shift()
     totals['New Active Cases PCT Change'] = totals['New Active Cases'].pct_change().fillna(0)
@@ -450,7 +451,7 @@ def partitionByCountry(country):
     totals.to_csv(output_dir + 'countries/'+c+'/covid_19_'+c+'_totals.csv', index=False, encoding='utf-8-sig')
 
 
-# In[20]:
+# In[23]:
 
 
 countries = covid_19_national_observations['Country/Region'].unique()
