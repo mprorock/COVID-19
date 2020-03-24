@@ -1,0 +1,20 @@
+﻿Date,Confirmed,Death,Recovered,Province/State,Total Confirmed,Total Deaths,Total Recovered,Active Cases,Death Rate,Death Change Rate,Recovery Change Rate,Confirmed Change Rate,Likely Cases 1pct,Likely Cases 1.8pct,Likely Cases 3.5pct,Likely Cases C86
+2020-03-05,2.0,,,Bosnia and Herzegovina,2.0,,,2.0,0.0,,,,,,,2.0
+2020-03-06,2.0,,,Bosnia and Herzegovina,2.0,,,2.0,0.0,,,0.0,,,,2.0
+2020-03-07,3.0,,,Bosnia and Herzegovina,3.0,,,3.0,0.0,,,0.5,,,,3.0
+2020-03-08,3.0,,,Bosnia and Herzegovina,3.0,,,3.0,0.0,,,0.0,,,,3.0
+2020-03-09,3.0,,,Bosnia and Herzegovina,3.0,,,3.0,0.0,,,0.0,,,,3.0
+2020-03-10,5.0,,,Bosnia and Herzegovina,5.0,,,5.0,0.0,,,0.667,,,,6.0
+2020-03-11,7.0,,,Bosnia and Herzegovina,7.0,,,7.0,0.0,,,0.4,,,,8.0
+2020-03-12,11.0,,,Bosnia and Herzegovina,11.0,,,11.0,0.0,,,0.571,,,,13.0
+2020-03-13,13.0,,,Bosnia and Herzegovina,13.0,,,13.0,0.0,,,0.182,,,,15.0
+2020-03-14,18.0,,,Bosnia and Herzegovina,18.0,,,18.0,0.0,,,0.385,,,,21.0
+2020-03-15,24.0,,,Bosnia and Herzegovina,24.0,,,24.0,0.0,,,0.333,,,,27.0
+2020-03-16,25.0,,,Bosnia and Herzegovina,25.0,,,25.0,0.0,,,0.042,,,,28.0
+2020-03-17,26.0,,2.0,Bosnia and Herzegovina,26.0,,2.0,24.0,0.0,,inf,0.04,,,,30.0
+2020-03-18,38.0,,2.0,Bosnia and Herzegovina,38.0,,2.0,36.0,0.0,,0.0,0.462,,,,43.0
+2020-03-19,63.0,,2.0,Bosnia and Herzegovina,63.0,,2.0,61.0,0.0,,0.0,0.658,,,,72.0
+2020-03-20,89.0,,2.0,Bosnia and Herzegovina,89.0,,2.0,87.0,0.0,,0.0,0.413,,,,101.0
+2020-03-21,93.0,1.0,2.0,Bosnia and Herzegovina,93.0,1.0,2.0,90.0,0.011,inf,0.0,0.045,100.0,180.0,350.0,106.0
+2020-03-22,126.0,1.0,2.0,Bosnia and Herzegovina,126.0,1.0,2.0,123.0,0.008,0.0,0.0,0.355,100.0,180.0,350.0,144.0
+2020-03-23,126.0,1.0,2.0,Bosnia and Herzegovina,126.0,1.0,2.0,123.0,0.008,0.0,0.0,0.0,100.0,180.0,350.0,144.0
