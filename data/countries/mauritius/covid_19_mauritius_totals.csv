@@ -1,0 +1,7 @@
+﻿Date,Confirmed,Death,Recovered,Total Confirmed,Total Deaths,Total Recovered,Active Cases,Death Rate,Death Change Rate,Recovery Change Rate,Confirmed Change Rate,Confirmed Rolling 3 Change Rate,New Active Cases,New Active Cases PCT Change,New Cases,New Case PCT Change,New Deaths,New Death PCT Change,New Recovered,New Recovered PCT Change,Likely Cases C86,Likely Cases 1pct,Likely Cases 1.8pct,Likely Cases 3.5pct
+2020-03-18,3.0,0.0,0,3.0,0.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,,0.0,,0.0,,0.0,,0.0,3.42,0.0,0.0,0.0
+2020-03-19,3.0,0.0,0,3.0,0.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,3.42,0.0,0.0,0.0
+2020-03-20,12.0,0.0,0,12.0,0.0,0.0,12.0,0.0,0.0,0.0,3.0,1.0,9.0,inf,9.0,inf,0.0,0.0,0.0,0.0,13.68,0.0,0.0,0.0
+2020-03-21,14.0,1.0,0,14.0,1.0,0.0,13.0,0.071,inf,0.0,0.167,1.0556666666666665,1.0,-0.8888888888888888,2.0,-0.7777777777777778,1.0,inf,0.0,0.0,14.819999999999999,100.0,180.0,350.0
+2020-03-22,18.0,1.0,0,18.0,1.0,0.0,17.0,0.056,0.0,0.0,0.286,1.151,4.0,3.0,4.0,1.0,0.0,-1.0,0.0,0.0,19.38,100.0,180.0,350.0
+2020-03-23,18.0,1.0,0,18.0,1.0,0.0,17.0,0.056,0.0,0.0,0.0,0.15099999999999994,0.0,-1.0,0.0,-1.0,0.0,0.0,0.0,0.0,19.38,100.0,180.0,350.0
