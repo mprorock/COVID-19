@@ -132,6 +132,8 @@ def pred_province(country, province, t=90, infectivity_factor=180, gMethod='line
     #print('Total records so far: ', totals.shape[0])
     # now let's run the forecast with fbprophet
     fb_df = cases[['Date', 'Confirmed']].copy()
+    if cases['Confirmed'].sum() < 5:
+	return
     fb_df = fb_df.sort_values('Date').reset_index(drop=True)
     fb_df.columns = ['ds','y']
     #fb_df['cap'] = totals['Death'] * infectivity_factor
