@@ -29,6 +29,9 @@ from sklearn.pipeline import make_pipeline
 from ipywidgets import interact, interactive, fixed, interact_manual
 from ipywidgets import widgets
 
+import folium
+from folium.plugins import FastMarkerCluster
+
 from datetime import datetime
 import os
 
@@ -174,7 +177,7 @@ def generate_forecasts():
                 with suppress_stdout_stderr():
                     pred_province(country, st, 3, infectivity_factor=180, gMethod='linear', disp=False)
 
-generate_forecasts()
+#generate_forecasts()
 
 covid_19_ts = pd.read_csv(input_dir + 'covid_19_ts.csv')
 covid_19_national_observations = pd.read_csv(input_dir + 'global/covid_19_national_observations.csv')
@@ -195,7 +198,7 @@ covid_19_world_totals_state = covid_19_world_totals[['Date', 'Active Cases', 'Re
             value_vars=['Active Cases', 'Death', 'Recovered'], value_name="Population", var_name='Status')
 world_chart = px.bar(covid_19_world_totals_state, 
     x="Date", y="Population", color="Status", title="Global Active, Recovered and Deaths by Date")
-world_chart.write_image('./www/global.png')
+world_chart.write_html('./www/global.html')
 
 fb_df = covid_19_world_totals[['Date', 'Active Cases']].copy()
 fb_df = fb_df.sort_values('Date').reset_index(drop=True)
@@ -209,8 +212,76 @@ future = m.make_future_dataframe(periods=3)
 
 forecast = m.predict(future)
 
-py.init_notebook_mode()
-
-fig = plot_plotly(m, forecast, xlabel='Date', ylabel='Active Cases', uncertainty=True, figsize=(1200,600))  # This returns a plotly Figure
+fig = plot_plotly(m, forecast, xlabel='Date', ylabel='Active Cases', uncertainty=True)  # This returns a plotly Figure
 fig.update_layout(title='Active Global COVID-19 Cases and Forecast')
 fig.write_html('./www/global_forecast.html')
+
+state_geo = os.path.join('./reference/', 'us-states.json')
+state_data = pd.read_csv('./reference/COVID19-US-State-Quarantine.csv')
+combined = pd.read_csv(input_dir + 'web_cases_state.csv')
+
+state_data['Quarantined'] = 1
+state_data.loc[state_data['US States Quarantined'] == 2, 'Quarantined'] = 0
+
+combined['Last Update'] = pd.to_datetime(combined['Last_Update'])
+combined['Latitude'] = combined['Lat']
+combined['Longitude'] = combined['Long_']
+combined['Province/State'] = combined['Province_State']
+combined['Country/Region'] = combined['Country_Region']
+combined = combined.sort_values('Last Update').reset_index(drop=True)
+
+combined = combined[['Last Update', 'Latitude', 'Longitude', 'Country/Region', 'Province/State','Active', 'Confirmed','Recovered','Deaths']].copy().reset_index(drop=True)
+
+latest = combined.sort_values('Last Update').groupby(['Latitude','Longitude']).tail(1).copy().reset_index(drop=True)
+latest['Active'] = latest['Confirmed'] - latest['Recovered'] - latest['Deaths']
+
+deaths = latest[latest['Deaths']>0]
+deaths = pd.DataFrame(deaths.values.repeat(deaths.Deaths, axis=0), columns=deaths.columns)
+
+confirmed = latest[latest['Confirmed']>0]
+confirmed = pd.DataFrame(confirmed.values.repeat(confirmed.Confirmed, axis=0), columns=confirmed.columns)
+
+us_confirmed = latest[latest['Confirmed']>0]
+us_confirmed = us_confirmed[us_confirmed['Country/Region'] == 'US']
+us_confirmed = pd.DataFrame(us_confirmed.values.repeat(us_confirmed.Confirmed, axis=0), columns=us_confirmed.columns)
+
+recovered = latest[latest['Recovered']>0]
+recovered = pd.DataFrame(recovered.values.repeat(recovered.Recovered, axis=0), columns=recovered.columns)
+
+active = latest[latest['Active']>0]
+active = pd.DataFrame(active.values.repeat(active.Active, axis=0), columns=active.columns)
+
+us_active = latest[latest['Active']>0]
+us_active = us_active[us_active['Country/Region'] == 'US']
+us_active = pd.DataFrame(us_active.values.repeat(us_active.Active, axis=0), columns=us_active.columns)
+
+na = latest[latest['Active'] > 0]
+na_active = na[na['Country/Region'] == 'US']
+na_active = na_active.append(na[na['Country/Region'] == 'Mexico'])
+na_active = na_active.append(na[na['Country/Region'] == 'Canada'])
+na_active = pd.DataFrame(na_active.values.repeat(na_active.Active, axis=0), columns=na_active.columns)
+
+folium_map = folium.Map(location=[38.826555, -100.244867],
+                        zoom_start=4,
+                        tiles=None)
+folium.TileLayer('CartoDB dark_matter', name='Base Layer').add_to(folium_map)
+                             
+#FastMarkerCluster(data=list(zip(deaths['Latitude'].values, deaths['Longitude'].values)), name='Reported Deaths').add_to(folium_map)
+#FastMarkerCluster(data=list(zip(recovered['Latitude'].values, recovered['Longitude'].values)), name='Recovered Cases').add_to(folium_map)
+#FastMarkerCluster(data=list(zip(active['Latitude'].values, active['Longitude'].values)), name='Active Cases').add_to(folium_map)
+FastMarkerCluster(data=list(zip(na_active['Latitude'].values, na_active['Longitude'].values)), name='North America Active Cases').add_to(folium_map)
+
+folium_map.choropleth(
+    name='Quarantine in Effect',
+    geo_data=state_geo,
+    data=state_data,
+    columns=['US States', 'Quarantined'],
+    key_on='feature.properties.name',
+    fill_color='RdPu',
+    fill_opacity=0.7,
+    line_opacity=0.2
+)
+
+lc = folium.LayerControl(collapsed=False).add_to(folium_map)
+
+folium_map.save('./www/mapping.html')
