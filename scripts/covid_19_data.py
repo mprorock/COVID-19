@@ -355,7 +355,7 @@ world_totals.to_csv(output_dir + "global/covid_19_world_totals.csv", index=False
 #country specific stuff below here
 
 
-# In[21]:
+# In[19]:
 
 
 def cleanStr(s):
@@ -392,7 +392,7 @@ def partitionByCountry(country):
     if 'Death' not in cases.columns:
         cases['Death'] = 0
     if 'Confirmed' not in cases.columns:
-        cases['Death'] = 0
+        cases['Confirmed'] = 0
     if 'Recovered' not in cases.columns:
         cases['Recovered'] = 0
     
@@ -450,7 +450,7 @@ def partitionByCountry(country):
     totals.to_csv(output_dir + 'countries/'+c+'/covid_19_'+c+'_totals.csv', index=False, encoding='utf-8-sig')
 
 
-# In[22]:
+# In[20]:
 
 
 countries = covid_19_national_observations['Country/Region'].unique()
