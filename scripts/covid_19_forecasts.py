@@ -269,7 +269,7 @@ folium.TileLayer('CartoDB dark_matter', name='Base Layer').add_to(folium_map)
 #FastMarkerCluster(data=list(zip(deaths['Latitude'].values, deaths['Longitude'].values)), name='Reported Deaths').add_to(folium_map)
 #FastMarkerCluster(data=list(zip(recovered['Latitude'].values, recovered['Longitude'].values)), name='Recovered Cases').add_to(folium_map)
 #FastMarkerCluster(data=list(zip(active['Latitude'].values, active['Longitude'].values)), name='Active Cases').add_to(folium_map)
-FastMarkerCluster(data=list(zip(na_active['Latitude'].values, na_active['Longitude'].values)), name='North America Active Cases').add_to(folium_map)
+FastMarkerCluster(data=list(zip(active['Latitude'].values, active['Longitude'].values)), name='Active Cases').add_to(folium_map)
 
 folium_map.choropleth(
     name='Quarantine in Effect',
