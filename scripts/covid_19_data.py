@@ -37,6 +37,20 @@ combined_csv['Country/Region'] = combined_csv['Country/Region'].replace('Mainlan
 combined_csv.to_csv(output_dir + "combined.csv", index=False, encoding='utf-8-sig')
 
 
+# In[26]:
+
+
+web_cases = pd.read_csv('https://raw.githubusercontent.com/CSSEGISandData/COVID-19/web-data/data/cases.csv')
+web_cases_state = pd.read_csv('https://raw.githubusercontent.com/CSSEGISandData/COVID-19/web-data/data/cases_state.csv')
+web_cases_country = pd.read_csv('https://raw.githubusercontent.com/CSSEGISandData/COVID-19/web-data/data/cases_country.csv')
+web_cases_time = pd.read_csv('https://raw.githubusercontent.com/CSSEGISandData/COVID-19/web-data/data/cases_time.csv')
+
+web_cases.to_csv(output_dir + "web_cases.csv", index=False, encoding='utf-8-sig')
+web_cases_state.to_csv(output_dir + "web_cases_state.csv", index=False, encoding='utf-8-sig')
+web_cases_country.to_csv(output_dir + "web_cases_country.csv", index=False, encoding='utf-8-sig')
+web_cases_time.to_csv(output_dir + "web_cases_time.csv", index=False, encoding='utf-8-sig')
+
+
 # In[3]:
 
 
