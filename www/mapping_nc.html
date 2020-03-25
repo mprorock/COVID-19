@@ -23,7 +23,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_be51cba29d70498d932d69a67d73b4e7 {
+                #map_8b3cdf1e79ab4ee0b4491dc743b419e2 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -38,13 +38,13 @@
 </head>
 <body>    
     
-            <div class="folium-map" id="map_be51cba29d70498d932d69a67d73b4e7" ></div>
+            <div class="folium-map" id="map_8b3cdf1e79ab4ee0b4491dc743b419e2" ></div>
         
 </body>
 <script>    
     
-            var map_be51cba29d70498d932d69a67d73b4e7 = L.map(
-                "map_be51cba29d70498d932d69a67d73b4e7",
+            var map_8b3cdf1e79ab4ee0b4491dc743b419e2 = L.map(
+                "map_8b3cdf1e79ab4ee0b4491dc743b419e2",
                 {
                     center: [35.450482, -79.666916],
                     crs: L.CRS.EPSG3857,
@@ -58,13 +58,13 @@
 
         
     
-            var tile_layer_6ccbbc4499f54d2c988cd96056f5a241 = L.tileLayer(
+            var tile_layer_d5f4755f4c41481a9156aa85816ab678 = L.tileLayer(
                 "https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png",
                 {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_be51cba29d70498d932d69a67d73b4e7);
+            ).addTo(map_8b3cdf1e79ab4ee0b4491dc743b419e2);
         
     
-            var fast_marker_cluster_da3aa7f6222b49df9d19ee156c1c3868 = (function(){
+            var fast_marker_cluster_c0753ce57c574faba4db7162a9731272 = (function(){
                 
                 var callback = function (row) {
                     var icon = L.AwesomeMarkers.icon();
@@ -82,23 +82,23 @@
                     marker.addTo(cluster);
                 }
 
-                cluster.addTo(map_be51cba29d70498d932d69a67d73b4e7);
+                cluster.addTo(map_8b3cdf1e79ab4ee0b4491dc743b419e2);
                 return cluster;
             })();
         
     
-            var layer_control_fc938ddc3dc24da186423e2ab944d164 = {
+            var layer_control_2869561df3674efe99b4cbbf898fe943 = {
                 base_layers : {
-                    "cartodbdark_matter" : tile_layer_6ccbbc4499f54d2c988cd96056f5a241,
+                    "cartodbdark_matter" : tile_layer_d5f4755f4c41481a9156aa85816ab678,
                 },
                 overlays :  {
-                    "NC Regional Active Cases" : fast_marker_cluster_da3aa7f6222b49df9d19ee156c1c3868,
+                    "NC Regional Active Cases" : fast_marker_cluster_c0753ce57c574faba4db7162a9731272,
                 },
             };
             L.control.layers(
-                layer_control_fc938ddc3dc24da186423e2ab944d164.base_layers,
-                layer_control_fc938ddc3dc24da186423e2ab944d164.overlays,
+                layer_control_2869561df3674efe99b4cbbf898fe943.base_layers,
+                layer_control_2869561df3674efe99b4cbbf898fe943.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_be51cba29d70498d932d69a67d73b4e7);
+            ).addTo(map_8b3cdf1e79ab4ee0b4491dc743b419e2);
         
 </script>
