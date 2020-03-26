@@ -3,7 +3,8 @@
 # run initial imports
 from __future__ import print_function
 import warnings
-#warnings.filterwarnings('ignore')
+warnings.filterwarnings('ignore')
+
 import logging
 logging.getLogger('fbprophet').setLevel(logging.ERROR)
 
@@ -40,10 +41,21 @@ NOW = datetime.now().strftime("%Y/%m/%d %H:%M")
 NOW_FILE = datetime.now().strftime("%Y_%m_%d__%H%M")
 pDay=3 # number of corecast days - should not exceed 5 unless you are very careful in tuning, and understand how to interpert the results
 input_dir = './data/'
-covid_19_national_observations = pd.read_csv(input_dir + 'global/covid_19_national_observations.csv')
-covid_19_infected_observations = pd.read_csv(input_dir + 'global/covid_19_infected_observations.csv')
+covid_19 = pd.read_csv(input_dir + 'combined.csv')
+#correct date parsing on some of the JH data
+covid_19['Last Update'] = pd.to_datetime(pd.to_datetime(covid_19['Last Update']).dt.date)
+covid_19 = covid_19.sort_values(['Last Update', 'Country/Region'])
 
-countries = covid_19_national_observations['Country/Region'].unique()
+covid_19_countries = covid_19.copy().groupby(['Last Update','Country/Region'])['Confirmed','Deaths', 'Recovered'].sum().reset_index()
+covid_19_overall = covid_19.copy().groupby(['Last Update'])['Confirmed','Deaths', 'Recovered'].sum().reset_index()
+
+covid_19_countries['Death'] = covid_19_countries['Deaths']
+covid_19_countries['Active Cases'] = covid_19_countries['Confirmed'] - covid_19_countries['Deaths'] - covid_19_countries['Recovered']
+covid_19_overall['Death'] = covid_19_overall['Deaths']
+covid_19_overall['Active Cases'] = covid_19_overall['Confirmed'] - covid_19_overall['Deaths'] - covid_19_overall['Recovered']
+
+
+countries = covid_19['Country/Region'].unique()
 countries.sort()
 
 class suppress_stdout_stderr(object):
@@ -83,14 +95,23 @@ def cleanStr(s):
 
 def getDf(country):
     c = cleanStr(country)
-    #setup initial data frames
-    input_dir = './data/countries/' + c + '/'
-    cases = pd.read_csv(input_dir + 'covid_19_'+ c +'_cases.csv')
-    totals = pd.read_csv(input_dir + './covid_19_' + c + '_totals.csv')
+    
+    totals = covid_19_countries[covid_19_countries['Country/Region'] == country].copy()
+    cases = covid_19[covid_19['Country/Region'] == country].copy()
+    #let's clean up some bad reporting first
+    cases['Province/State'] = cases['Province/State'].str.rsplit(',').str[-1].str.strip()
+    cases['Province/State'] = cases['Province/State'].replace(us_state_abbrev)
+    cases = cases.groupby(['Last Update','Country/Region', 'Province/State'])['Confirmed','Deaths', 'Recovered'].sum().reset_index()
     
     #correct date parsing on some of the JH data
-    cases['Date'] = pd.to_datetime(cases['Date'])
-    totals['Date'] = pd.to_datetime(totals['Date'])
+    cases['Date'] = pd.to_datetime(cases['Last Update'])
+    totals['Date'] = pd.to_datetime(totals['Last Update'])
+    
+    #some backwards compat redundancy
+    cases['Death'] = cases['Deaths']
+    cases['Active Cases'] = cases['Confirmed'] - cases['Deaths'] - cases['Recovered']
+    totals['Death'] = totals['Deaths']
+    totals['Active Cases'] = totals['Confirmed'] - totals['Deaths'] - totals['Recovered']
     
     cases = cases.sort_values('Date')
     totals = totals.sort_values('Date')
@@ -178,29 +199,19 @@ def generate_forecasts():
                     pred_province(country, st, 3, infectivity_factor=180, gMethod='linear', disp=False)
 
 def generate_htmls():
-    covid_19_ts = pd.read_csv(input_dir + 'covid_19_ts.csv')
-    covid_19_national_observations = pd.read_csv(input_dir + 'global/covid_19_national_observations.csv')
-    covid_19_infected_observations = pd.read_csv(input_dir + 'global/covid_19_infected_observations.csv')
-    covid_19_world_totals = pd.read_csv(input_dir + 'global/covid_19_world_totals.csv')
-
-    #correct date parsing on some of the JH data
-    covid_19_ts['Date'] = pd.to_datetime(covid_19_ts['Date'])
-    covid_19_national_observations['Date'] = pd.to_datetime(covid_19_national_observations['Date'])
-    covid_19_infected_observations['Date'] = pd.to_datetime(covid_19_infected_observations['Date'])
-    covid_19_world_totals['Date'] = pd.to_datetime(covid_19_world_totals['Date'])
-
-    world_chart = px.bar(covid_19_infected_observations, 
-        x="Day", y="Active Cases", color="Country/Region", title="Global Active Cases by Day of Outbreak (Confirmed - Recovered - Deaths)")
+    world_chart = px.bar(covid_19_countries, 
+        x="Last Update", y="Confirmed", color="Country/Region", title="Global Confirmed Cases by Calendar Date")
     world_chart.write_html('./www//global_by_day.html')
 
-    covid_19_world_totals_state = covid_19_world_totals[['Date', 'Active Cases', 'Recovered', 'Death']].melt(id_vars=['Date'], 
-                value_vars=['Active Cases', 'Death', 'Recovered'], value_name="Population", var_name='Status')
+    
+    covid_19_world_totals_state = covid_19_overall[['Last Update', 'Confirmed', 'Deaths']].melt(id_vars=['Last Update'], 
+            value_vars=['Confirmed', 'Deaths'], value_name="Population", var_name='Status')
     world_chart = px.bar(covid_19_world_totals_state, 
-        x="Date", y="Population", color="Status", title="Global Active, Recovered and Deaths by Date")
+        x="Last Update", y="Population", color="Status", title="Global Active, Recovered and Deaths by Date")
     world_chart.write_html('./www/global.html')
 
-    fb_df = covid_19_world_totals[['Date', 'Active Cases']].copy()
-    fb_df = fb_df.sort_values('Date').reset_index(drop=True)
+    fb_df = covid_19_overall[['Last Update', 'Active Cases']].copy()
+    fb_df = fb_df.sort_values('Last Update').reset_index(drop=True)
     fb_df.columns = ['ds','y']
     #print(fb_df)
 
