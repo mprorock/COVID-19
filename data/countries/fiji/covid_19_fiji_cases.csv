@@ -1,6 +1,0 @@
-﻿Date,Province/State,Latitude,Longitude,FIPS,Confirmed,Deaths,Recovered,UnknownActive,Active,Day,DayLoc,DayCountry,DayCountryProvince,Death,Total Confirmed,Total Deaths,Total Recovered,Active Cases,Death Rate,Death Change Rate,Recovery Change Rate,Confirmed Change Rate,Likely Cases 1pct,Likely Cases 1.8pct,Likely Cases 3.5pct,Likely Cases C86
-2020-03-19 14:53:06,Fiji,0.0,0.0,0.0,3.0,0.0,0.0,3.0,3.0,3,18475,3,3,0.0,3.0,0.0,0.0,3.0,0.0,,,,0.0,0.0,0.0,3.0
-2020-03-22 23:45:00,Fiji,-18.123969600000002,179.0122737,0.0,2.0,0.0,0.0,2.0,2.0,3,0,3,3,0.0,2.0,0.0,0.0,2.0,0.0,,,-0.333,0.0,0.0,0.0,2.0
-2020-03-23 23:19:21,Fiji,-18.123969600000002,179.0122737,0.0,3.0,0.0,0.0,3.0,3.0,4,1,4,4,0.0,3.0,0.0,0.0,3.0,0.0,,,0.5,0.0,0.0,0.0,3.0
-2020-03-24 23:37:15,Fiji,-18.123969600000002,179.0122737,0.0,4.0,0.0,0.0,4.0,4.0,5,2,5,5,0.0,4.0,0.0,0.0,4.0,0.0,,,0.333,0.0,0.0,0.0,5.0
-2020-03-25 23:33:04,Fiji,-18.123969600000002,179.0122737,0.0,5.0,0.0,0.0,5.0,5.0,6,3,6,6,0.0,5.0,0.0,0.0,5.0,0.0,,,0.25,0.0,0.0,0.0,6.0

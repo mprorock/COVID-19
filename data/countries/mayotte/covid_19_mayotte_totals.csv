@@ -1,5 +1,0 @@
-﻿Date,Latitude,Longitude,FIPS,Confirmed,Deaths,Recovered,UnknownActive,Active,Day,DayLoc,DayCountry,DayCountryProvince,Death,Total Confirmed,Total Deaths,Total Recovered,Active Cases,Death Rate,Death Change Rate,Recovery Change Rate,Confirmed Change Rate,Confirmed Rolling 3 Change Rate,New Active Cases,New Active Cases PCT Change,New Cases,New Case PCT Change,New Deaths,New Death PCT Change,New Recovered,New Recovered PCT Change,Likely Cases C86,Likely Cases 1pct,Likely Cases 1.8pct,Likely Cases 3.5pct
-2020-03-16 14:38:45,0.0,0.0,0.0,2.0,0.0,0.0,2.0,2.0,1,10719,1,1,0.0,2.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,,0.0,,0.0,,0.0,,0.0,2.28,0.0,0.0,0.0
-2020-03-18 02:53:03,0.0,0.0,0.0,6.0,0.0,0.0,6.0,6.0,5,11562,5,5,0.0,6.0,0.0,0.0,6.0,0.0,0.0,0.0,2.0,0.0,4.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0,6.84,0.0,0.0,0.0
-2020-03-20 10:13:38,0.0,0.0,0.0,6.0,0.0,0.0,6.0,6.0,4,6344,4,4,0.0,6.0,0.0,0.0,6.0,0.0,0.0,0.0,0.0,0.6666666666666666,0.0,-1.0,0.0,-1.0,0.0,0.0,0.0,0.0,6.84,0.0,0.0,0.0
-2020-03-21 13:13:35,0.0,0.0,0.0,7.0,0.0,0.0,7.0,7.0,5,6619,5,5,0.0,7.0,0.0,0.0,7.0,0.0,0.0,0.0,0.167,0.7223333333333333,1.0,inf,1.0,inf,0.0,0.0,0.0,0.0,7.9799999999999995,0.0,0.0,0.0
