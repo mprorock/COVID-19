@@ -1,0 +1,5 @@
+﻿Date,Province/State,Latitude,Longitude,FIPS,Confirmed,Deaths,Recovered,UnknownActive,Active,Day,DayLoc,DayCountry,DayCountryProvince,Death,Total Confirmed,Total Deaths,Total Recovered,Active Cases,Death Rate,Death Change Rate,Recovery Change Rate,Confirmed Change Rate,Likely Cases 1pct,Likely Cases 1.8pct,Likely Cases 3.5pct,Likely Cases C86
+2020-03-11 20:00:00,Aruba,0.0,0.0,0.0,2.0,0.0,0.0,2.0,2.0,0,4239,0,0,0.0,2.0,0.0,0.0,2.0,0.0,,,,0.0,0.0,0.0,2.0
+2020-03-13 23:53:03,Aruba,0.0,0.0,0.0,6.0,0.0,0.0,6.0,6.0,6,14105,6,6,0.0,6.0,0.0,0.0,6.0,0.0,,,2.0,0.0,0.0,0.0,7.0
+2020-03-17 12:33:07,Aruba,0.0,0.0,0.0,3.0,0.0,0.0,3.0,3.0,4,5599,4,4,0.0,3.0,0.0,0.0,3.0,0.0,,,-0.5,0.0,0.0,0.0,3.0
+2020-03-18 11:53:04,Aruba,0.0,0.0,0.0,8.0,0.0,0.0,8.0,8.0,11,11759,11,11,0.0,8.0,0.0,0.0,8.0,0.0,,,1.667,0.0,0.0,0.0,9.0

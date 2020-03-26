@@ -1,6 +1,6 @@
-﻿Date,Confirmed,Death,Recovered,Total Confirmed,Total Deaths,Total Recovered,Active Cases,Death Rate,Death Change Rate,Recovery Change Rate,Confirmed Change Rate,Confirmed Rolling 3 Change Rate,New Active Cases,New Active Cases PCT Change,New Cases,New Case PCT Change,New Deaths,New Death PCT Change,New Recovered,New Recovered PCT Change,Likely Cases C86,Likely Cases 1pct,Likely Cases 1.8pct,Likely Cases 3.5pct
-2020-03-21,1,0,0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,,0.0,,0.0,,0.0,,0.0,1.14,0.0,0.0,0.0
-2020-03-22,1,0,0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.14,0.0,0.0,0.0
-2020-03-23,1,0,0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.14,0.0,0.0,0.0
-2020-03-24,1,0,0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.14,0.0,0.0,0.0
-2020-03-25,4,0,0,4.0,0.0,0.0,4.0,0.0,0.0,0.0,3.0,1.0,3.0,inf,3.0,inf,0.0,0.0,0.0,0.0,4.56,0.0,0.0,0.0
+﻿Date,Latitude,Longitude,FIPS,Confirmed,Deaths,Recovered,UnknownActive,Active,Day,DayLoc,DayCountry,DayCountryProvince,Death,Total Confirmed,Total Deaths,Total Recovered,Active Cases,Death Rate,Death Change Rate,Recovery Change Rate,Confirmed Change Rate,Confirmed Rolling 3 Change Rate,New Active Cases,New Active Cases PCT Change,New Cases,New Case PCT Change,New Deaths,New Death PCT Change,New Recovered,New Recovered PCT Change,Likely Cases C86,Likely Cases 1pct,Likely Cases 1.8pct,Likely Cases 3.5pct
+2020-03-21 21:13:30,0.0,0.0,0.0,1.0,0.0,0.0,1.0,1.0,0,6718,0,0,0.0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,,0.0,,0.0,,0.0,,0.0,1.14,0.0,0.0,0.0
+2020-03-22 23:45:00,15.950031900000003,37.999966799999996,0.0,1.0,0.0,0.0,1.0,1.0,1,0,1,1,0.0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.14,0.0,0.0,0.0
+2020-03-23 23:19:21,15.950031900000003,37.999966799999996,0.0,1.0,0.0,0.0,1.0,1.0,2,1,2,2,0.0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.14,0.0,0.0,0.0
+2020-03-24 23:37:15,15.950031900000003,37.999966799999996,0.0,1.0,0.0,0.0,1.0,1.0,3,2,3,3,0.0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.14,0.0,0.0,0.0
+2020-03-25 23:33:04,15.950031900000003,37.999966799999996,0.0,4.0,0.0,0.0,4.0,4.0,4,3,4,4,0.0,4.0,0.0,0.0,4.0,0.0,0.0,0.0,3.0,1.0,3.0,inf,3.0,inf,0.0,0.0,0.0,0.0,4.56,0.0,0.0,0.0

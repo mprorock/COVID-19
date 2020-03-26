@@ -1,2 +1,6 @@
-﻿Date,Confirmed,Recovered,Province/State,Death,Total Confirmed,Total Deaths,Total Recovered,Active Cases,Death Rate,Death Change Rate,Recovery Change Rate,Confirmed Change Rate,Likely Cases 1pct,Likely Cases 1.8pct,Likely Cases 3.5pct,Likely Cases C86
-2020-03-23,18.0,6.0,French Guiana,0,18.0,0.0,6.0,12.0,0.0,,,,0,0,0,21.0
+﻿Date,Province/State,Latitude,Longitude,FIPS,Confirmed,Deaths,Recovered,UnknownActive,Active,Day,DayLoc,DayCountry,DayCountryProvince,Death,Total Confirmed,Total Deaths,Total Recovered,Active Cases,Death Rate,Death Change Rate,Recovery Change Rate,Confirmed Change Rate,Likely Cases 1pct,Likely Cases 1.8pct,Likely Cases 3.5pct,Likely Cases C86
+2020-03-07 03:23:05,French Guiana,0.0,0.0,0.0,35.0,0.0,0.0,35.0,35.0,21,22562,21,21,0.0,35.0,0.0,0.0,35.0,0.0,,,,0.0,0.0,0.0,40.0
+2020-03-11 20:00:00,French Guiana,0.0,0.0,0.0,5.0,0.0,0.0,5.0,5.0,7,4191,7,7,0.0,5.0,0.0,0.0,5.0,0.0,,,-0.857,0.0,0.0,0.0,6.0
+2020-03-16 14:38:46,French Guiana,0.0,0.0,0.0,44.0,0.0,0.0,44.0,44.0,38,21626,38,38,0.0,44.0,0.0,0.0,44.0,0.0,,,7.8,0.0,0.0,0.0,50.0
+2020-03-20 10:13:39,French Guiana,0.0,0.0,0.0,15.0,0.0,0.0,15.0,15.0,12,6346,12,12,0.0,15.0,0.0,0.0,15.0,0.0,,,-0.659,0.0,0.0,0.0,17.0
+2020-03-21 21:13:30,French Guiana,0.0,0.0,0.0,18.0,0.0,6.0,18.0,12.0,13,6715,13,13,0.0,18.0,0.0,6.0,12.0,0.0,,inf,0.2,0.0,0.0,0.0,21.0

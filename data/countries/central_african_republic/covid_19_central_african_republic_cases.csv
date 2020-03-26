@@ -1,12 +1,8 @@
-﻿Date,Confirmed,Province/State,Death,Recovered,Total Confirmed,Total Deaths,Total Recovered,Active Cases,Death Rate,Death Change Rate,Recovery Change Rate,Confirmed Change Rate,Likely Cases 1pct,Likely Cases 1.8pct,Likely Cases 3.5pct,Likely Cases C86
-2020-03-15,1,Central African Republic,0,0,1.0,0.0,0.0,1.0,0.0,,,,0,0,0,1.0
-2020-03-16,1,Central African Republic,0,0,1.0,0.0,0.0,1.0,0.0,,,0.0,0,0,0,1.0
-2020-03-17,1,Central African Republic,0,0,1.0,0.0,0.0,1.0,0.0,,,0.0,0,0,0,1.0
-2020-03-18,1,Central African Republic,0,0,1.0,0.0,0.0,1.0,0.0,,,0.0,0,0,0,1.0
-2020-03-19,1,Central African Republic,0,0,1.0,0.0,0.0,1.0,0.0,,,0.0,0,0,0,1.0
-2020-03-20,3,Central African Republic,0,0,3.0,0.0,0.0,3.0,0.0,,,2.0,0,0,0,3.0
-2020-03-21,3,Central African Republic,0,0,3.0,0.0,0.0,3.0,0.0,,,0.0,0,0,0,3.0
-2020-03-22,3,Central African Republic,0,0,3.0,0.0,0.0,3.0,0.0,,,0.0,0,0,0,3.0
-2020-03-23,3,Central African Republic,0,0,3.0,0.0,0.0,3.0,0.0,,,0.0,0,0,0,3.0
-2020-03-24,3,Central African Republic,0,0,3.0,0.0,0.0,3.0,0.0,,,0.0,0,0,0,3.0
-2020-03-25,3,Central African Republic,0,0,3.0,0.0,0.0,3.0,0.0,,,0.0,0,0,0,3.0
+﻿Date,Province/State,Latitude,Longitude,FIPS,Confirmed,Deaths,Recovered,UnknownActive,Active,Day,DayLoc,DayCountry,DayCountryProvince,Death,Total Confirmed,Total Deaths,Total Recovered,Active Cases,Death Rate,Death Change Rate,Recovery Change Rate,Confirmed Change Rate,Likely Cases 1pct,Likely Cases 1.8pct,Likely Cases 3.5pct,Likely Cases C86
+2020-03-15 18:20:19,Central African Republic,0.0,0.0,0.0,1.0,0.0,0.0,1.0,1.0,0,5197,0,0,0.0,1.0,0.0,0.0,1.0,0.0,,,,0.0,0.0,0.0,1.0
+2020-03-16 03:33:03,Central African Republic,0.0,0.0,0.0,4.0,0.0,0.0,4.0,4.0,10,21107,10,10,0.0,4.0,0.0,0.0,4.0,0.0,,,3.0,0.0,0.0,0.0,5.0
+2020-03-20 20:43:03,Central African Republic,0.0,0.0,0.0,6.0,0.0,0.0,6.0,6.0,11,12961,11,11,0.0,6.0,0.0,0.0,6.0,0.0,,,0.5,0.0,0.0,0.0,7.0
+2020-03-22 23:45:00,Central African Republic,7.0323598,19.9981227,0.0,3.0,0.0,0.0,3.0,3.0,7,0,7,7,0.0,3.0,0.0,0.0,3.0,0.0,,,-0.5,0.0,0.0,0.0,3.0
+2020-03-23 23:19:21,Central African Republic,7.0323598,19.9981227,0.0,3.0,0.0,0.0,3.0,3.0,8,1,8,8,0.0,3.0,0.0,0.0,3.0,0.0,,,0.0,0.0,0.0,0.0,3.0
+2020-03-24 23:37:15,Central African Republic,7.0323598,19.9981227,0.0,3.0,0.0,0.0,3.0,3.0,9,2,9,9,0.0,3.0,0.0,0.0,3.0,0.0,,,0.0,0.0,0.0,0.0,3.0
+2020-03-25 23:33:04,Central African Republic,7.0323598,19.9981227,0.0,3.0,0.0,0.0,3.0,3.0,10,3,10,10,0.0,3.0,0.0,0.0,3.0,0.0,,,0.0,0.0,0.0,0.0,3.0
