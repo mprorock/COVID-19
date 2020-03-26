@@ -1,5 +1,7 @@
-﻿Date,Confirmed,Province/State,Death,Recovered,Total Confirmed,Total Deaths,Total Recovered,Active Cases,Death Rate,Death Change Rate,Recovery Change Rate,Confirmed Change Rate,Likely Cases 1pct,Likely Cases 1.8pct,Likely Cases 3.5pct,Likely Cases C86
-2020-03-20,1.0,Niger,0,0,1.0,0.0,0.0,1.0,0.0,,,,0,0,0,1.0
-2020-03-21,1.0,Niger,0,0,1.0,0.0,0.0,1.0,0.0,,,0.0,0,0,0,1.0
-2020-03-22,2.0,Niger,0,0,2.0,0.0,0.0,2.0,0.0,,,1.0,0,0,0,2.0
-2020-03-23,2.0,Niger,0,0,2.0,0.0,0.0,2.0,0.0,,,0.0,0,0,0,2.0
+﻿Date,Confirmed,Death,Province/State,Recovered,Total Confirmed,Total Deaths,Total Recovered,Active Cases,Death Rate,Death Change Rate,Recovery Change Rate,Confirmed Change Rate,Likely Cases 1pct,Likely Cases 1.8pct,Likely Cases 3.5pct,Likely Cases C86
+2020-03-20,1.0,,Niger,0,1.0,,0.0,1.0,0.0,,,,,,,1.0
+2020-03-21,1.0,,Niger,0,1.0,,0.0,1.0,0.0,,,0.0,,,,1.0
+2020-03-22,2.0,,Niger,0,2.0,,0.0,2.0,0.0,,,1.0,,,,2.0
+2020-03-23,3.0,,Niger,0,3.0,,0.0,3.0,0.0,,,0.5,,,,3.0
+2020-03-24,3.0,,Niger,0,3.0,,0.0,3.0,0.0,,,0.0,,,,3.0
+2020-03-25,7.0,1.0,Niger,0,7.0,1.0,0.0,6.0,0.143,inf,,1.333,100.0,180.0,350.0,8.0

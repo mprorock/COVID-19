@@ -1,0 +1,10 @@
+﻿Date,Confirmed,Death,Province/State,Recovered,Total Confirmed,Total Deaths,Total Recovered,Active Cases,Death Rate,Death Change Rate,Recovery Change Rate,Confirmed Change Rate,Likely Cases 1pct,Likely Cases 1.8pct,Likely Cases 3.5pct,Likely Cases C86
+2020-03-17,1.0,,Gambia,0,1.0,,0.0,1.0,0.0,,,,,,,1.0
+2020-03-18,1.0,,Gambia,0,1.0,,0.0,1.0,0.0,,,0.0,,,,1.0
+2020-03-19,1.0,,Gambia,0,1.0,,0.0,1.0,0.0,,,0.0,,,,1.0
+2020-03-20,1.0,,Gambia,0,1.0,,0.0,1.0,0.0,,,0.0,,,,1.0
+2020-03-21,1.0,,Gambia,0,1.0,,0.0,1.0,0.0,,,0.0,,,,1.0
+2020-03-22,1.0,,Gambia,0,1.0,,0.0,1.0,0.0,,,0.0,,,,1.0
+2020-03-23,2.0,1.0,Gambia,0,2.0,1.0,0.0,1.0,0.5,inf,,1.0,100.0,180.0,350.0,2.0
+2020-03-24,3.0,1.0,Gambia,0,3.0,1.0,0.0,2.0,0.333,0.0,,0.5,100.0,180.0,350.0,3.0
+2020-03-25,3.0,1.0,Gambia,0,3.0,1.0,0.0,2.0,0.333,0.0,,0.0,100.0,180.0,350.0,3.0
