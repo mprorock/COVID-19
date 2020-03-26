@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[78]:
 
 
 # imports
@@ -11,11 +11,27 @@ warnings.simplefilter(action='ignore', category=FutureWarning)
 import pandas as pd
 import numpy as np
 
+import json
+
+# for geocoding stuff
+import geopandas as gpd
+import geopy
+from geopy.geocoders import Nominatim
+from geopy.extra.rate_limiter import RateLimiter
+
+from tqdm import tqdm
+
 import glob
 import os
 
 
-# In[2]:
+# In[79]:
+
+
+tqdm.pandas()
+
+
+# In[80]:
 
 
 output_dir = "./data/"
@@ -25,7 +41,19 @@ all_filenames = [i for i in glob.glob(input_dir+'*.{}'.format(extension))]
 
 # %% combine em up
 combined_csv = pd.concat([pd.read_csv(f) for f in all_filenames ])
-combined_csv.to_csv(output_dir + "covid_19.csv", index=False, encoding='utf-8-sig') 
+combined_csv.to_csv(output_dir + "covid_19_raw.csv", index=False, encoding='utf-8-sig') 
+
+
+# In[81]:
+
+
+geopy.geocoders.options.default_timeout = 30
+locator = Nominatim(user_agent="mesur.io")
+geocode = RateLimiter(locator.geocode, min_delay_seconds=1)
+
+
+# In[82]:
+
 
 # let's do a little data cleanup
 combined_csv['Country/Region'] = combined_csv['Country/Region'].str.strip()
@@ -34,10 +62,159 @@ combined_csv['Country/Region'] = combined_csv['Country/Region'].replace('Republi
 combined_csv['Country/Region'] = combined_csv['Country/Region'].replace('Iran (Islamic Republic of)', 'Iran')
 combined_csv['Country/Region'] = combined_csv['Country/Region'].replace('Mainland China', 'China')
 
+combined_csv['Country_Region'] = combined_csv['Country_Region'].str.strip()
+combined_csv['Country_Region'] = combined_csv['Country_Region'].replace('Korea, South', 'South Korea')
+combined_csv['Country_Region'] = combined_csv['Country_Region'].replace('Republic of Korea', 'South Korea')
+combined_csv['Country_Region'] = combined_csv['Country_Region'].replace('Iran (Islamic Republic of)', 'Iran')
+combined_csv['Country_Region'] = combined_csv['Country_Region'].replace('Mainland China', 'China')
+
+
+# In[83]:
+
+
+combined = combined_csv.copy()
+
+
+# In[84]:
+
+
+locations = combined.groupby(['Country/Region', 'Province/State'])['Latitude', 'Longitude'].mean().reset_index()
+locations.columns = ['Country/Region', 'Province/State', 'Latitude_Lookup', 'Longitude_Lookup']
+
+combined = pd.merge(left=combined, right=locations, left_on=['Country/Region', 'Province/State'], right_on=['Country/Region', 'Province/State'], how='left')
+combined['Latitude'] = combined['Latitude'].fillna(combined['Latitude_Lookup'])
+combined['Longitude'] = combined['Longitude'].fillna(combined['Longitude_Lookup'])
+del combined['Latitude_Lookup'] 
+del combined['Longitude_Lookup'] 
+
+locations2 = combined.groupby(['Country/Region', 'Province/State'])['Lat', 'Long_'].mean().reset_index()
+locations2.columns = ['Country/Region', 'Province/State', 'Latitude_Lookup', 'Longitude_Lookup']
+
+combined = pd.merge(left=combined, right=locations2, left_on=['Country/Region', 'Province/State'], right_on=['Country/Region', 'Province/State'], how='left')
+combined['Latitude'] = combined['Latitude'].fillna(combined['Latitude_Lookup'])
+combined['Longitude'] = combined['Longitude'].fillna(combined['Longitude_Lookup'])
+del combined['Latitude_Lookup'] 
+del combined['Longitude_Lookup'] 
+
+combined['Last Update'] = combined['Last Update'].fillna(combined['Last_Update'])
+combined['Country/Region'] = combined['Country/Region'].fillna(combined['Country_Region'])
+combined['Province/State'] = combined['Province/State'].fillna(combined['Province_State'])
+combined['Province/State'] = combined['Province/State'].fillna(combined['Country/Region'])
+combined['Confirmed'] = combined['Confirmed'].fillna(0)
+combined['Deaths'] = combined['Deaths'].fillna(0)
+
+
+# In[85]:
+
+
+combined['Last Update'] = pd.to_datetime(combined['Last Update'])
+combined = combined.sort_values('Last Update').reset_index(drop=True)
+
+
+# In[86]:
+
+
+combined['Geo_Input'] = combined['Province/State']+', '+combined['Country/Region'] 
+
+
+# In[87]:
+
+
+non_located = combined[combined['Latitude'].isna()]
+non_located = non_located[non_located['Province/State'] != 'Cruise Ship']
+
+
+# In[88]:
+
+
+geo_inputs = non_located['Geo_Input'].unique()
+combined['Location_Key_Raw'] = combined.apply(lambda x: (x.Latitude, x.Longitude), axis = 1)
+#for testing you may want to trim this down a bit
+#geo_inputs = geo_inputs[:10]
+
+
+# In[89]:
+
+
+def geocode():
+    print('Geocoding for: ', len(geo_inputs), 'locations')
+    #use progress_apply() for interactive progress
+    d = dict(zip(geo_inputs, pd.Series(geo_inputs).apply(geocode).apply(lambda x: (x.latitude if pd.notnull(x.latitude) else x.latitude, 
+                                                                                   x.longitude if pd.notnull(x.longitude) else x.longitude) if pd.notnull(x) else x)
+                )
+            )
+    pd.DataFrame.from_dict(d, orient="index").to_csv('./reference/geoloc_dict.json')
+
+
+# In[90]:
+
+
+d = pd.read_csv('./reference/geoloc_dict.json', index_col=0).to_dict("split")
+d = dict(zip(d["index"], d["data"]))
+
+
+# In[91]:
+
+
+combined['Location_Key'] = combined['Geo_Input'].map(d)
+
+
+# In[92]:
+
+
+combined['Location_Key'] = combined['Location_Key'].fillna(combined['Location_Key_Raw'])
+
+
+# In[93]:
+
+
+combined['Latitude'] = combined.loc[combined['Latitude'].isna(), 'Location_Key'].apply(lambda x: x[0])
+combined['Longitude'] = combined.loc[combined['Longitude'].isna(), 'Location_Key'].apply(lambda x: x[1])
+
+
+# In[99]:
+
+
+#let's do a recovery est
+# first need the day of outbreak
+combined = combined.sort_values('Last Update').reset_index(drop=True)
+combined['Day'] = combined.groupby('Country/Region').cumcount()
+combined['DayLoc'] = combined.groupby(['Latitude','Longitude']).cumcount()
+combined['DayCountry'] = combined.groupby('Country/Region').cumcount()
+combined['DayCountryProvince'] = combined.groupby('Geo_Input').cumcount()
+
+combined['UnknownActive'] = combined['Confirmed'] - combined['Deaths']
+combined['RecoveredEst'] = np.floor(combined['UnknownActive'] * .14)
+combined['Recovered'] = combined['Recovered'].fillna(0)
+#hold on this for now, there is a formula that is curve based for this
+#combined.loc[combined['Recovered'] == 0, 'Recovered'] = combined['RecoveredEst']
+combined['Active'] = combined['UnknownActive'] - combined['Recovered']
+
+
+# In[100]:
+
+
+combined = combined.fillna(0)
+
+
+# In[102]:
+
+
+# do a little reording and subselection
+combined_csv = combined[['Last Update','Latitude','Longitude','Country/Region','Province/State','FIPS','Admin2',
+                         'Confirmed','Deaths','Recovered','UnknownActive', 'Active',
+                         'Day','DayLoc','DayCountry','DayCountryProvince']]
+combined_csv = combined_csv.sort_values(['Last Update','Latitude','Longitude','Country/Region','Province/State'])
+#combined_csv
+
+
+# In[103]:
+
+
 combined_csv.to_csv(output_dir + "combined.csv", index=False, encoding='utf-8-sig')
 
 
-# In[26]:
+# In[104]:
 
 
 web_cases = pd.read_csv('https://raw.githubusercontent.com/CSSEGISandData/COVID-19/web-data/data/cases.csv')
@@ -51,7 +228,7 @@ web_cases_country.to_csv(output_dir + "web_cases_country.csv", index=False, enco
 web_cases_time.to_csv(output_dir + "web_cases_time.csv", index=False, encoding='utf-8-sig')
 
 
-# In[3]:
+# In[105]:
 
 
 us_state_abbrev = {
@@ -113,7 +290,13 @@ us_state_abbrev = {
     }
 
 
-# In[4]:
+# In[ ]:
+
+
+
+
+
+# In[106]:
 
 
 df = combined_csv.copy()
@@ -143,7 +326,7 @@ df = df.dropna().reset_index()
 df.to_csv(output_dir + "covid_19_by_date_and_country.csv", index=False, encoding='utf-8-sig')
 
 
-# In[5]:
+# In[107]:
 
 
 overallDf = df.copy().groupby('Last Update').agg({
@@ -167,7 +350,7 @@ overallDf = overallDf.dropna().reset_index()
 overallDf.to_csv(output_dir + "covid_19_by_date.csv", index=False, encoding='utf-8-sig')
 
 
-# In[6]:
+# In[108]:
 
 
 overallDf = df.copy().groupby('Day').agg({
@@ -190,7 +373,7 @@ overallDf = overallDf.dropna().reset_index()
 overallDf.to_csv(output_dir + "covid_19_by_day.csv", index=False, encoding='utf-8-sig')
 
 
-# In[7]:
+# In[109]:
 
 
 overallDf = df.copy().groupby(by=['Country/Region','Day']).agg({
@@ -211,25 +394,26 @@ overallDf['New Death Rate'] = overallDf['New Deaths'].pct_change()
 overallDf = overallDf.dropna().reset_index()
 
 
-# In[8]:
+# In[110]:
 
 
 #john's hopkins raw files
-ts_deaths = pd.read_csv('csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Deaths.csv')
-ts_recovered = pd.read_csv('csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Recovered.csv')
-ts_confirmed = pd.read_csv('csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv')
+ts_deaths = pd.read_csv('csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv')
+ts_confirmed = pd.read_csv('csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv')
+#new recovered tracking has now been dropped :(
+ts_recovered = pd.read_csv('csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_recovered_global.csv')
 
 # let's unpivot that nasty excel style stuff
 ts_deaths = pd.melt(ts_deaths, id_vars=['Province/State', 'Country/Region', 'Lat', 'Long'], var_name='Date', value_name='Observation')
 ts_deaths['Observation Type'] = 'Death'
-ts_recovered = pd.melt(ts_recovered, id_vars=['Province/State', 'Country/Region', 'Lat', 'Long'], var_name='Date', value_name='Observation')
-ts_recovered['Observation Type'] = 'Recovered'
 ts_confirmed = pd.melt(ts_confirmed, id_vars=['Province/State', 'Country/Region', 'Lat', 'Long'], var_name='Date', value_name='Observation')
 ts_confirmed['Observation Type'] = 'Confirmed'
+ts_recovered = pd.melt(ts_recovered, id_vars=['Province/State', 'Country/Region', 'Lat', 'Long'], var_name='Date', value_name='Observation')
+ts_recovered['Observation Type'] = 'Recovered'
 
 ts_deaths['Date'] = pd.to_datetime(ts_deaths['Date'])
-ts_recovered['Date'] = pd.to_datetime(ts_recovered['Date'])
 ts_confirmed['Date'] = pd.to_datetime(ts_confirmed['Date'])
+ts_recovered['Date'] = pd.to_datetime(ts_recovered['Date'])
 
 #and concat into one nice set
 covid_19_ts = ts_deaths.copy()
@@ -241,27 +425,27 @@ covid_19_ts = covid_19_ts.sort_values(['Country/Region', 'Province/State', 'Date
 covid_19_ts = covid_19_ts[covid_19_ts['Observation'] != 0]
 
 
-# In[9]:
+# In[111]:
 
 
 overallDf.to_csv(output_dir + "covid_19_by_date_and_country.csv", index=False, encoding='utf-8-sig')
 covid_19_ts.to_csv(output_dir + "covid_19_ts.csv", index=False, encoding='utf-8-sig')
 
 
-# In[10]:
+# In[112]:
 
 
 #display for debug
 #display(covid_19_ts)
 
 
-# In[11]:
+# In[113]:
 
 
 # now run any JH combinations
 
 
-# In[12]:
+# In[114]:
 
 
 covid_19_by_country_and_day_of_outbreak = pd.read_csv(output_dir + 'covid_19_by_date_and_country.csv')
@@ -271,13 +455,13 @@ covid_19_overall = pd.read_csv(output_dir + 'covid_19.csv')
 covid_19_ts = pd.read_csv(output_dir + 'covid_19_ts.csv')
 
 
-# In[13]:
+# In[115]:
 
 
 covid_19_ts['Date'] = pd.to_datetime(covid_19_ts['Date'])
 
 
-# In[14]:
+# In[116]:
 
 
 ts_df = covid_19_ts.copy()
@@ -328,20 +512,20 @@ maxes.columns = ['Country/Region', 'Max Day']
 covid_19_infected_observations = pd.merge(left=covid_19_infected_observations, right=maxes, left_on='Country/Region', right_on='Country/Region', how='left')
 
 
-# In[15]:
+# In[117]:
 
 
 covid_19_national_observations.to_csv(output_dir + "global/covid_19_national_observations.csv", index=False, encoding="utf-8-sig")
 covid_19_infected_observations.to_csv(output_dir + "global/covid_19_infected_observations.csv", index=False, encoding="utf-8-sig")
 
 
-# In[16]:
+# In[118]:
 
 
 #covid_19_national_observations[covid_19_national_observations['Country/Region']=='Brazil']
 
 
-# In[17]:
+# In[119]:
 
 
 world_totals = covid_19_national_observations.groupby(['Date']).sum().reset_index().copy()
@@ -363,13 +547,13 @@ world_totals['Likely Cases 3.5pct'] = world_totals['Total Deaths'] * 350
 world_totals.to_csv(output_dir + "global/covid_19_world_totals.csv", index=False, encoding='utf-8-sig')
 
 
-# In[18]:
+# In[120]:
 
 
 #country specific stuff below here
 
 
-# In[22]:
+# In[128]:
 
 
 def cleanStr(s):
@@ -382,33 +566,24 @@ def partitionByCountry(country):
     print('Processing data files for', country)
     c = cleanStr(country)
     os.makedirs(output_dir + 'countries/'+c, exist_ok=True)
+    
+    df = combined_csv[combined_csv['Country/Region'] == country].copy()
+    #add some backwards compat
+    df['Date'] = df['Last Update']
+    df['Death'] = df['Deaths']
 
-    df = covid_19_ts[covid_19_ts['Country/Region'] == country].copy()
     df['Province/State'] = df['Province/State'].str.rsplit(',').str[-1].str.strip() 
     df['Province/State'] = df['Province/State'].replace(us_state_abbrev)
 
     df = df.sort_values(['Province/State', 'Date'])
     
-    if c == 'us':
+    if df['Province/State'].count() > 1:
         print(df['Province/State'].unique())
 
     cases = pd.DataFrame()
     if df['Province/State'].count() == 0:
         df['Province/State'] = country
-        cases = df.groupby(['Date', 'Observation Type'])['Observation'].sum().reset_index()
-        cases = cases.pivot_table(columns='Observation Type', index=['Date'], values='Observation').reset_index().rename_axis(None, axis=1)
-        cases['Province/State'] = country
-    else:
-        cases = df.groupby(['Date', 'Province/State', 'Observation Type'])['Observation'].sum().reset_index()
-        cases = cases.pivot_table(columns='Observation Type', index=['Date', 'Province/State'], values='Observation').reset_index().rename_axis(None, axis=1)
-    
-    # check if columns exist
-    if 'Death' not in cases.columns:
-        cases['Death'] = 0
-    if 'Confirmed' not in cases.columns:
-        cases['Confirmed'] = 0
-    if 'Recovered' not in cases.columns:
-        cases['Recovered'] = 0
+    cases = df.groupby(['Date', 'Province/State']).sum().reset_index()
     
     totals = cases.groupby(['Date']).sum().reset_index().copy()
     totals = totals.sort_values('Date')    
@@ -465,10 +640,11 @@ def partitionByCountry(country):
     totals.to_csv(output_dir + 'countries/'+c+'/covid_19_'+c+'_totals.csv', index=False, encoding='utf-8-sig')
 
 
-# In[23]:
+# In[129]:
 
 
-countries = covid_19_national_observations['Country/Region'].unique()
+countries = combined_csv['Country/Region'].unique()
+
 countries.sort()
 for cnt in countries:
     partitionByCountry(cnt)

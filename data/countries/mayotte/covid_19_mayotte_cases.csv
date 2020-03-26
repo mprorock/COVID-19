@@ -1,5 +1,5 @@
 ﻿Date,Province/State,Latitude,Longitude,FIPS,Confirmed,Deaths,Recovered,UnknownActive,Active,Day,DayLoc,DayCountry,DayCountryProvince,Death,Total Confirmed,Total Deaths,Total Recovered,Active Cases,Death Rate,Death Change Rate,Recovery Change Rate,Confirmed Change Rate,Likely Cases 1pct,Likely Cases 1.8pct,Likely Cases 3.5pct,Likely Cases C86
-2020-03-16 14:38:45,Mayotte,0.0,0.0,0.0,2.0,0.0,0.0,2.0,2.0,1,10695,1,1,0.0,2.0,0.0,0.0,2.0,0.0,,,,0.0,0.0,0.0,2.0
-2020-03-18 02:53:03,Mayotte,0.0,0.0,0.0,6.0,0.0,0.0,6.0,6.0,5,11564,5,5,0.0,6.0,0.0,0.0,6.0,0.0,,,2.0,0.0,0.0,0.0,7.0
+2020-03-16 14:38:45,Mayotte,0.0,0.0,0.0,2.0,0.0,0.0,2.0,2.0,1,10719,1,1,0.0,2.0,0.0,0.0,2.0,0.0,,,,0.0,0.0,0.0,2.0
+2020-03-18 02:53:03,Mayotte,0.0,0.0,0.0,6.0,0.0,0.0,6.0,6.0,5,11562,5,5,0.0,6.0,0.0,0.0,6.0,0.0,,,2.0,0.0,0.0,0.0,7.0
 2020-03-20 10:13:38,Mayotte,0.0,0.0,0.0,6.0,0.0,0.0,6.0,6.0,4,6344,4,4,0.0,6.0,0.0,0.0,6.0,0.0,,,0.0,0.0,0.0,0.0,7.0
 2020-03-21 13:13:35,Mayotte,0.0,0.0,0.0,7.0,0.0,0.0,7.0,7.0,5,6619,5,5,0.0,7.0,0.0,0.0,7.0,0.0,,,0.167,0.0,0.0,0.0,8.0
