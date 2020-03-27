@@ -1,25 +1,50 @@
 
 ## Getting Started
 
-- [install conda for Python 3](https://conda.io/projects/conda/en/latest/user-guide/install/index.html)
+All of the following examples assume that you have already cloned the repository locally, and are operating from within the checked-out working folder:
 
-```
-
+```bash
 git clone git@github.com:mprorock/COVID-19.git
 cd COVID-19
-conda install -c conda-forge scikit-learn plotly seaborn pandas numpy matplotlib ipywidgets fbprophet
+```
+
+### Docker
+
+Docker is the recommended way to use the notebooks in this repository. To get started, build and run the docker container as follows:
+
+```bash
+docker build -t covid19 .
+docker run --init --rm -it -v $(pwd):/srv/data -p:8888:8888 covid19
+```
+
+Follow the instructions in the output to open Jupyter in your browser.
+
+### Manual Installation (Linux)
+
+- [Install conda for Python 3](https://conda.io/projects/conda/en/latest/user-guide/install/index.html)
+
+```bash
+conda install -c conda-forge \
+    scikit-learn             \
+    plotly                   \
+    seaborn                  \
+    pandas                   \
+    numpy                    \
+    matplotlib               \
+    ipywidgets               \
+    fbprophet                \
+    jupyterlab
 
 jupyter lab .
 ```
 
 Go to:
 
-http://localhost:8889/lab
+http://localhost:8888/lab
 
 Run all Cells of "covid_19_data.ipynb".
 
 And other notebooks.
-
 
 # 2019 Novel Coronavirus COVID-19 (2019-nCoV) Data Repository by Johns Hopkins CSSE
 
