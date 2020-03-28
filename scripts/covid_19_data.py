@@ -18,6 +18,7 @@ import geopandas as gpd
 import geopy
 from geopy.geocoders import Nominatim
 from geopy.extra.rate_limiter import RateLimiter
+import pickle
 
 from tqdm import tqdm
 
@@ -47,12 +48,63 @@ combined_csv.to_csv(output_dir + "covid_19_raw.csv", index=False, encoding='utf-
 # In[4]:
 
 
-geopy.geocoders.options.default_timeout = 30
-locator = Nominatim(user_agent="mesur.io")
-geocode = RateLimiter(locator.geocode, min_delay_seconds=1)
+def calc_timeseries_by_group(df, group_col='Location'):
+    tdf = df.copy()
+    timeseries_by_location = tdf.groupby(group_col)
+    for days_shift in [1,3,7]:
+        for orig_column in ['Recovered', 'Deaths', 'Confirmed', 'Active']:
+            tdf[f'{days_shift}d new {orig_column}'] = timeseries_by_location[orig_column].diff(periods=days_shift)
+
+    day_location_reached_100 = tdf[tdf['Confirmed']>100].groupby(group_col)['Last Update'].min().to_dict()
+    day_location_reached_100_active = tdf[tdf['Active']>100].groupby(group_col)['Last Update'].min().to_dict()
+    day_location_reached_10_deaths = tdf[tdf['Deaths']>10].groupby(group_col)['Last Update'].min().to_dict()
+    day_location_reached_100_deaths = tdf[tdf['Deaths']>100].groupby(group_col)['Last Update'].min().to_dict()
+    #day_location_reached_1_per_100k = tdf[tdf['Confirmed per 100k capita']>1].groupby(group_col)['Last Update'].min().to_dict()
+
+    def shift_dates(row, offset_by_location):
+        date = row['Last Update']
+        location = row[group_col]
+        if location in offset_by_location:
+            return (date - offset_by_location[location]) / pd.Timedelta(days=1)
+
+    tdf['days since 100 cases - ' + group_col] = tdf.apply(
+        shift_dates,
+        offset_by_location=day_location_reached_100,
+        axis='columns'
+    )
+    tdf['days since 100 active - ' + group_col] = tdf.apply(
+        shift_dates,
+        offset_by_location=day_location_reached_100_active,
+        axis='columns'
+    )
+    tdf['days since 10 deaths - ' + group_col] = tdf.apply(
+        shift_dates,
+        offset_by_location=day_location_reached_10_deaths,
+        axis='columns'
+    )
+    tdf['days since 100 deaths - ' + group_col] = tdf.apply(
+        shift_dates,
+        offset_by_location=day_location_reached_100_deaths,
+        axis='columns'
+    )
+#     tdf['days since 1 case/100k people - ' + group_col] = tdf.apply(
+#         shift_dates,
+#         offset_by_location=day_location_reached_1_per_100k,
+#         axis='columns'
+#     )
+    return tdf
 
 
 # In[5]:
+
+
+geopy.geocoders.options.default_timeout = 30
+locator = Nominatim(user_agent="mesur.io")
+geocode = RateLimiter(locator.geocode, min_delay_seconds=1)
+revgeocode = RateLimiter(locator.reverse, min_delay_seconds=1)
+
+
+# In[6]:
 
 
 # let's do a little data cleanup
@@ -69,13 +121,19 @@ combined_csv['Country_Region'] = combined_csv['Country_Region'].replace('Iran (I
 combined_csv['Country_Region'] = combined_csv['Country_Region'].replace('Mainland China', 'China')
 
 
-# In[6]:
+# In[7]:
 
 
 combined = combined_csv.copy()
 
 
-# In[7]:
+# In[8]:
+
+
+combined.columns
+
+
+# In[9]:
 
 
 locations = combined.groupby(['Country/Region', 'Province/State'])['Latitude', 'Longitude'].mean().reset_index()
@@ -104,27 +162,27 @@ combined['Confirmed'] = combined['Confirmed'].fillna(0)
 combined['Deaths'] = combined['Deaths'].fillna(0)
 
 
-# In[8]:
+# In[10]:
 
 
-combined['Last Update'] = pd.to_datetime(combined['Last Update'])
+combined['Last Update'] = pd.to_datetime(combined['Last Update']).dt.date
 combined = combined.sort_values('Last Update').reset_index(drop=True)
 
 
-# In[9]:
+# In[11]:
 
 
 combined['Geo_Input'] = combined['Province/State']+', '+combined['Country/Region'] 
 
 
-# In[10]:
+# In[12]:
 
 
 non_located = combined[combined['Latitude'].isna()]
 non_located = non_located[non_located['Province/State'] != 'Cruise Ship']
 
 
-# In[11]:
+# In[13]:
 
 
 geo_inputs = non_located['Geo_Input'].unique()
@@ -133,46 +191,41 @@ combined['Location_Key_Raw'] = combined.apply(lambda x: (x.Latitude, x.Longitude
 #geo_inputs = geo_inputs[:10]
 
 
-# In[12]:
+# In[14]:
 
 
-def geocode():
+def geocode_jh():
     print('Geocoding for: ', len(geo_inputs), 'locations')
     #use progress_apply() for interactive progress
     d = dict(zip(geo_inputs, pd.Series(geo_inputs).apply(geocode).apply(lambda x: (x.latitude if pd.notnull(x.latitude) else x.latitude, 
                                                                                    x.longitude if pd.notnull(x.longitude) else x.longitude) if pd.notnull(x) else x)
                 )
             )
-    pd.DataFrame.from_dict(d, orient="index").to_csv('./reference/geoloc_dict.json')
-
-
-# In[13]:
-
-
-d = pd.read_csv('./reference/geoloc_dict.json', index_col=0).to_dict("split")
-d = dict(zip(d["index"], d["data"]))
-
-
-# In[14]:
-
-
-combined['Location_Key'] = combined['Geo_Input'].map(d)
+    pickle.dump(d, open('./reference/geolod_dict.pickle', 'wb'))
 
 
 # In[15]:
 
 
-combined['Location_Key'] = combined['Location_Key'].fillna(combined['Location_Key_Raw'])
+#geocode_jh()
 
 
 # In[16]:
 
 
+d = pickle.load(open('./reference/geolod_dict.pickle', 'rb'))
+
+
+# In[17]:
+
+
+combined['Location_Key'] = combined['Geo_Input'].map(d)
+combined['Location_Key'] = combined['Location_Key'].fillna(combined['Location_Key_Raw'])
 combined['Latitude'] = combined.loc[combined['Latitude'].isna(), 'Location_Key'].apply(lambda x: x[0])
 combined['Longitude'] = combined.loc[combined['Longitude'].isna(), 'Location_Key'].apply(lambda x: x[1])
 
 
-# In[17]:
+# In[18]:
 
 
 #let's do a recovery est
@@ -191,13 +244,13 @@ combined['Recovered'] = combined['Recovered'].fillna(0)
 combined['Active'] = combined['UnknownActive'] - combined['Recovered']
 
 
-# In[18]:
+# In[19]:
 
 
 combined = combined.fillna(0)
 
 
-# In[19]:
+# In[20]:
 
 
 # do a little reording and subselection
@@ -208,13 +261,37 @@ combined_csv = combined_csv.sort_values(['Last Update','Latitude','Longitude','C
 #combined_csv
 
 
-# In[20]:
+# In[21]:
+
+
+def get_state_country_jh(row):
+    location_segments = [
+        row['Province/State'], row['Country/Region']
+    ]
+    cleaned_location_segments = [
+        segment
+        for segment in location_segments
+        if type(segment) is str
+    ]
+    return ', '.join(cleaned_location_segments)
+
+combined_csv['State and Country'] = combined_csv.apply(get_state_country_jh, axis='columns')
+
+
+# In[22]:
+
+
+combined_csv = calc_timeseries_by_group(combined_csv, 'Country/Region')
+combined_csv = calc_timeseries_by_group(combined_csv, 'State and Country')
+
+
+# In[23]:
 
 
 combined_csv.to_csv(output_dir + "combined.csv", index=False, encoding='utf-8-sig')
 
 
-# In[21]:
+# In[24]:
 
 
 web_cases = pd.read_csv('https://raw.githubusercontent.com/CSSEGISandData/COVID-19/web-data/data/cases.csv')
@@ -234,7 +311,7 @@ web_cases_time.to_csv(output_dir + "web_cases_time.csv", index=False, encoding='
 
 
 
-# In[22]:
+# In[25]:
 
 
 df = combined_csv.copy()
@@ -264,7 +341,7 @@ df = df.dropna().reset_index()
 df.to_csv(output_dir + "covid_19_by_date_and_country.csv", index=False, encoding='utf-8-sig')
 
 
-# In[23]:
+# In[26]:
 
 
 overallDf = df.copy().groupby('Last Update').agg({
@@ -288,7 +365,7 @@ overallDf = overallDf.dropna().reset_index()
 overallDf.to_csv(output_dir + "covid_19_by_date.csv", index=False, encoding='utf-8-sig')
 
 
-# In[24]:
+# In[27]:
 
 
 overallDf = df.copy().groupby('Day').agg({
@@ -311,7 +388,7 @@ overallDf = overallDf.dropna().reset_index()
 overallDf.to_csv(output_dir + "covid_19_by_day.csv", index=False, encoding='utf-8-sig')
 
 
-# In[25]:
+# In[28]:
 
 
 overallDf = df.copy().groupby(by=['Country/Region','Day']).agg({
@@ -332,7 +409,7 @@ overallDf['New Death Rate'] = overallDf['New Deaths'].pct_change()
 overallDf = overallDf.dropna().reset_index()
 
 
-# In[26]:
+# In[29]:
 
 
 #john's hopkins raw files
@@ -363,18 +440,224 @@ covid_19_ts = covid_19_ts.sort_values(['Country/Region', 'Province/State', 'Date
 covid_19_ts = covid_19_ts[covid_19_ts['Observation'] != 0]
 
 
-# In[27]:
+# In[30]:
 
 
 overallDf.to_csv(output_dir + "covid_19_by_date_and_country.csv", index=False, encoding='utf-8-sig')
 covid_19_ts.to_csv(output_dir + "covid_19_ts.csv", index=False, encoding='utf-8-sig')
 
 
-# In[28]:
+# In[31]:
 
 
 #display for debug
 #display(covid_19_ts)
+
+
+# In[32]:
+
+
+# sourcing from CDS here: https://coronadatascraper.com/#home
+# we really like these guys, but would recommend that you fork and spin up your own scraper set
+# set the following url to your own source
+scraper = pd.read_csv('https://coronadatascraper.com/timeseries.csv')
+scraper['date'] = pd.to_datetime(scraper['date'])
+scraper.to_csv(output_dir+'scraper_raw.csv', index=False, encoding='utf-8-sig')
+
+
+# In[33]:
+
+
+scraper['cases'] = scraper['cases'].fillna(0)
+scraper['recovered'] = scraper['recovered'].fillna(0)
+scraper['active'] = scraper['active'].fillna(0)
+scraper['tested'] = scraper['tested'].fillna(0)
+scraper['growthFactor'] = scraper['growthFactor'].fillna(0)
+
+
+# In[34]:
+
+
+scraper['Geo_Input'] = scraper['state']+', '+scraper['country'] 
+non_located = scraper[scraper['lat'].isna()]
+geo_inputs = non_located['Geo_Input'].dropna().unique()
+scraper['Location_Key_Raw'] = scraper.apply(lambda x: (x.lat, x.long), axis = 1)
+scraper['Location_Key'] = scraper.apply(lambda x: (x.lat, x.long), axis = 1)
+
+
+# In[35]:
+
+
+def geocode_scraper():
+    print('Geocoding for: ', len(geo_inputs), 'locations')
+    d = dict(zip(geo_inputs, pd.Series(geo_inputs).apply(geocode).apply(lambda x: (x.latitude if pd.notnull(x.latitude) else x.latitude, 
+                                                                                   x.longitude if pd.notnull(x.longitude) else x.longitude) if pd.notnull(x) else x)
+                )
+            )
+    pickle.dump(d, open('./reference/geoloc_dict_scraper.pickle', 'wb'))
+
+
+# In[36]:
+
+
+#geocode_scraper()
+
+
+# In[37]:
+
+
+d = pickle.load(open('./reference/geoloc_dict_scraper.pickle','rb'))
+
+
+# In[38]:
+
+
+scraper['Location_Key'] = scraper['Geo_Input'].map(d)
+scraper['Location_Key'] = scraper['Location_Key'].fillna(scraper['Location_Key_Raw'])
+scraper.loc[scraper['lat'].isna(), 'lat'] = scraper.loc[scraper['lat'].isna(), 'Location_Key'].apply(lambda x: (x[0] if pd.notnull(x[0]) else x[0]) if pd.notnull(x) else x)
+scraper.loc[scraper['lat'].isna(), 'long'] = scraper.loc[scraper['lat'].isna(), 'Location_Key'].apply(lambda x: (x[1] if pd.notnull(x[1]) else x[1]) if pd.notnull(x) else x)
+
+
+# In[39]:
+
+
+def revgeocode_scraper():
+    rev_set = scraper[['lat', 'long']].dropna().drop_duplicates()
+    print('Reverse geocoding for', rev_set.shape[0],'locations')
+    rev_list = rev_set['lat'].astype(str) + ', ' + rev_set['long'].astype(str)
+    r = rev_list.values
+    d = dict(zip(rev_list, pd.Series(r).apply(revgeocode).apply(lambda x: x if pd.notnull(x) else x)))
+    pickle.dump(d, open('./reference/geoloc_rev_dict_scraper.pickle', 'wb'))
+
+
+# In[40]:
+
+
+# revgeocode_scraper()./reference/
+
+
+# In[41]:
+
+
+country_codes = pd.read_csv('./reference/country_region_mappings.csv').set_index('alpha-3')['name']
+country_codes.name = 'country'
+# do some cleanup on this stuff
+country_codes.update(pd.Series({
+    'USA': 'USA',
+    'GBR': 'UK',
+    'KOR': 'South Korea',
+}))
+# now let's do some display friendly naming thatnks to Jason Curtis
+def get_combined_location(row):
+    location_segments = [
+        row['city'], row['county'], row['state'], row['country']
+    ]
+    cleaned_location_segments = [
+        segment
+        for segment in location_segments
+        if type(segment) is str
+    ]
+    return ', '.join(cleaned_location_segments)
+
+cleaned_timeseries = (
+    scraper.rename(
+        {
+            'country': 'country_code'
+        },
+        axis='columns'
+    ).join(country_codes, 'country_code')
+)
+
+cleaned_timeseries['location'] = cleaned_timeseries.apply(get_combined_location, axis='columns')
+cleaned_timeseries
+
+
+# In[42]:
+
+
+cleaned_timeseries.to_csv(output_dir+'scraper_cleaned.csv', index=False, encoding='utf-8-sig')
+
+
+# In[43]:
+
+
+# now reshape and rename for backwards compat
+cleaned_timeseries['date'] = pd.to_datetime(cleaned_timeseries['date'])
+cleaned_timeseries['Last Update'] = cleaned_timeseries['date']
+scraper_df = cleaned_timeseries[['Last Update', 'date', 'lat', 'long', 'location', 'city', 'county', 'state', 'country', 'population', 'active', 'cases', 'deaths', 'recovered', 'tested', 'growthFactor']].copy()
+scraper_df.columns = ['Last Update', 'Date', 'Latitude', 'Longitude', 'Location', 'City', 'County', 'State', 'Country', 'Population', 'Active', 'Confirmed', 'Deaths', 'Recovered', 'Tested', 'Growth Factor']
+
+
+# In[44]:
+
+
+def get_state_country(row):
+    location_segments = [
+        row['State'], row['Country']
+    ]
+    cleaned_location_segments = [
+        segment
+        for segment in location_segments
+        if type(segment) is str
+    ]
+    return ', '.join(cleaned_location_segments)
+
+scraper_df['State and Country'] = scraper_df.apply(get_state_country, axis='columns')
+
+
+# In[45]:
+
+
+# good, looks like only dupes are due to NaN on lat/lon - this can be corrected with better reverse geocoding
+#scraper_df[scraper_df[['Last Update', 'Latitude', 'Longitude']].duplicated()]
+scraper_df
+
+
+# In[46]:
+
+
+scraper_df['Confirmed Death Rate'] = scraper_df['Confirmed'] / scraper_df['Deaths']
+scraper_df['Confirmed per 100k capita'] = scraper_df['Confirmed'] / scraper_df['Population'] * 1e5
+
+
+# In[47]:
+
+
+# this is once again some great work from Jason Curtis
+scraper_df['Date'] = scraper_df['Date'].apply(lambda date: date.strftime('%Y-%m-%d'))
+
+
+# In[ ]:
+
+
+
+
+
+# In[48]:
+
+
+scraper_df = calc_timeseries_by_group(scraper_df, 'Country')
+scraper_df = calc_timeseries_by_group(scraper_df, 'State and Country')
+scraper_df = calc_timeseries_by_group(scraper_df, 'Location')
+
+
+# In[49]:
+
+
+scraper_df = scraper_df.fillna(0)
+
+
+# In[50]:
+
+
+scraper_df.to_csv(output_dir+'scraper.csv', index=False, encoding='utf-8-sig')
+
+
+# In[51]:
+
+
+pd.set_option('display.max_columns', None)
+scraper_df
 
 
 # In[ ]:

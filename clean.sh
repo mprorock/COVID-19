@@ -1,2 +1,2 @@
-rm -R ./data/countries/*
+rm -R ./data/*
 rm -R ./images/*
