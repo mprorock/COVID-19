@@ -1,5 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
+
+# In[1]:
+
+
 # imports
 import warnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
@@ -22,10 +26,14 @@ import glob
 import os
 
 
-tqdm.pandas()
+# In[ ]:
 
 
-print('Updating all datasets...')
+
+
+
+# In[3]:
+
 
 output_dir = "./data/"
 input_dir = "./csse_covid_19_data/csse_covid_19_daily_reports/"
@@ -37,16 +45,28 @@ combined_csv = pd.concat([pd.read_csv(f) for f in all_filenames ])
 combined_csv.to_csv(output_dir + "covid_19_raw.csv", index=False, encoding='utf-8-sig') 
 
 
+# In[ ]:
+
+
+
+
+
+# In[4]:
+
 
 def calc_timeseries_by_group(df, group_col='Location'):
     tdf = df.copy()
+    tdf=tdf.sort_values('Last Update')
     timeseries_by_location = tdf.groupby(group_col)
+    
     for days_shift in [1,3,7]:
         for orig_column in ['Recovered', 'Deaths', 'Confirmed', 'Active']:
             tdf[f'{days_shift}d new {orig_column}'] = timeseries_by_location[orig_column].diff(periods=days_shift)
 
     day_location_reached_100 = tdf[tdf['Confirmed']>100].groupby(group_col)['Last Update'].min().to_dict()
     day_location_reached_100_active = tdf[tdf['Active']>100].groupby(group_col)['Last Update'].min().to_dict()
+    
+    day_location_reached_1_deaths = tdf[tdf['Deaths']>1].groupby(group_col)['Last Update'].min().to_dict()
     day_location_reached_10_deaths = tdf[tdf['Deaths']>10].groupby(group_col)['Last Update'].min().to_dict()
     day_location_reached_100_deaths = tdf[tdf['Deaths']>100].groupby(group_col)['Last Update'].min().to_dict()
     #day_location_reached_1_per_100k = tdf[tdf['Confirmed per 100k capita']>1].groupby(group_col)['Last Update'].min().to_dict()
@@ -55,7 +75,7 @@ def calc_timeseries_by_group(df, group_col='Location'):
         date = row['Last Update']
         location = row[group_col]
         if location in offset_by_location:
-            return (date - offset_by_location[location]) / pd.Timedelta(days=1)
+            return int((date - offset_by_location[location]) / pd.Timedelta(days=1))
 
     tdf['days since 100 cases - ' + group_col] = tdf.apply(
         shift_dates,
@@ -65,6 +85,12 @@ def calc_timeseries_by_group(df, group_col='Location'):
     tdf['days since 100 active - ' + group_col] = tdf.apply(
         shift_dates,
         offset_by_location=day_location_reached_100_active,
+        axis='columns'
+    )
+    
+    tdf['days since 1 deaths - ' + group_col] = tdf.apply(
+        shift_dates,
+        offset_by_location=day_location_reached_1_deaths,
         axis='columns'
     )
     tdf['days since 10 deaths - ' + group_col] = tdf.apply(
@@ -155,7 +181,7 @@ combined['Deaths'] = combined['Deaths'].fillna(0)
 # In[10]:
 
 
-combined['Last Update'] = pd.to_datetime(combined['Last Update']).dt.date
+combined['Last Update'] = pd.to_datetime(combined['Last Update']).dt.round(freq = 'D')
 combined = combined.sort_values('Last Update').reset_index(drop=True)
 
 
@@ -305,7 +331,7 @@ web_cases_time.to_csv(output_dir + "web_cases_time.csv", index=False, encoding='
 
 
 df = combined_csv.copy()
-df['Last Update'] = pd.to_datetime(df['Last Update']).dt.date 
+df['Last Update'] = pd.to_datetime(df['Last Update']).dt.round(freq = 'D')
 
 def firsti(Series, offset):
     return Series.first(offset)
@@ -416,9 +442,9 @@ ts_confirmed['Observation Type'] = 'Confirmed'
 ts_recovered = pd.melt(ts_recovered, id_vars=['Province/State', 'Country/Region', 'Lat', 'Long'], var_name='Date', value_name='Observation')
 ts_recovered['Observation Type'] = 'Recovered'
 
-ts_deaths['Date'] = pd.to_datetime(ts_deaths['Date'])
-ts_confirmed['Date'] = pd.to_datetime(ts_confirmed['Date'])
-ts_recovered['Date'] = pd.to_datetime(ts_recovered['Date'])
+ts_deaths['Date'] = pd.to_datetime(ts_deaths['Date']).dt.round(freq = 'D')
+ts_confirmed['Date'] = pd.to_datetime(ts_confirmed['Date']).dt.round(freq = 'D')
+ts_recovered['Date'] = pd.to_datetime(ts_recovered['Date']).dt.round(freq = 'D')
 
 #and concat into one nice set
 covid_19_ts = ts_deaths.copy()
@@ -451,7 +477,7 @@ covid_19_ts.to_csv(output_dir + "covid_19_ts.csv", index=False, encoding='utf-8-
 # we really like these guys, but would recommend that you fork and spin up your own scraper set
 # set the following url to your own source
 scraper = pd.read_csv('https://coronadatascraper.com/timeseries.csv')
-scraper['date'] = pd.to_datetime(scraper['date'])
+scraper['date'] = pd.to_datetime(scraper['date']).dt.round(freq = 'D')
 scraper.to_csv(output_dir+'scraper_raw.csv', index=False, encoding='utf-8-sig')
 
 
@@ -572,7 +598,7 @@ cleaned_timeseries.to_csv(output_dir+'scraper_cleaned.csv', index=False, encodin
 
 
 # now reshape and rename for backwards compat
-cleaned_timeseries['date'] = pd.to_datetime(cleaned_timeseries['date'])
+cleaned_timeseries['date'] = pd.to_datetime(cleaned_timeseries['date']).dt.round(freq = 'D')
 cleaned_timeseries['Last Update'] = cleaned_timeseries['date']
 scraper_df = cleaned_timeseries[['Last Update', 'date', 'lat', 'long', 'location', 'city', 'county', 'state', 'country', 'population', 'active', 'cases', 'deaths', 'recovered', 'tested', 'growthFactor']].copy()
 scraper_df.columns = ['Last Update', 'Date', 'Latitude', 'Longitude', 'Location', 'City', 'County', 'State', 'Country', 'Population', 'Active', 'Confirmed', 'Deaths', 'Recovered', 'Tested', 'Growth Factor']
@@ -623,7 +649,7 @@ scraper_df['Date'] = scraper_df['Date'].apply(lambda date: date.strftime('%Y-%m-
 
 
 
-# In[48]:
+# In[ ]:
 
 
 scraper_df = calc_timeseries_by_group(scraper_df, 'Country')
@@ -631,23 +657,23 @@ scraper_df = calc_timeseries_by_group(scraper_df, 'State and Country')
 scraper_df = calc_timeseries_by_group(scraper_df, 'Location')
 
 
-# In[49]:
+# In[ ]:
 
 
 scraper_df = scraper_df.fillna(0)
 
 
-# In[50]:
+# In[ ]:
 
 
 scraper_df.to_csv(output_dir+'scraper.csv', index=False, encoding='utf-8-sig')
 
 
-# In[51]:
+# In[ ]:
 
 
-pd.set_option('display.max_columns', None)
-scraper_df
+# pd.set_option('display.max_columns', None)
+# scraper_df
 
 
 # In[ ]:
