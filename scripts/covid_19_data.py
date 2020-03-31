@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[ ]:
 
 
 # imports
@@ -32,7 +32,7 @@ import os
 
 
 
-# In[3]:
+# In[ ]:
 
 
 output_dir = "./data/"
@@ -51,7 +51,7 @@ combined_csv.to_csv(output_dir + "covid_19_raw.csv", index=False, encoding='utf-
 
 
 
-# In[4]:
+# In[ ]:
 
 
 def calc_timeseries_by_group(df, group_col='Location'):
@@ -111,7 +111,7 @@ def calc_timeseries_by_group(df, group_col='Location'):
     return tdf
 
 
-# In[5]:
+# In[ ]:
 
 
 geopy.geocoders.options.default_timeout = 30
@@ -120,7 +120,7 @@ geocode = RateLimiter(locator.geocode, min_delay_seconds=1)
 revgeocode = RateLimiter(locator.reverse, min_delay_seconds=1)
 
 
-# In[6]:
+# In[ ]:
 
 
 # let's do a little data cleanup
@@ -137,19 +137,19 @@ combined_csv['Country_Region'] = combined_csv['Country_Region'].replace('Iran (I
 combined_csv['Country_Region'] = combined_csv['Country_Region'].replace('Mainland China', 'China')
 
 
-# In[7]:
+# In[ ]:
 
 
 combined = combined_csv.copy()
 
 
-# In[8]:
+# In[ ]:
 
 
 combined.columns
 
 
-# In[9]:
+# In[ ]:
 
 
 locations = combined.groupby(['Country/Region', 'Province/State'])['Latitude', 'Longitude'].mean().reset_index()
@@ -178,27 +178,27 @@ combined['Confirmed'] = combined['Confirmed'].fillna(0)
 combined['Deaths'] = combined['Deaths'].fillna(0)
 
 
-# In[10]:
+# In[ ]:
 
 
 combined['Last Update'] = pd.to_datetime(combined['Last Update']).dt.round(freq = 'D')
 combined = combined.sort_values('Last Update').reset_index(drop=True)
 
 
-# In[11]:
+# In[ ]:
 
 
 combined['Geo_Input'] = combined['Province/State']+', '+combined['Country/Region'] 
 
 
-# In[12]:
+# In[ ]:
 
 
 non_located = combined[combined['Latitude'].isna()]
 non_located = non_located[non_located['Province/State'] != 'Cruise Ship']
 
 
-# In[13]:
+# In[ ]:
 
 
 geo_inputs = non_located['Geo_Input'].unique()
@@ -207,7 +207,7 @@ combined['Location_Key_Raw'] = combined.apply(lambda x: (x.Latitude, x.Longitude
 #geo_inputs = geo_inputs[:10]
 
 
-# In[14]:
+# In[ ]:
 
 
 def geocode_jh():
@@ -220,19 +220,19 @@ def geocode_jh():
     pickle.dump(d, open('./reference/geolod_dict.pickle', 'wb'))
 
 
-# In[15]:
+# In[ ]:
 
 
 #geocode_jh()
 
 
-# In[16]:
+# In[ ]:
 
 
 d = pickle.load(open('./reference/geolod_dict.pickle', 'rb'))
 
 
-# In[17]:
+# In[ ]:
 
 
 combined['Location_Key'] = combined['Geo_Input'].map(d)
@@ -241,7 +241,7 @@ combined['Latitude'] = combined.loc[combined['Latitude'].isna(), 'Location_Key']
 combined['Longitude'] = combined.loc[combined['Longitude'].isna(), 'Location_Key'].apply(lambda x: x[1])
 
 
-# In[18]:
+# In[ ]:
 
 
 #let's do a recovery est
@@ -260,13 +260,13 @@ combined['Recovered'] = combined['Recovered'].fillna(0)
 combined['Active'] = combined['UnknownActive'] - combined['Recovered']
 
 
-# In[19]:
+# In[ ]:
 
 
 combined = combined.fillna(0)
 
 
-# In[20]:
+# In[ ]:
 
 
 # do a little reording and subselection
@@ -277,7 +277,7 @@ combined_csv = combined_csv.sort_values(['Last Update','Latitude','Longitude','C
 #combined_csv
 
 
-# In[21]:
+# In[ ]:
 
 
 def get_state_country_jh(row):
@@ -294,20 +294,20 @@ def get_state_country_jh(row):
 combined_csv['State and Country'] = combined_csv.apply(get_state_country_jh, axis='columns')
 
 
-# In[22]:
+# In[ ]:
 
 
 combined_csv = calc_timeseries_by_group(combined_csv, 'Country/Region')
 combined_csv = calc_timeseries_by_group(combined_csv, 'State and Country')
 
 
-# In[23]:
+# In[ ]:
 
 
 combined_csv.to_csv(output_dir + "combined.csv", index=False, encoding='utf-8-sig')
 
 
-# In[24]:
+# In[ ]:
 
 
 web_cases = pd.read_csv('https://raw.githubusercontent.com/CSSEGISandData/COVID-19/web-data/data/cases.csv')
@@ -327,7 +327,7 @@ web_cases_time.to_csv(output_dir + "web_cases_time.csv", index=False, encoding='
 
 
 
-# In[25]:
+# In[ ]:
 
 
 df = combined_csv.copy()
@@ -357,7 +357,7 @@ df = df.dropna().reset_index()
 df.to_csv(output_dir + "covid_19_by_date_and_country.csv", index=False, encoding='utf-8-sig')
 
 
-# In[26]:
+# In[ ]:
 
 
 overallDf = df.copy().groupby('Last Update').agg({
@@ -381,7 +381,7 @@ overallDf = overallDf.dropna().reset_index()
 overallDf.to_csv(output_dir + "covid_19_by_date.csv", index=False, encoding='utf-8-sig')
 
 
-# In[27]:
+# In[ ]:
 
 
 overallDf = df.copy().groupby('Day').agg({
@@ -404,7 +404,7 @@ overallDf = overallDf.dropna().reset_index()
 overallDf.to_csv(output_dir + "covid_19_by_day.csv", index=False, encoding='utf-8-sig')
 
 
-# In[28]:
+# In[ ]:
 
 
 overallDf = df.copy().groupby(by=['Country/Region','Day']).agg({
@@ -425,7 +425,7 @@ overallDf['New Death Rate'] = overallDf['New Deaths'].pct_change()
 overallDf = overallDf.dropna().reset_index()
 
 
-# In[29]:
+# In[ ]:
 
 
 #john's hopkins raw files
@@ -456,21 +456,21 @@ covid_19_ts = covid_19_ts.sort_values(['Country/Region', 'Province/State', 'Date
 covid_19_ts = covid_19_ts[covid_19_ts['Observation'] != 0]
 
 
-# In[30]:
+# In[ ]:
 
 
 overallDf.to_csv(output_dir + "covid_19_by_date_and_country.csv", index=False, encoding='utf-8-sig')
 covid_19_ts.to_csv(output_dir + "covid_19_ts.csv", index=False, encoding='utf-8-sig')
 
 
-# In[31]:
+# In[ ]:
 
 
 #display for debug
 #display(covid_19_ts)
 
 
-# In[32]:
+# In[ ]:
 
 
 # sourcing from CDS here: https://coronadatascraper.com/#home
@@ -481,7 +481,7 @@ scraper['date'] = pd.to_datetime(scraper['date']).dt.round(freq = 'D')
 scraper.to_csv(output_dir+'scraper_raw.csv', index=False, encoding='utf-8-sig')
 
 
-# In[33]:
+# In[ ]:
 
 
 scraper['cases'] = scraper['cases'].fillna(0)
@@ -491,7 +491,7 @@ scraper['tested'] = scraper['tested'].fillna(0)
 scraper['growthFactor'] = scraper['growthFactor'].fillna(0)
 
 
-# In[34]:
+# In[ ]:
 
 
 scraper['Geo_Input'] = scraper['state']+', '+scraper['country'] 
@@ -501,7 +501,7 @@ scraper['Location_Key_Raw'] = scraper.apply(lambda x: (x.lat, x.long), axis = 1)
 scraper['Location_Key'] = scraper.apply(lambda x: (x.lat, x.long), axis = 1)
 
 
-# In[35]:
+# In[ ]:
 
 
 def geocode_scraper():
@@ -513,19 +513,19 @@ def geocode_scraper():
     pickle.dump(d, open('./reference/geoloc_dict_scraper.pickle', 'wb'))
 
 
-# In[36]:
+# In[ ]:
 
 
 #geocode_scraper()
 
 
-# In[37]:
+# In[ ]:
 
 
 d = pickle.load(open('./reference/geoloc_dict_scraper.pickle','rb'))
 
 
-# In[38]:
+# In[ ]:
 
 
 scraper['Location_Key'] = scraper['Geo_Input'].map(d)
@@ -534,7 +534,7 @@ scraper.loc[scraper['lat'].isna(), 'lat'] = scraper.loc[scraper['lat'].isna(), '
 scraper.loc[scraper['lat'].isna(), 'long'] = scraper.loc[scraper['lat'].isna(), 'Location_Key'].apply(lambda x: (x[1] if pd.notnull(x[1]) else x[1]) if pd.notnull(x) else x)
 
 
-# In[39]:
+# In[ ]:
 
 
 def revgeocode_scraper():
@@ -546,13 +546,13 @@ def revgeocode_scraper():
     pickle.dump(d, open('./reference/geoloc_rev_dict_scraper.pickle', 'wb'))
 
 
-# In[40]:
+# In[ ]:
 
 
 # revgeocode_scraper()./reference/
 
 
-# In[41]:
+# In[ ]:
 
 
 country_codes = pd.read_csv('./reference/country_region_mappings.csv').set_index('alpha-3')['name']
@@ -585,16 +585,16 @@ cleaned_timeseries = (
 )
 
 cleaned_timeseries['location'] = cleaned_timeseries.apply(get_combined_location, axis='columns')
-cleaned_timeseries
+#cleaned_timeseries
 
 
-# In[42]:
+# In[ ]:
 
 
 cleaned_timeseries.to_csv(output_dir+'scraper_cleaned.csv', index=False, encoding='utf-8-sig')
 
 
-# In[43]:
+# In[ ]:
 
 
 # now reshape and rename for backwards compat
@@ -604,7 +604,7 @@ scraper_df = cleaned_timeseries[['Last Update', 'date', 'lat', 'long', 'location
 scraper_df.columns = ['Last Update', 'Date', 'Latitude', 'Longitude', 'Location', 'City', 'County', 'State', 'Country', 'Population', 'Active', 'Confirmed', 'Deaths', 'Recovered', 'Tested', 'Growth Factor']
 
 
-# In[44]:
+# In[ ]:
 
 
 def get_state_country(row):
@@ -621,22 +621,22 @@ def get_state_country(row):
 scraper_df['State and Country'] = scraper_df.apply(get_state_country, axis='columns')
 
 
-# In[45]:
+# In[ ]:
 
 
 # good, looks like only dupes are due to NaN on lat/lon - this can be corrected with better reverse geocoding
 #scraper_df[scraper_df[['Last Update', 'Latitude', 'Longitude']].duplicated()]
-scraper_df
+#scraper_df
 
 
-# In[46]:
+# In[ ]:
 
 
 scraper_df['Confirmed Death Rate'] = scraper_df['Confirmed'] / scraper_df['Deaths']
 scraper_df['Confirmed per 100k capita'] = scraper_df['Confirmed'] / scraper_df['Population'] * 1e5
 
 
-# In[47]:
+# In[ ]:
 
 
 # this is once again some great work from Jason Curtis
