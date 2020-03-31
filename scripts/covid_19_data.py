@@ -1,9 +1,5 @@
 #!/usr/bin/env python
 # coding: utf-8
-
-# In[1]:
-
-
 # imports
 import warnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
@@ -26,14 +22,10 @@ import glob
 import os
 
 
-# In[2]:
-
-
 tqdm.pandas()
 
 
-# In[3]:
-
+print('Updating all datasets...')
 
 output_dir = "./data/"
 input_dir = "./csse_covid_19_data/csse_covid_19_daily_reports/"
@@ -44,8 +36,6 @@ all_filenames = [i for i in glob.glob(input_dir+'*.{}'.format(extension))]
 combined_csv = pd.concat([pd.read_csv(f) for f in all_filenames ])
 combined_csv.to_csv(output_dir + "covid_19_raw.csv", index=False, encoding='utf-8-sig') 
 
-
-# In[4]:
 
 
 def calc_timeseries_by_group(df, group_col='Location'):

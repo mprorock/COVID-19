@@ -327,7 +327,7 @@ def generate_mapping():
 
     combined = combined[['Last Update', 'Latitude', 'Longitude', 'Country/Region', 'Province/State','Active', 'Confirmed','Recovered','Deaths']].copy().reset_index(drop=True)
 
-    latest = combined.sort_values('Last Update').groupby(['Latitude','Longitude']).tail(1).copy().reset_index(drop=True)
+    latest = combined.sort_values('Last Update').groupby(['Latitude','Longitude']).tail(1).copy().reset_index(drop=True).dropna()
     latest['Active'] = latest['Confirmed'] - latest['Recovered'] - latest['Deaths']
 
     deaths = latest[latest['Deaths']>0]
