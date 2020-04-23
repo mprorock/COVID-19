@@ -129,12 +129,9 @@ combined_csv['Country/Region'] = combined_csv['Country/Region'].replace('Korea, 
 combined_csv['Country/Region'] = combined_csv['Country/Region'].replace('Republic of Korea', 'South Korea')
 combined_csv['Country/Region'] = combined_csv['Country/Region'].replace('Iran (Islamic Republic of)', 'Iran')
 combined_csv['Country/Region'] = combined_csv['Country/Region'].replace('Mainland China', 'China')
+combined_csv['Country_Region'] = combined_csv['Country_Region'].replace('United Kingdom', 'UK')
 
-combined_csv['Country_Region'] = combined_csv['Country_Region'].str.strip()
-combined_csv['Country_Region'] = combined_csv['Country_Region'].replace('Korea, South', 'South Korea')
-combined_csv['Country_Region'] = combined_csv['Country_Region'].replace('Republic of Korea', 'South Korea')
-combined_csv['Country_Region'] = combined_csv['Country_Region'].replace('Iran (Islamic Republic of)', 'Iran')
-combined_csv['Country_Region'] = combined_csv['Country_Region'].replace('Mainland China', 'China')
+combined_csv['Country_Region'] = combined_csv['Country_Region'].replace('*', '').replace(', The', '')
 
 
 # In[ ]:
